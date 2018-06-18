@@ -9,5 +9,5 @@ github_username:  rreganjr
 markdown: kramdown
 theme: minima
 
-gems:
-  - jekyll-last-modified-at
+#gems:
+#  - jekyll-last-modified-at
