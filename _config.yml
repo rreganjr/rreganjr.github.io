@@ -8,3 +8,6 @@ github_username:  rreganjr
 # Build settings
 markdown: kramdown
 theme: minima
+
+gems:
+  - jekyll-last-modified-at
