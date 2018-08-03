@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My Struggles with UI Coding: JavaScript and Angular
+title: 'My Struggles with UI Coding: JavaScript and Angular'
 ---
 
 ## History
