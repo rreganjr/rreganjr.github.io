@@ -1,0 +1,17 @@
+---
+layout: post
+title: 'My Experience with Event Sourcing - Zarex Event processing'
+---
+
+Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.
+
+Because we were starting from a more traditional application structure that we were adapting to event based we used some of the existing structures and wrapped them. We already had the concept of an EditModel that contained the changes to make to an entity's persistent state. The EditModel was translated from json to an object that was passed to a controller which was a UI binding to an EditCommand that took the incoming data and updated a Hibernate persisted entity and subordinate entities in the context of a transaction.
+
+When we introduced the EventStore we introduced a PersistenceMode to the commands such that each was really two commands, one that would save the EditModel in the EventStore wrapped with some extra event specific data and one that would use the original persistence mechanism to update the hibernate backed entity in a local database for the service to use.
+
+The EventStore had a concept of entities and their state which was maintained in an entity id table. The identity of an entity included an id assigned by the EventStore plus external keys, for example email. It maintained the latest version (id of the last event submitted) used to validate if an incoming request was based on stale data and should be rejected, whether the entity was deleted such that external keys could be reused, and a table of relationships between entities that was used to validate if an object could be deleted or not.
+
+An important concept was that an event wasn't really "something that already happened" until it was accepted by the EventStore. The expectation was that any event in the EventStore is valid and shall be processed by the services that support that type of event so that the state of an entity is consistent between all services.
+
+Each service maintained its own state for all entities. The state may look different, for example in our authentication service we only cared about email, password and hash salt, and in our communications service we only care about contact info and whether a user is opted in to receiving emails about a specific product. In our data warehouse there were lots of different representations of a user, plus data from external sources so that we could report on different aspects. We setup up our services this way so that they could work completely independent of each other and didn't make requests to each other for data.
+
