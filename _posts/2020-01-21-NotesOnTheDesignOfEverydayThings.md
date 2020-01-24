@@ -40,6 +40,8 @@ title: 'Notes on - The Design of Everyday Things'
 
 *The power of observations - observe how people act, interact with objects.*
 
+---
+
 * Design - things are designed for people.
   * non-functional requirements:
   * manufacturing - how will it be produced, how much will it cost, can it be mass produced
@@ -54,8 +56,10 @@ title: 'Notes on - The Design of Everyday Things'
   * people frequently misconstrue coincidence as cause and effect.
   * learned helplessness - failures lead people to blame themselves
   * taught helplessness -
+  
+---
 
-#### phsycology of everyday things
+#### Psychology of Everyday Things
 
 false assessment - once we have an explanation for discrepant events (right or wrong) we are complacent.
 
@@ -156,7 +160,7 @@ learning
 efficiency of use first time
 aesthetics
 
--------------------------
+---
 
 #### knowing what to do
 
@@ -316,12 +320,48 @@ infinite gulf of evaluation - levels of bureaucracy, feedback/desires filtered t
 
 * The variety of possible solutions is enormous.
   * the range of expression granted the designer is vast.
-* the level and number of details to account for is necessarily pedantic. 
+* the level and number of details to account for is astounding.
 
+* varied and obscure uses - "use a pen to set the clock in a car" does the designer of the pen know this requirement? 
 
+* designing for special people
+  * there is no such thing as the "average person" - physical anthropometry
+  * make things adjustable to accommodate different users
+  * left handed versus right handed - how can you adjust for mirror image use?
+  * various capabilities: vision, hearing etc.
 
+* selective attention: problem of focus
+  * limits to what can be focused on
+  * attend to immediate problems and ignore the rest
+  * designers must consider the problems of focus in the design.
+    * use of forcing functions for safety
+    * proper feedback to avert evaluation problems
 
+##### two deadly temptations for the designer
 
+* creeping featurism
+  * tendency to keep adding new features
+    * require more controls, more feedback to display, or instructions to know
+    * adding more complexity
+  * if adding a feature can't be avoided, can features be organized better? modularity.
+  
+* worshipping false images
+  * features for showing off, not using - fancy copiers to make you look cool to clients.
+  * features for the appearance of technical sophistication.
+  
+* computer systems
+  * programmers should not be responsible for the computer's interactions with the user, it is not their expertise.
+  * many programs are too abstract for users
+  * how to do things wrong
+    * make things invisible, widen the gulf of execution, give no feedback
+    * be arbitrary - non-obvious command names (or key combos)
+    * be inconsistent - change the way things are done from screen to screen
+    * use idiosyncratic language - indecipherable error messages
+    * make operations dangerous - lose work by clicking the wrong button.
+    
+    
+
+---
 
 *Once a satisfactory product has been achieved, further changes may be counterproductive, you have to know when to stop.* pg 150
 
