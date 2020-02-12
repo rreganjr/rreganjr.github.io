@@ -1,3 +1,8 @@
+---
+layout: post
+title: 'Dieter Rams - "Good design" principles'
+---
+
 ### Dieter Rams - "Good design" principles
 
 1. is innovative – The possibilities for progression are not, by any means, exhausted. Technological development is always offering new opportunities for original designs. But imaginative design always develops in tandem with improving technology, and can never be an end in itself.
@@ -11,4 +16,6 @@
 1. is environmentally friendly – Design makes an important contribution to the preservation of the environment. It conserves resources and minimizes physical and visual pollution throughout the lifecycle of the product.
 1. is as little design as possible – Less, but better – because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity.
 
-From https://en.wikipedia.org/wiki/Dieter_Rams
+From [Wikipedia's page for Dieter Rams](https://en.wikipedia.org/wiki/Dieter_Rams)
+
+See Also [Interaction Design Foundation article](https://www.interaction-design.org/literature/article/dieter-rams-10-timeless-commandments-for-good-design)

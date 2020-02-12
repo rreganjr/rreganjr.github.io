@@ -1,4 +1,950 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-12T23:10:42-04:00</updated><id>http://localhost:4000/</id><title type="html">RReganJr Software Developer</title><subtitle>musings</subtitle><author><name>Ron Regan</name></author><entry><title type="html">Modularity, ManyToAny, and Bidirectional Associations Follow Up</title><link href="http://localhost:4000/2018/06/29/Modularity2.html" rel="alternate" type="text/html" title="Modularity, ManyToAny, and Bidirectional Associations Follow Up" /><published>2018-06-29T00:00:00-04:00</published><updated>2018-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2018/06/29/Modularity2</id><content type="html" xml:base="http://localhost:4000/2018/06/29/Modularity2.html">&lt;h2 id=&quot;the-solution&quot;&gt;The Solution&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-11T23:05:58-05:00</updated><id>http://localhost:4000/</id><title type="html">RReganJr Software Developer</title><subtitle>musings</subtitle><author><name>Ron Regan</name></author><entry><title type="html">10 Usability Heuristics for User Interface Design</title><link href="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html" rel="alternate" type="text/html" title="10 Usability Heuristics for User Interface Design" /><published>2020-02-11T00:00:00-05:00</published><updated>2020-02-11T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics</id><content type="html" xml:base="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html">&lt;h3 id=&quot;10-usability-heuristics-for-user-interface-design&quot;&gt;10 Usability Heuristics for User Interface Design&lt;/h3&gt;
+
+&lt;p&gt;These are my notes for the &lt;a href=&quot;https://www.youtube.com/playlist?list=PLJOFJ3Ok_idtb2YeifXlG1-TYoMBLoG6I&quot;&gt;Youtube playlist The 10 Usability Heuristics&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;also see &lt;a href=&quot;https://www.nngroup.com/articles/ten-usability-heuristics/&quot;&gt;Nielsen Norman Group’s page on 10 Usability Heuristics&lt;/a&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Visibility - keep users informed with what is going on in the system in a reasonable time
+    &lt;ul&gt;
+      &lt;li&gt;what they need to in a timely manner&lt;/li&gt;
+      &lt;li&gt;durable - always on - current state - ex: battery charge or network strength&lt;/li&gt;
+      &lt;li&gt;as a response to an action
+        &lt;ul&gt;
+          &lt;li&gt;acknowledge success or a problem&lt;/li&gt;
+          &lt;li&gt;indicate the system is working = progress bar&lt;/li&gt;
+          &lt;li&gt;give a feeling of control&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;don’t provide updates if not helpful - key pieces of info = user can’t do anything with that feedback.&lt;/li&gt;
+      &lt;li&gt;open and continuous communication
+    * reliable and predictable - creates trust&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Match between the system and real world&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;use language and concepts from real world
+    &lt;ul&gt;
+      &lt;li&gt;terms familiar to the user rather than system oriented&lt;/li&gt;
+      &lt;li&gt;instead of marketing jargon use regular language&lt;/li&gt;
+      &lt;li&gt;mental models&lt;/li&gt;
+      &lt;li&gt;skeuomorphic - digital experience to match/align a physical experience.&lt;/li&gt;
+      &lt;li&gt;real world conventions&lt;/li&gt;
+      &lt;li&gt;use user’s language&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;design for them and not you.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;User Control and Freedom&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;need a way to back out of a decision
+    &lt;ul&gt;
+      &lt;li&gt;back/cancel button&lt;/li&gt;
+      &lt;li&gt;undo&lt;/li&gt;
+      &lt;li&gt;must be visible to the user&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;foster a sense of freedom&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Consistency and Standards&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;internal and external
+    &lt;ul&gt;
+      &lt;li&gt;internal - in a product or family
+        &lt;ul&gt;
+          &lt;li&gt;color for call to action buttons&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;external - conventions for industry or in general
+        &lt;ul&gt;
+          &lt;li&gt;shopping cart - standard across most sites - upper right corner&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;don’t force users to learn something new - unless it is worth the cost&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Error Prevention&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;don’t let users do something catastrophic by accident
+    &lt;ul&gt;
+      &lt;li&gt;high cost effects&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;location of a button&lt;/li&gt;
+  &lt;li&gt;confirmation dialog?&lt;/li&gt;
+  &lt;li&gt;support undo function so error doesn’t become permanent
+    &lt;ul&gt;
+      &lt;li&gt;reply all - timer before actually sending?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Recognition vs. Recall&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;why is recognition easier than recall
+    &lt;ul&gt;
+      &lt;li&gt;is the information provided correct&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;memory retrieval - the more ques we have the easier to retreive&lt;/li&gt;
+  &lt;li&gt;show the commands and the user can recognize what they want versus remembering the command on a command line&lt;/li&gt;
+  &lt;li&gt;minimize user working&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Flexibility and Efficiency of Use&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cntrl-c to copy versus right click copy versus edit menu copy option&lt;/li&gt;
+  &lt;li&gt;let the user select their prefered way to work&lt;/li&gt;
+  &lt;li&gt;accelerator - speeds up interaction for experienced users&lt;/li&gt;
+  &lt;li&gt;macros&lt;/li&gt;
+  &lt;li&gt;visibility for new users so they aren’t overwelmed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Aesthetic and Minimalist Design&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;focus on the essentials
+    &lt;ul&gt;
+      &lt;li&gt;doesn’t mean flat or monochromatic colors&lt;/li&gt;
+      &lt;li&gt;keeping the content in the visual design focused on essentials&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;signal to noise ration - ratio of relevant to irrelevant information
+    &lt;ul&gt;
+      &lt;li&gt;text content, animation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;every extra piece of information in the UI takes away from the relevant information&lt;/li&gt;
+  &lt;li&gt;visual - graphics or photos - support the primary goals of users -&lt;/li&gt;
+  &lt;li&gt;communicate don’t decorate&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Recognize, Diagnose and Recover from Errors&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;clearly inform users when an error has occurred
+    &lt;ul&gt;
+      &lt;li&gt;visual treatments (colors) and error message&lt;/li&gt;
+      &lt;li&gt;what is the problem, in regular language&lt;/li&gt;
+      &lt;li&gt;offer users a solution to solve the problem&lt;/li&gt;
+      &lt;li&gt;best - link to solve the problem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;gmail - supports undoing sending an email&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Help and Documentation&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;should be as intuitive as possible not to need helpful, but…&lt;/li&gt;
+  &lt;li&gt;consider:
+    &lt;ul&gt;
+      &lt;li&gt;is it easy to search/find helpful&lt;/li&gt;
+      &lt;li&gt;focused on user’s task&lt;/li&gt;
+      &lt;li&gt;list steps to be carried out&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;search suggestions&lt;/li&gt;
+  &lt;li&gt;minimize the interaction cost to the user&lt;/li&gt;
+  &lt;li&gt;make help contextual
+    &lt;ul&gt;
+      &lt;li&gt;pop over&lt;/li&gt;
+      &lt;li&gt;screen shots&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;use analytics to see it works&lt;/li&gt;
+  &lt;li&gt;don’t overload users with unnecessary information&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;bonus-material-&quot;&gt;Bonus Material :)&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Fitts’s Law  &lt;a href=&quot;https://www.youtube.com/watch?v=M-9FbUJk6tI&quot;&gt;youtube&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the time to acquire a target is a function of the size of the target and the distance to the target&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MT = a + b * log2( 2D / W)
+
+MT = time to select target 
+a &amp;amp; b = constants set by type of device
+D = distance from starting point to target
+W = width of target along axis of motion
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;buttons
+    &lt;ul&gt;
+      &lt;li&gt;submit button for a form - close to the bottom of the input fields&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;important actions should be larger&lt;/li&gt;
+  &lt;li&gt;lists - shorter is better&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Hick’s Law - &lt;a href=&quot;https://www.youtube.com/watch?v=pbbTOzArcWQ&quot;&gt;youtube&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;designing long menu lists&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;two criteria
+    &lt;ul&gt;
+      &lt;li&gt;in order (alphabetically)&lt;/li&gt;
+      &lt;li&gt;items are known to the user - they know what the terms mean/are&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;example - list of US States - no matter where a user focuses on the list, they know what they are looking for and where it is in relation to where they are.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Should the whole list  be visible to scan?&lt;/em&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">10 Usability Heuristics for User Interface Design</summary></entry><entry><title type="html">Dieter Rams - “Good design” principles</title><link href="http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples.html" rel="alternate" type="text/html" title="Dieter Rams - &quot;Good design&quot; principles" /><published>2020-01-27T00:00:00-05:00</published><updated>2020-01-27T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples</id><content type="html" xml:base="http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples.html">&lt;h3 id=&quot;dieter-rams---good-design-principles&quot;&gt;Dieter Rams - “Good design” principles&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;is innovative – The possibilities for progression are not, by any means, exhausted. Technological development is always offering new opportunities for original designs. But imaginative design always develops in tandem with improving technology, and can never be an end in itself.&lt;/li&gt;
+  &lt;li&gt;makes a product useful – A product is bought to be used. It has to satisfy not only functional, but also psychological and aesthetic criteria. Good design emphasizes the usefulness of a product whilst disregarding anything that could detract from it.&lt;/li&gt;
+  &lt;li&gt;is aesthetic – The aesthetic quality of a product is integral to its usefulness because products are used every day and have an effect on people and their well-being. Only well-executed objects can be beautiful.&lt;/li&gt;
+  &lt;li&gt;makes a product understandable – It clarifies the product’s structure. Better still, it can make the product clearly express its function by making use of the user’s intuition. At best, it is self-explanatory.&lt;/li&gt;
+  &lt;li&gt;is unobtrusive – Products fulfilling a purpose are like tools. They are neither decorative objects nor works of art. Their design should therefore be both neutral and restrained, to leave room for the user’s self-expression.&lt;/li&gt;
+  &lt;li&gt;is honest – It does not make a product appear more innovative, powerful or valuable than it really is. It does not attempt to manipulate the consumer with promises that cannot be kept.&lt;/li&gt;
+  &lt;li&gt;is long-lasting – It avoids being fashionable and therefore never appears antiquated. Unlike fashionable design, it lasts many years – even in today’s throwaway society.&lt;/li&gt;
+  &lt;li&gt;is thorough down to the last detail – Nothing must be arbitrary or left to chance. Care and accuracy in the design process show respect towards the consumer.&lt;/li&gt;
+  &lt;li&gt;is environmentally friendly – Design makes an important contribution to the preservation of the environment. It conserves resources and minimizes physical and visual pollution throughout the lifecycle of the product.&lt;/li&gt;
+  &lt;li&gt;is as little design as possible – Less, but better – because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;From &lt;a href=&quot;https://en.wikipedia.org/wiki/Dieter_Rams&quot;&gt;Wikipedia’s page for Dieter Rams&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;See Also &lt;a href=&quot;https://www.interaction-design.org/literature/article/dieter-rams-10-timeless-commandments-for-good-design&quot;&gt;Interaction Design Foundation article&lt;/a&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Dieter Rams - “Good design” principles</summary></entry><entry><title type="html">Notes on - The Design of Everyday Things</title><link href="http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings.html" rel="alternate" type="text/html" title="Notes on - The Design of Everyday Things" /><published>2020-01-21T00:00:00-05:00</published><updated>2020-01-21T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings</id><content type="html" xml:base="http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings.html">&lt;p&gt;&lt;em&gt;It’s not your fault - bad user experience is the fault of the designer.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;design-principals&quot;&gt;Design Principals&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Affordances - “is for” Perceived and actual properties of an object. make appropriate actions perceptible. a chair is for sitting. materials, textures.
+    &lt;ul&gt;
+      &lt;li&gt;https://www.interaction-design.org/literature/topics/affordances - Affordances are an object’s properties that show the possible actions users can take with it, thereby suggesting how they may interact with that object. For instance, a button can look as if it needs to be turned or pushed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conceptual Models - how people perceive something operates. Finding meaning in the events around us.
+    &lt;ul&gt;
+      &lt;li&gt;mapping of what you want to do to what appears possible.&lt;/li&gt;
+      &lt;li&gt;a good conceptual model allows us to predict the effects of our actions.&lt;/li&gt;
+      &lt;li&gt;without a good model we do operations as we are told to do them without fully appreciating why or what to expect, using rote knowledge.&lt;/li&gt;
+      &lt;li&gt;the conceptual model can be very simple we only need to associate the relationship between the controls and outcomes.&lt;/li&gt;
+      &lt;li&gt;the conceptual model must be easily discernible from the controls&lt;/li&gt;
+      &lt;li&gt;The design model is the designers conceptual model, the user’s conceptual model is a mental model developed through the visible controls and interaction with the system.
+        &lt;ul&gt;
+          &lt;li&gt;Ideally the design and user models are the same, but a poor design can lead the user astray.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;the visible part of the device is the system image.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Visibility - the correct parts must be visible and they must convey the correct message.&lt;/li&gt;
+  &lt;li&gt;Mapping - The relationship between two things
+    &lt;ul&gt;
+      &lt;li&gt;the mapping between controls (and how they move) and the results&lt;/li&gt;
+      &lt;li&gt;natural mappings take advantage of physical analogies and cultural standards, “common sense”
+        &lt;ul&gt;
+          &lt;li&gt;spatial analogies: move a control left to go left, up to go up, down to go down. orient a control to what it controls, light switch on the left turns on/off lights to the left&lt;/li&gt;
+          &lt;li&gt;turn a dial clockwise for more
+            &lt;ul&gt;
+              &lt;li&gt;slide a slider right for more, or to direct something to the right (stereo left/right balance)&lt;/li&gt;
+              &lt;li&gt;flip a switch up to turn a light on&lt;/li&gt;
+              &lt;li&gt;steering wheel - turn clockwise (right from the top) to turn right, counter-clockwise (left from the top) to turn left&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;additive dimension, louder, brighter, longer, and darker show incremental increase&lt;/li&gt;
+          &lt;li&gt;substitutive dimensions: pitch, taste, color, location, there is no natural concept of more or less&lt;/li&gt;
+          &lt;li&gt;check a box to indicate affirmation&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;one or more controls per function is easier, less controls than functions adds difficulty
+        &lt;ul&gt;
+          &lt;li&gt;radio preset channel buttons + a tuner knob and channel frequency indicator (slide or digital)
+            &lt;ul&gt;
+              &lt;li&gt;note setting a preset is harder, for example press the button for less than 3 seconds to go to that channel, more than 3 seconds to make the current channel that preset value&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Feedback - send back to the user what action has been done or what result has been accomplished. - cause and effect, react to a user action.
+    &lt;ul&gt;
+      &lt;li&gt;tactile - push a button&lt;/li&gt;
+      &lt;li&gt;audible - clicks, tones, beeps, verbal responses&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Constraints - constrain the choices a user can make&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;The power of observations - observe how people act, interact with objects.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Design - things are designed for people.
+    &lt;ul&gt;
+      &lt;li&gt;non-functional requirements:&lt;/li&gt;
+      &lt;li&gt;manufacturing - how will it be produced, how much will it cost, can it be mass produced&lt;/li&gt;
+      &lt;li&gt;maintenance - is it easy to repair&lt;/li&gt;
+      &lt;li&gt;aesthetics - does it look good&lt;/li&gt;
+      &lt;li&gt;usability - is it easy, pleasant to use?&lt;/li&gt;
+      &lt;li&gt;safety&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mental Models - are conceptual models of how we perceive things to work based on our knowledge and perception.
+    &lt;ul&gt;
+      &lt;li&gt;often knowledge is fragmentary (you don’t know everything)&lt;/li&gt;
+      &lt;li&gt;the mental model can only be as good as the information used to form it. If the design doesn’t inform the model then it is likely to be wrong. In the absence of information people use imagination to fill in the missing details.&lt;/li&gt;
+      &lt;li&gt;people frequently misconstrue coincidence as cause and effect.&lt;/li&gt;
+      &lt;li&gt;learned helplessness - failures lead people to blame themselves&lt;/li&gt;
+      &lt;li&gt;taught helplessness -&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;psychology-of-everyday-things&quot;&gt;Psychology of Everyday Things&lt;/h4&gt;
+
+&lt;p&gt;false assessment - once we have an explanation for discrepant events (right or wrong) we are complacent.&lt;/p&gt;
+
+&lt;p&gt;Naive Theories - non-scientific sound sensible/plausible but may be wrong&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Seven stages of Action pg 47
+    &lt;ul&gt;
+      &lt;li&gt;perceive the state of the world&lt;/li&gt;
+      &lt;li&gt;interpret the perception&lt;/li&gt;
+      &lt;li&gt;evaluate the interpretations&lt;/li&gt;
+      &lt;li&gt;goals&lt;/li&gt;
+      &lt;li&gt;intent to act&lt;/li&gt;
+      &lt;li&gt;sequence f actions&lt;/li&gt;
+      &lt;li&gt;execution of actions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;to get something done you must start with a notion of what is wanted - the goal.
+next you act to accomplish the goal.
+next you asses if the goal was met.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;goal is what you want, not how to get it. vague&lt;/li&gt;
+  &lt;li&gt;intentions are the statements of what is to be done. an intention to act so as to achieve the goal&lt;/li&gt;
+  &lt;li&gt;plan a sequence of actions to do&lt;/li&gt;
+  &lt;li&gt;execution of the actions in proper sequence&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I don’t like the word intention for how it is being used. definition: intention - a thing intended; an aim or plan.  synonyms: aim, purpose, intent, objective, object, goal, target, end, design, plan, scheme, resolve, resolution, determination, wish, desire, ambition, idea, dream, aspiration&lt;/p&gt;
+
+&lt;p&gt;would “solution” make more sense - goal -&amp;gt; solution -&amp;gt; action plan -&amp;gt; execute plan -&amp;gt; evaluate&lt;/p&gt;
+
+&lt;p&gt;goal - I need more light
+intention - I need to turn on the lamp.&lt;/p&gt;
+
+&lt;p&gt;To me goal and intention seems like two levels of goals, an abstract or high level goal and concrete goal - the light is too simplistic. or maybe sometimes people start at the intention level as the goal.&lt;/p&gt;
+
+&lt;p&gt;data-driven behavior - responding to events versus starting with a goal.&lt;/p&gt;
+
+&lt;p&gt;Gulfs of execution and evaluation&lt;/p&gt;
+
+&lt;p&gt;difficulty with mapping and feedback. the relationship between the actions, controls and outcome. a gulf is a difficulty in deriving the relationship between the mental intentions and interpretations and the physical actions and states.&lt;/p&gt;
+
+&lt;p&gt;gulfs separate mental states from physical ones. they each reflect an aspect of the distance between mental representations of the person and the physical components and states of the environment.&lt;/p&gt;
+
+&lt;p&gt;gulf of execution - does the system provide actions that correspond to the intentions of the person? Is it clear what actions must be performed to meet the intention?
+gulf of evaluation - the amount of effort to or difficulty in interpreting the physical state of the system and if the intentions are met.&lt;/p&gt;
+
+&lt;p&gt;The seven stages of action as design aids&lt;/p&gt;
+
+&lt;p&gt;provide a checklist of questions to ask to ensure the gulfs are bridged (minimize gulfs)&lt;/p&gt;
+
+&lt;p&gt;each stage of action has its own design strategies.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;can the user tell what actions are possible&lt;/li&gt;
+  &lt;li&gt;determine mapping from intention to action&lt;/li&gt;
+  &lt;li&gt;perform an action&lt;/li&gt;
+  &lt;li&gt;see if the system is in the desired state (before and after an action)&lt;/li&gt;
+  &lt;li&gt;interpret the system state desired or otherwise&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;knowledge-in-the-head-and-in-the-world&quot;&gt;Knowledge in the head and in the world&lt;/h4&gt;
+
+&lt;p&gt;discrepancy between the precision of behavior and imprecision of knowledge - a typist can type correctly, but most couldn’t describe the location of letters on the keyboard.&lt;/p&gt;
+
+&lt;p&gt;not all knowledge must be in the head, it can be distributed between the head, the world and constraints in the world. (internal plus external)&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;information in the world&lt;/li&gt;
+  &lt;li&gt;great precision is not required&lt;/li&gt;
+  &lt;li&gt;natural constraints are present&lt;/li&gt;
+  &lt;li&gt;cultural constraints are present&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;two kinds of knowledge&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;knowledge “of” - declarative - facts and rules, easy to write and teach. a red light means stop.&lt;/li&gt;
+  &lt;li&gt;knowledge “how” - procedural - how to perform actions -  hard to teach or write down - taught through demonstration and learned by practice - play an instrument - procedural knowledge is primarily subconscious.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;knowledge by delta - we don’t need to know every detail of things, just the differences that distinguesh choices. Size and color of coins.&lt;/p&gt;
+
+&lt;p&gt;the structure of mental memory&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;short term - 5-7 items immediately recallable - can be quickly lost when distracted&lt;/li&gt;
+  &lt;li&gt;long term - memory of the past - it takes time to store and retrieve - how experiences are stored - not exact recall but interpreted through our existing memory/knowledge/understanding/experience.&lt;/li&gt;
+  &lt;li&gt;three categories:
+** arbitrary knowledge - facts - no back story
+** meaningful relationships - facts+ (emotion?) sensible structure - makes sense (can be made to make sense), fit into mental model - interpretive
+** through explanation - can be derived from mental model - understanding&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;knowledge in the world - external memory&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;out of sight, out of mind - specific to time and place&lt;/li&gt;
+  &lt;li&gt;reminders
+** rehearsal - keep in your mind by thinking about it
+** notes&lt;/li&gt;
+  &lt;li&gt;two aspects
+** signal - string on the finger
+** message - what to remember&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;trade off between knowledge in the head and world&lt;/p&gt;
+
+&lt;p&gt;retrieve-ability
+learning
+efficiency of use first time
+aesthetics&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;knowing-what-to-do&quot;&gt;knowing what to do&lt;/h4&gt;
+
+&lt;p&gt;the difficulty of dealing with novel situations is directly related to the number of possibilities.
+what are the controls and what can be done
+how do we deal with novel situations&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;information in the head
+** transfer of knowledge from using a similar object
+** instruction/taught&lt;/li&gt;
+  &lt;li&gt;information in the world
+** the design
+&lt;em&gt;** affordances - suggest a range of possibilities
+**&lt;/em&gt; natural/physical constraints - limit the possibilities&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;there are four types of constraints&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;physical -&lt;/li&gt;
+  &lt;li&gt;semantic - meaning in the situation - knowledge of the situation and the world.&lt;/li&gt;
+  &lt;li&gt;cultural - vary by location, change/created over time. social rules&lt;/li&gt;
+  &lt;li&gt;logical - natural mappings&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;applying affordances and constraints&lt;/p&gt;
+
+&lt;p&gt;switches&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;group related together&lt;/li&gt;
+  &lt;li&gt;use shapes to distinguish&lt;/li&gt;
+  &lt;li&gt;physical layout to match what they control
+** vertical or horizontal rows of light switches don’t map to the lights
+** a room “plan” type layout with the switches laid out where the lights are in the room&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;visibility-and-feedback&quot;&gt;visibility and feedback&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;visibility - what parts move, how do they move, where do you pull/push/slide/turn.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;feedback - what signifies a state change, what is decorative&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;visibility versus aesthetics - hiding controls for aesthetic effect.&lt;/li&gt;
+  &lt;li&gt;where am I in a sequence of steps - VCR programming - gulf of execution&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;did the steps produce what I intended.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;sound for visibility
+** beeping for button presses (informative and annoying)&lt;/li&gt;
+  &lt;li&gt;auditory icons&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;to-err-is-human&quot;&gt;to Err is human&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;slip - subconscious mis-action - pressing the wrong key typing - these are typically small actions - execution phase of a plan. usually easy to detect and correct.
+** happen from lack of attention, multi-tasking.
+** six categories: capture, description, data-driven, associative activation, lack of activation, mode.
+&lt;em&gt;** capture - a frequently done activity is done instead of the intended activity. two different actions have a similar starting sequence and you switch from the intended, typically less used, to the more used.
+**&lt;/em&gt; description - the internal description of an action is not precise and you do the action out of context. the “right” action on the wrong object. putting your coffee in the refrigerator instead of the microwave to heat it. flipping the wrong light switch.
+&lt;em&gt;** data driven - mixing up data - if your adding a series of numbers and someone in a different conversation says a number and you add it in. giving your old phone number instead of your new one.
+**&lt;/em&gt; associative - internal thoughts interfering in actions.
+&lt;em&gt;** loss of activation - forget why you went into the kitchen.
+**&lt;/em&gt; mode errors - when a control has more than one function “modes of operation”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;slips are usually easy to detect because the result doesn’t match the goal, but if there is no feedback it may not be possible to know.&lt;/p&gt;
+
+&lt;p&gt;level problem - goal or intention versus lower level actions.&lt;/p&gt;
+
+&lt;p&gt;error correction seems to start at the lowest level and works out to higher level. This new code is broken, so start looking at the new code, but maybe the tester was testing on the wrong server or deployed the wrong version.&lt;/p&gt;
+
+&lt;h4 id=&quot;design-lessons-from-slips&quot;&gt;design lessons from slips&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;prevention
+** asking for confirmation before deleting, although it usually is more annoying than helpful and you don’t realize that you selected the wrong file until later. confirmation of the action versus that you have the right file. having the trash can is much better because you can easily recover by pulling the file out of the trash.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;detection and correction&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;mistake - choosing the wrong goal - conscious deliberations - thinking your appointment is tomorrow when it was today - can be catastrophic. can be hard to detect because the execution was correct, but done for the wrong reason, over generalize a situation - jump to the wrong conclusion.
+** poor decision, misclassified situation, fail to take all relevant factors into account. non-rational thought.
+** rely on past experience/memory instead of systematic analysis.
+** human thought is not pure logic - jumps and unfounded connections
+** memory - schema theory, frame theory, semantic networks
+&lt;strong&gt;* there is logic/order in individual structures
+*** memory is associative
+*** deductive thought applies the information from one schema to another schema to deduce the properties of it.
+*** default values and exceptions
+*** connectionist approach - neural nets
+**&lt;/strong&gt; discrepant memories (out of the ordinary) carry equal weight to the “normal” ones that happen more frequently - bias behavior to them.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;wide and deep structures - chess moves&lt;/li&gt;
+  &lt;li&gt;shallow structures - may have many top level options, but no deep associations - selecting an ice cream: flavor, amount, container, topping&lt;/li&gt;
+  &lt;li&gt;narrow structures - sequential, very limited variety - recipe&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;####conscious vs. unconscious thought&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;unconscious thought is fast, it uses experience of “regular” or generalized information appropriate to the situation, things you do everyday, biased to the normal.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;conscious thought is slow and laborious, takes different options into account, ponders the situation and rationalizes the explanation. limited by short term memory
+** short term memory - 5-6 “items”, can be overcome by organizing individual items into structures, using subconscious structures, understanding and explanations, more can be reasoned about.
+*** mistakes are made by mismatch, applying the wrong organization structure, understanding or explanation to the wrong situation. this leads to “rare” situations being interpreted as either common or unique resulting in error.
+** explaining away errors because they are the rare situation is common.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;social pressure has a strong influence on behavior.
+** threat of punishment
+** risk and reward
+** time and economic pressures - taking a short-cut in proper procedures to save time or get back on schedule or to avoid extra costs.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;designs can make it easy to err, but difficult or impossible to detect or recover.
+** it should not be possible for one person with one simple error to cause catastrophic failure.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;design to minimize cause of errors and easy to recover.
+** easy to undo an action or hard to do actions that can’t be undone.
+** easy to discover errors and correct them
+** think of errors as approximations in actions to complete a task, as the normal way of doing things.
+** don’t punish a user for making mistakes and don’t take offense, most of all don’t ignore it.
+** normal behavior isn’t always accurate.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;how-to-deal-with-errors&quot;&gt;how to deal with errors&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;warning signals - car beeps when you open the door with the engine running - can’t distinguish deliberate actions from erroneous ones, frequently ignored such that when it is correctly signaling you, you will ignore it as usual.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;forcing function - can’t lock keys in car, you must lock the door from the outside.
+** it isn’t easy to force people to do something they don’t want to do, ex: seat-belts.
+** if you use a forcing function it must be reliable and distinguish legitimate cases from illegitimate.
+** not every case affords forcing functions.
+** interlock - forces proper sequence - ex: microwave can’t be turned on with the door open.
+** lockin - prevent premature stopping of a process. ex: you have unsaved files or unsaved data on a form dialog.
+** lockout -&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;put the required knowledge in the world, don’t require all the knowledge to be in the head.
+** allow for more efficient operation when the user has learned the operations.&lt;/li&gt;
+  &lt;li&gt;use the power of natural and artificial constraints, physical, logical, semantic, and cultural.
+** use forcing functions and natural mappings.&lt;/li&gt;
+  &lt;li&gt;narrow the gulfs of execution and evaluation.
+** make things visible, operations readily available, outcomes apparent.&lt;/li&gt;
+  &lt;li&gt;make the system state easily available and consistent with the goals, intentions and expectations of the user.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;design-challenge&quot;&gt;Design Challenge&lt;/h4&gt;
+
+&lt;p&gt;natural design process - good design evolves - design -&amp;gt; test -&amp;gt; problems -&amp;gt; repeat.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;time constraints - lots of iterations are slow&lt;/li&gt;
+  &lt;li&gt;feedback mechanism required&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;design is a balance of aesthetics, usability, economics and manufacturing.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;why-designers-go-astray&quot;&gt;why designers go astray&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;reward structure is loaded towards aesthetics.&lt;/li&gt;
+  &lt;li&gt;designers aren’t typical users
+    &lt;ul&gt;
+      &lt;li&gt;big difference in the expertise required to be a designer versus a user.&lt;/li&gt;
+      &lt;li&gt;designers can use their own device with knowlege in the head where as a novice user requires knowlegde in the world.&lt;/li&gt;
+      &lt;li&gt;designers must work with real users from the beginning before any decisions are made.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;the user/target audience isn’t always the client/buyer
+    &lt;ul&gt;
+      &lt;li&gt;builders and landlords buy appliances and equipment based on cost and aesthetics more than usability&lt;/li&gt;
+      &lt;li&gt;the government frequently makes decisions based on cost&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;infinite gulf of evaluation - levels of bureaucracy, feedback/desires filtered through multiple levels.&lt;/p&gt;
+
+&lt;h5 id=&quot;complexity-of-the-design-process&quot;&gt;complexity of the design process&lt;/h5&gt;
+
+&lt;p&gt;&lt;em&gt;design is the successive application of constraints until only  unique product is left&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The variety of possible solutions is enormous.
+    &lt;ul&gt;
+      &lt;li&gt;the range of expression granted the designer is vast.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;the level and number of details to account for is astounding.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;varied and obscure uses - “use a pen to set the clock in a car” does the designer of the pen know this requirement?&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;designing for special people
+    &lt;ul&gt;
+      &lt;li&gt;there is no such thing as the “average person” - physical anthropometry&lt;/li&gt;
+      &lt;li&gt;make things adjustable to accommodate different users&lt;/li&gt;
+      &lt;li&gt;left handed versus right handed - how can you adjust for mirror image use?&lt;/li&gt;
+      &lt;li&gt;various capabilities: vision, hearing etc.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;selective attention: problem of focus
+    &lt;ul&gt;
+      &lt;li&gt;limits to what can be focused on&lt;/li&gt;
+      &lt;li&gt;attend to immediate problems and ignore the rest&lt;/li&gt;
+      &lt;li&gt;designers must consider the problems of focus in the design.
+        &lt;ul&gt;
+          &lt;li&gt;use of forcing functions for safety&lt;/li&gt;
+          &lt;li&gt;proper feedback to avert evaluation problems&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;two-deadly-temptations-for-the-designer&quot;&gt;two deadly temptations for the designer&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;creeping featurism
+    &lt;ul&gt;
+      &lt;li&gt;tendency to keep adding new features
+        &lt;ul&gt;
+          &lt;li&gt;require more controls, more feedback to display, or instructions to know&lt;/li&gt;
+          &lt;li&gt;adding more complexity&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;if adding a feature can’t be avoided, can features be organized better? modularity.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;worshipping false images
+    &lt;ul&gt;
+      &lt;li&gt;features for showing off, not using - fancy copiers to make you look cool to clients.&lt;/li&gt;
+      &lt;li&gt;features for the appearance of technical sophistication.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;computer systems
+    &lt;ul&gt;
+      &lt;li&gt;programmers should not be responsible for the computer’s interactions with the user, it is not their expertise.&lt;/li&gt;
+      &lt;li&gt;many programs are too abstract for users&lt;/li&gt;
+      &lt;li&gt;how to do things wrong
+        &lt;ul&gt;
+          &lt;li&gt;make things invisible, widen the gulf of execution, give no feedback&lt;/li&gt;
+          &lt;li&gt;be arbitrary - non-obvious command names (or key combos)&lt;/li&gt;
+          &lt;li&gt;be inconsistent - change the way things are done from screen to screen&lt;/li&gt;
+          &lt;li&gt;use idiosyncratic language - indecipherable error messages&lt;/li&gt;
+          &lt;li&gt;make operations dangerous - lose work by clicking the wrong button.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;Once a satisfactory product has been achieved, further changes may be counterproductive, you have to know when to stop.&lt;/em&gt; pg 150&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;It is a lot easier to determine what is obvious after it has happened&lt;/em&gt; pg 129&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;technology changes quickly, people change slowly.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;People are explanatory creatures&lt;/em&gt; - back story, mental models, interpretations pg 38&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;When ever the number of functions and required operations exceeds the number of controls, the design become arbitrary, unnatural, and complicated.&lt;/em&gt; pq. 31&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">It’s not your fault - bad user experience is the fault of the designer.</summary></entry><entry><title type="html">My Experience with Event Sourcing - Zarex Event processing</title><link href="http://localhost:4000/2020/01/16/ZarexEventProcessing.html" rel="alternate" type="text/html" title="My Experience with Event Sourcing - Zarex Event processing" /><published>2020-01-16T00:00:00-05:00</published><updated>2020-01-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/16/ZarexEventProcessing</id><content type="html" xml:base="http://localhost:4000/2020/01/16/ZarexEventProcessing.html">&lt;p&gt;Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.&lt;/p&gt;
+
+&lt;p&gt;Because we were starting from a more traditional application structure that we were adapting to event based we used some of the existing structures and wrapped them. We already had the concept of an EditModel that contained the changes to make to an entity’s persistent state. The EditModel was translated from json to an object that was passed to a controller which was a UI binding to an EditCommand that took the incoming data and updated a Hibernate persisted entity and subordinate entities in the context of a transaction.&lt;/p&gt;
+
+&lt;p&gt;When we introduced the EventStore we introduced a PersistenceMode to the commands such that each was really two commands, one that would save the EditModel in the EventStore wrapped with some extra event specific data and one that would use the original persistence mechanism to update the hibernate backed entity in a local database for the service to use.&lt;/p&gt;
+
+&lt;p&gt;The EventStore had a concept of entities and their state which was maintained in an entity id table. The identity of an entity included an id assigned by the EventStore plus external keys, for example email. It maintained the latest version (id of the last event submitted) used to validate if an incoming request was based on stale data and should be rejected, whether the entity was deleted such that external keys could be reused, and a table of relationships between entities that was used to validate if an object could be deleted or not.&lt;/p&gt;
+
+&lt;p&gt;An important concept was that an event wasn’t really “something that already happened” until it was accepted by the EventStore. The expectation was that any event in the EventStore is valid and shall be processed by the services that support that type of event so that the state of an entity is consistent between all services.&lt;/p&gt;
+
+&lt;p&gt;Each service maintained its own state for all entities. The state may look different, for example in our authentication service we only cared about email, password and hash salt, and in our communications service we only care about contact info and whether a user is opted in to receiving emails about a specific product. In our data warehouse there were lots of different representations of a user, plus data from external sources so that we could report on different aspects. We setup up our services this way so that they could work completely independent of each other and didn’t make requests to each other for data.&lt;/p&gt;
+
+&lt;p&gt;There is a logical entity type, this represents a concept such as a User, this was used to associate different persistent models and event data to the same logical entities and allow services to indicate they care about events related to those entities even if the specific event may not be relevant to their local representation of the entity. It was the services responsability to process the message and ignore it if the data wasn’t relevant. For example the authentication service cared about users’ email and password, but not about users’ phone number so if an event came in to change the phone number it would process the event but do nothing. This relates to one of the problems with our rigorous consistency.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.</summary></entry><entry><title type="html">Getting back to FUNctional programming with jsrx</title><link href="http://localhost:4000/2019/11/22/jsrx.html" rel="alternate" type="text/html" title="Getting back to FUNctional programming with jsrx" /><published>2019-11-22T00:00:00-05:00</published><updated>2019-11-22T00:00:00-05:00</updated><id>http://localhost:4000/2019/11/22/jsrx</id><content type="html" xml:base="http://localhost:4000/2019/11/22/jsrx.html">&lt;p&gt;I’m working on a demo for upgrading https://globalofficelink.com/ to a single page app using Angular.&lt;/p&gt;
+
+&lt;p&gt;I want to give the listings search page a better user experience. The minimum search is by type of listing (buy/rent versus
+ selling) and country. There aren’t that many countries with listings so having a user select one of 200+ countries to find
+ a listing is a terrible experience. I want the user to only have to select from countries that have listings.&lt;/p&gt;
+
+&lt;p&gt;I could easily do this as a query on a database:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   select distinct c.* 
+   from country c
+   left join listing l on (c.countryCode == l.countryCode)
+   where l.id is not null 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;except relational databases and SQL are so passé. I’m getting my countries from a REST service and if I want to be a UI 
+ guy I have to do everything on the UI side, pulling from different services. I’ll assume I have a listing service but 
+ for now I’ll pull dummy ones from an array.&lt;/p&gt;
+
+&lt;p&gt;For some reason I thought pulling countries from a service would return a stream of countries, but in reality it returns
+ a stream of country arrays with a single item. So right off the bat I had it wrong as &lt;code class=&quot;highlighter-rouge&quot;&gt;httpClient.get&amp;lt;Country&amp;gt;(this.countriesAPI)&lt;/code&gt;
+ but Typescript didn’t complain because it had no idea what the service was returning. Plus I assumed an &lt;code class=&quot;highlighter-rouge&quot;&gt;Observable&lt;/code&gt; was
+ iterable, but it wasn’t. I wasn’t sure how to turm my stream of country arrays into a stream of country so I just filtered
+ the countries array with the array filter method and a static array of country codes.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable via array filter of country codes
+   public getActiveCountriesTakeOne(): Observable&amp;lt;Country[]&amp;gt; {
+     return this.countries.pipe(
+       map(countries =&amp;gt; countries.filter(country =&amp;gt; ['US', 'CA', 'UK'].includes(country.alpha2Code))), tap(console.log));
+   }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;the rxjs map takes the array as one item, applies the function &lt;code class=&quot;highlighter-rouge&quot;&gt;countries.filter(...)&lt;/code&gt; and returns the correct set of
+countries I want. This seems inelegant and kind of like cheating so the next step was to turn my country array 
+into a stream of countries. This stumped me for a bit going through the documentation of functions, for example the
+description for flatMap:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An Observable that emits the result of applying the projection function (and the optional deprecated resultSelector)
+to each item emitted by the source Observable and merging the results of the Observables obtained from this transformation.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;while I’m sure this is technically correct it is indecipherable to me and the fact that &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country)&lt;/code&gt; converts
+a stream of Country[] into a stream of Country seems like witchcraft. It takes an item from the source stream, in
+this case a Country[] and makes that an Observable, subscribes to it and then applies the projection function, in this case
+&lt;code class=&quot;highlighter-rouge&quot;&gt;country&lt;/code&gt;, to the items in that stream, which just returns the item.&lt;/p&gt;
+
+&lt;p&gt;After flattening and mapping I could then filter the countries &lt;code class=&quot;highlighter-rouge&quot;&gt;filter(country =&amp;gt; ['US', 'CA', 'MX'].includes(country.alpha2Code))&lt;/code&gt;
+but now I’m returning a stream of Countries, but the Select control doesn’t like that as it isn’t iterable. I need to return
+a single item with an array. Hello reduce, you have a funny name, why isn’t it collect? It in Lisp and XSLT you use tail recursion
+but this is more like unwinding recursion into iteration with a collection, anyway now I have a pure observable way of
+generating my active countries:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable filtering by array
+   public getActiveCountriesTakeTwo(): Observable&amp;lt;Country[]&amp;gt; {
+     return this.countries.pipe(
+       flatMap(country =&amp;gt; country),
+       filter(country =&amp;gt; ['US', 'CA', 'MX'].includes(country.alpha2Code)),
+       reduce((countries, country) =&amp;gt; countries.concat(country), []), tap(console.log));
+   }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The final problem to solve is the static array of active country codes, this needs to be from the active listings. I mocked
+ up listings as an array listings with only a countryCode and then making it into an observable. I struggled trying to do
+ this as a single pipeline. I then outlined what I wanted. I want to take my stream of countries and if the country was
+ in the collection of distinct country codes from the listings, return it. I need the countries individually to see if they
+ are in the list, but I need the active country codes collectively. I broke the problem into two parts, make a distinct
+ list of country codes and then apply that to the countries. I already know that I can use &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap&lt;/code&gt; to turn my stream
+ of listing[] into a stream of listings, I thought I could be clever and map directly to countryCode like 
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country.alpha2Code)&lt;/code&gt; but that didn’t work. There is probably a way to get that to work but using 
+ https://rxjs-dev.firebaseapp.com/operator-decision-tree I found &lt;code class=&quot;highlighter-rouge&quot;&gt;pluck()&lt;/code&gt; and that is pretty clean. Then &lt;code class=&quot;highlighter-rouge&quot;&gt;distinct()&lt;/code&gt;
+ is just like SQL, finally turn this back into an array with reduce. How do I bring two streams together? Using the 
+ operator decision tree when I get my countries I want to then apply the filtering to see if it is in the active country
+ code array, it came up with &lt;code class=&quot;highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt;. Using this took some time to wrap my head around but basically I take
+  a country from the main observable and the array from the country codes and combine into &lt;code class=&quot;highlighter-rouge&quot;&gt;{country,activeCountryCodes}&lt;/code&gt;
+  I then pass that single item into a filter
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;filter((countryWithCountryCodes) =&amp;gt; countryWithCountryCodes.countryCodes.includes(countryWithCountryCodes.country.alpha2Code))&lt;/code&gt;
+  and if the country matches a code in the array it gets returned, otherwise not. Finally I collect that back into an
+  array of countries for my select list and voilà.&lt;/p&gt;
+
+&lt;p&gt;I don’t know if this is true, but I expect if I setup my service observables to poll the services and then switched
+  to use &lt;code class=&quot;highlighter-rouge&quot;&gt;combineLatest()&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt; then my select list of countries for searching would magically
+  get updated if a new listing in a new country were added.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import { Listing } from './../listings.types';
+ import { Code, SIZE_UNITS } from './../../codes/codes.types';
+ import { CodesService } from './../../codes/codes.service';
+ import { Injectable } from '@angular/core';
+ import { Observable, of } from 'rxjs';
+ import { tap, filter, flatMap, map, reduce, withLatestFrom, distinct, pluck } from 'rxjs/operators';
+ import { HttpClient } from '@angular/common/http';
+ import { Country } from '../../country.types';
+ 
+ 
+ @Injectable({
+   providedIn: 'root'
+ })
+ export class ListingsDataService {
+   // https://restcountries.eu/rest/v2/all?fields=name;alpha2Code  -- returns just {&quot;name&quot;:&quot;Afghanistan&quot;,&quot;alpha2Code&quot;:&quot;AF&quot;}
+   private countriesAPI = 'https://restcountries.eu/rest/v2/all';
+ 
+   private httpClient: HttpClient;
+   private codesService: CodesService;
+   private countries: Observable&amp;lt;Country[]&amp;gt;;
+   private listings: Observable&amp;lt;Listing[]&amp;gt;;
+ 
+   constructor(httpClient: HttpClient) {
+     this.httpClient = httpClient;
+ 
+     this.countries = this.httpClient.get&amp;lt;Country[]&amp;gt;(this.countriesAPI);
+     this.listings = of([
+       {id: 1, countryCode: 'US'},
+       {id: 2, countryCode: 'US'},
+       {id: 3, countryCode: 'US'},
+       {id: 4, countryCode: 'US'},
+       {id: 5, countryCode: 'CA'},
+       {id: 6, countryCode: 'CA'},
+       {id: 7, countryCode: 'CA'},
+       {id: 8, countryCode: 'MX'}
+     ]);
+    }
+ 
+   public getAllCountries(): Observable&amp;lt;Country[]&amp;gt; {
+     return this.countries.pipe(tap(console.log));
+   }
+ 
+   // observable via array filter of country codes
+   public getActiveCountriesTakeOne(): Observable&amp;lt;Country[]&amp;gt; {
+     return this.countries.pipe(
+       map(countries =&amp;gt; countries.filter(country =&amp;gt; ['US', 'CA', 'UK'].includes(country.alpha2Code))), tap(console.log));
+   }
+ 
+   // observable filtering by array
+   public getActiveCountriesTakeTwo(): Observable&amp;lt;Country[]&amp;gt; {
+     return this.countries.pipe(
+       flatMap(country =&amp;gt; country),
+       filter(country =&amp;gt; ['US', 'CA', 'MX'].includes(country.alpha2Code)),
+       reduce((countries, country) =&amp;gt; countries.concat(country), []), tap(console.log));
+   }
+   
+   // observable countries filtered by unique country code observable from listings
+   public getActiveCountries(): Observable&amp;lt;Country[]&amp;gt; {
+     // observable of unique country codes array from listings
+     let countryCodesFromListings: Observable&amp;lt;string[]&amp;gt; = this.listings.pipe(
+       flatMap(listing =&amp;gt; listing), 
+       pluck('countryCode'),
+       distinct(), 
+       reduce((uniqueCountryCodes,countryCode) =&amp;gt; uniqueCountryCodes.concat(countryCode), []),
+       tap(console.log)
+     );
+     // obserable of active countries filtered by listing country codes
+     return this.countries.pipe(
+       flatMap(country =&amp;gt; country),
+       withLatestFrom(countryCodesFromListings, (country, countryCodes) =&amp;gt; ({country,countryCodes})),
+       filter((countryWithCountryCodes) =&amp;gt; countryWithCountryCodes.countryCodes.includes(countryWithCountryCodes.country.alpha2Code)),
+       reduce((activeCountries, countryWithCountryCodes) =&amp;gt; activeCountries.concat(countryWithCountryCodes.country), []), 
+       tap(console.log)
+     );
+   }
+ }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ron Regan</name></author><summary type="html">I’m working on a demo for upgrading https://globalofficelink.com/ to a single page app using Angular.</summary></entry><entry><title type="html">TODO: My Experience with Event Sourcing</title><link href="http://localhost:4000/2018/09/27/MyExperienceWithEventSourcing.html" rel="alternate" type="text/html" title="TODO: My Experience with Event Sourcing" /><published>2018-09-27T00:00:00-04:00</published><updated>2018-09-27T00:00:00-04:00</updated><id>http://localhost:4000/2018/09/27/MyExperienceWithEventSourcing</id><content type="html" xml:base="http://localhost:4000/2018/09/27/MyExperienceWithEventSourcing.html">&lt;p&gt;Watching this video https://youtu.be/A0goyZ9F4bg reminded me that I need to write about my experience moving from a typical
+single relational database layered architecture to an event-store based micro-service architecture, particularly getting into
+the details of choices and mistakes.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Watching this video https://youtu.be/A0goyZ9F4bg reminded me that I need to write about my experience moving from a typical single relational database layered architecture to an event-store based micro-service architecture, particularly getting into the details of choices and mistakes.</summary></entry><entry><title type="html">My Struggles with UI Coding: JavaScript and Angular</title><link href="http://localhost:4000/2018/07/31/StrugglesWithUICoding.html" rel="alternate" type="text/html" title="My Struggles with UI Coding: JavaScript and Angular" /><published>2018-07-31T00:00:00-04:00</published><updated>2018-07-31T00:00:00-04:00</updated><id>http://localhost:4000/2018/07/31/StrugglesWithUICoding</id><content type="html" xml:base="http://localhost:4000/2018/07/31/StrugglesWithUICoding.html">&lt;h2 id=&quot;history&quot;&gt;History&lt;/h2&gt;
+
+&lt;p&gt;In 2005 I started working for a company that focused on mobile apps. I decided to stay focused on server side coding because I thought in time the need for specialized phone specific code would go away. But I didn’t keep up with web coding. When we built a web UI for administration, my team hadn’t used javascript in a while so I looked for a Java solution. I compared Google Web Toolkit and the Echo2 framework. I went with Echo2 because it was much more like Java’s AWT/Swing and we had a single language to work with.&lt;/p&gt;
+
+&lt;p&gt;I didn’t get back to “real” client web coding until around 2010 or 2011. Five or six web years is like 100 human years. Even then mobile still wasn’t the same as desktop so I didn’t catch on to the new web frameworks. Now I find myself at a disadvantage. The way JavaScript was used back in the early 2000s is completely different. The programming model on the client side has advanced to complex multi-file modules. I feel like I missed something big somewhere as I struggle with seemingly simple issues.&lt;/p&gt;
+
+&lt;h2 id=&quot;struggles&quot;&gt;Struggles&lt;/h2&gt;
+
+&lt;p&gt;For example I was creating a new form for collecting reporting criteria that was very similar to another report page so I started by copying the files for the other report, renaming them and then editing the contents. At first nothing worked, but I got passed that relatively easily by restarting the buld/server. Then when I loaded the page most things were looking good except the first two date input fields. The labels for the start/end dates in the schedule select failed to display, both showed as `` and I had the following stack trace.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;angular.js:15288 TypeError: Cannot read property 'label' of undefined
+    at activate (pqScheduleWidgetDirective.js:31)
+    at pqScheduleWidgetController (pqScheduleWidgetDirective.js:22)
+    at Object.invoke (angular.js:4898)
+    at O.instance (angular.js:11101)
+    at q (angular.js:9867)
+    at angular.js:10305
+    at angular.js:17099
+    at m.$digest (angular.js:18238)
+    at m.$apply (angular.js:18604)
+    at l (angular.js:12404)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This made it seem like there was a problem with how I was configuring our custom schedule control. I can’t debug in the browser because the references to code in the stack trace open as empty files. Our build process obfuscates and merges the code into a single file. There is a mapping file that suppose to get loaded in the browser so the compressed code can be viewed and debugged as the source code, but it doesn’t work, so I have to guess my way around the code with alerts or commenting out changes I made until I happen on the problem.&lt;/p&gt;
+
+&lt;p&gt;Long story short, I had a typo in my model name in the html template. there was no indication in the file to the error. I apparently cut and pasted here and left an errant ‘P’ in the model reference, after removing it things worked fine. This cost me 2 hours.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;formly-form model=&quot;vm.reportPCMEOutcomesView&quot; fields=&quot;vm.formFields&quot; options=&quot;vm.formOptions&quot; ng-if=&quot;vm.reportCMEOutcomesView&quot;&amp;gt;&amp;lt;/formly-form&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is were I feel like I’m missing something. Debugging in Java is such a joy compared to Visual Basic circa 1997 or C via gdb in the early 90s. Debugging in Chrome isn’t bad with un-obfuscated code, I can set break points and view data values. But stepping into library code is terrible.&lt;/p&gt;
+
+&lt;p&gt;There are other things about UI development. For example I lost time with an AngularJS module issue. Again I was copying and pasting a file someone else made to my reporting module. I changed the module name to match the name of the module I was putting it.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  angular
+    .module('some.module', [])
+    .directive(...)
+  ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After I did this I started getting errors that my controller wasn’t defined, making me think I messed up something else. What really happened is that I didn’t remove the second parameter to the module function &lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; and now I redefining the module, blowing away all the other things I had added to it. I didn’t get an error that I was redefining an existing module which seems like something you shouldn’t be able to do. My new file should have started like this&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  angular
+    .module('some.module')
+    .directive(...)
+  ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Again this took me a while to figure out. Am I struggling because I don’t understand a tenet of JavaScript development or is this just how it is, and if so why do people work this way?&lt;/p&gt;
+
+&lt;h2 id=&quot;coda&quot;&gt;Coda&lt;/h2&gt;
+
+&lt;p&gt;Before our last UI expert left we decided to switch to using Typescript. In most cases we just simply renamed some files, but in others we did use real Typescript and that helped with compile time errors, until we moved to Intellij Ultimate with real Typescript support. That was awesome. Unfortunately he left and the new UI expert isn’t in to Typescript. Intellij Ultimate is still much better with regular JavaScript identifying typos and being able to find where functions are defined, so I have that. Debugging is still a pain.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">History</summary></entry><entry><title type="html">Modularity, ManyToAny, and Bidirectional Associations Follow Up</title><link href="http://localhost:4000/2018/06/29/Modularity2.html" rel="alternate" type="text/html" title="Modularity, ManyToAny, and Bidirectional Associations Follow Up" /><published>2018-06-29T00:00:00-04:00</published><updated>2018-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2018/06/29/Modularity2</id><content type="html" xml:base="http://localhost:4000/2018/06/29/Modularity2.html">&lt;h2 id=&quot;the-solution&quot;&gt;The Solution&lt;/h2&gt;
 
 &lt;p&gt;This is the solution to the problem described in &lt;a href=&quot;/2018/06/18/Modularity.html&quot;&gt;Modularity, ManyToAny, and Bidirectional Associations&lt;/a&gt;&lt;/p&gt;
 
