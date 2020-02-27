@@ -10,7 +10,7 @@ I find requirements the hard part of software development because communication 
 1. What the user really wants.
 1. What the user thinks they want.
 1. What the user asks for.
-1. How I interpret what the user asks for.
+1. How I interpret what the user asks for (filling in details with my knowledge of the context.)
 1. What I conceptualize that meets my interpretation of what the user wants.
     * Mapping my understanding of the requirements to an abstract solution that I think will meet the requirements.
 1. What I deliver
