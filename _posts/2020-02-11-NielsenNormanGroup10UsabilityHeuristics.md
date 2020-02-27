@@ -23,7 +23,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
 * reliable and predictable - creates trust
 
 1. Match between the system and real world
-
 * use language and concepts from real world
   * terms familiar to the user rather than system oriented 
   * instead of marketing jargon use regular language
@@ -34,7 +33,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
 * design for them and not you.
 
 1. User Control and Freedom
-
 * need a way to back out of a decision
   * back/cancel button
   * undo
@@ -42,7 +40,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
 * foster a sense of freedom 
 
 1. Consistency and Standards
-
 * internal and external
   * internal - in a product or family 
     * color for call to action buttons 
@@ -51,7 +48,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
   * don't force users to learn something new - unless it is worth the cost
 
 1. Error Prevention
-
 * don't let users do something catastrophic by accident
   * high cost effects
 * location of a button
@@ -60,7 +56,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
   * reply all - timer before actually sending?
 
 1. Recognition vs. Recall
-
 * why is recognition easier than recall
   * is the information provided correct
 * memory retrieval - the more ques we have the easier to retreive
@@ -68,7 +63,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
 * minimize user working
 
 1. Flexibility and Efficiency of Use
-
 * cntrl-c to copy versus right click copy versus edit menu copy option
 * let the user select their prefered way to work
 * accelerator - speeds up interaction for experienced users
@@ -76,7 +70,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
 * visibility for new users so they aren't overwelmed.
 
 1. Aesthetic and Minimalist Design
-
 * focus on the essentials
   * doesn't mean flat or monochromatic colors
   * keeping the content in the visual design focused on essentials
@@ -87,7 +80,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
 * communicate don't decorate
 
 1. Recognize, Diagnose and Recover from Errors
-
 * clearly inform users when an error has occurred
   * visual treatments (colors) and error message
   * what is the problem, in regular language
@@ -96,7 +88,6 @@ also see [Nielsen Norman Group's page on 10 Usability Heuristics](https://www.nn
 * gmail - supports undoing sending an email
 
 1. Help and Documentation
-
 * should be as intuitive as possible not to need helpful, but...
 * consider:
   * is it easy to search/find helpful

@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-11T23:05:58-05:00</updated><id>http://localhost:4000/</id><title type="html">RReganJr Software Developer</title><subtitle>musings</subtitle><author><name>Ron Regan</name></author><entry><title type="html">10 Usability Heuristics for User Interface Design</title><link href="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html" rel="alternate" type="text/html" title="10 Usability Heuristics for User Interface Design" /><published>2020-02-11T00:00:00-05:00</published><updated>2020-02-11T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics</id><content type="html" xml:base="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html">&lt;h3 id=&quot;10-usability-heuristics-for-user-interface-design&quot;&gt;10 Usability Heuristics for User Interface Design&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-13T21:43:55-05:00</updated><id>http://localhost:4000/</id><title type="html">RReganJr Software Developer</title><subtitle>musings</subtitle><author><name>Ron Regan</name></author><entry><title type="html">What Users Really Want Versus What Gets Delivered</title><link href="http://localhost:4000/2020/02/13/WantVersusReceive.html" rel="alternate" type="text/html" title="What Users Really Want Versus What Gets Delivered" /><published>2020-02-13T00:00:00-05:00</published><updated>2020-02-13T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/13/WantVersusReceive</id><content type="html" xml:base="http://localhost:4000/2020/02/13/WantVersusReceive.html">&lt;h3 id=&quot;what-users-really-want-versus-what-gets-delivered&quot;&gt;What Users Really Want Versus What Gets Delivered&lt;/h3&gt;
+
+&lt;p&gt;I find requirements the hard part of software development because communication is so hard; much harder than it seems it should be.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What the user really wants.&lt;/li&gt;
+  &lt;li&gt;What the user thinks they want.&lt;/li&gt;
+  &lt;li&gt;What the user asks for.&lt;/li&gt;
+  &lt;li&gt;How I interpret what the user asks for.&lt;/li&gt;
+  &lt;li&gt;What I conceptualize that meets my interpretation of what the user wants.
+    &lt;ul&gt;
+      &lt;li&gt;Mapping my understanding of the requirements to an abstract solution that I think will meet the requirements.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What I deliver&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In a perfect world “what I deliver” equals “what the user really wants”. In the real world what I deliver is close to what I think was requested.&lt;/p&gt;
+
+&lt;h4 id=&quot;language-and-understanding&quot;&gt;Language and Understanding&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sometimes a word or statement means different things to different people.&lt;/li&gt;
+  &lt;li&gt;Sometimes people don’t say what they mean, using the wrong word or combination of words.&lt;/li&gt;
+  &lt;li&gt;Sometimes people mishear or misinterpret what someone else says.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I worked on a project where my interpretation of the ask was for an international site and a domestic site, and I’m pretty sure it was discussed as the international site should do this and the domestic should do that. We had two different domains. Within a month of the go live date during a demo talking about redirecting users from the domestic site to the international based on registratoin country I was told there should be only one site that shows users different content for domestic versus international based on the registration information.&lt;/p&gt;
+
+&lt;h4 id=&quot;details&quot;&gt;Details&lt;/h4&gt;
+
+&lt;p&gt;Software is effectively unconstrained with respect to options. Because of this a lot of detail is required to produce it.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">What Users Really Want Versus What Gets Delivered</summary></entry><entry><title type="html">10 Usability Heuristics for User Interface Design</title><link href="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html" rel="alternate" type="text/html" title="10 Usability Heuristics for User Interface Design" /><published>2020-02-11T00:00:00-05:00</published><updated>2020-02-11T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics</id><content type="html" xml:base="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html">&lt;h3 id=&quot;10-usability-heuristics-for-user-interface-design&quot;&gt;10 Usability Heuristics for User Interface Design&lt;/h3&gt;
 
 &lt;p&gt;These are my notes for the &lt;a href=&quot;https://www.youtube.com/playlist?list=PLJOFJ3Ok_idtb2YeifXlG1-TYoMBLoG6I&quot;&gt;Youtube playlist The 10 Usability Heuristics&lt;/a&gt;&lt;/p&gt;
 
@@ -23,167 +54,139 @@
     * reliable and predictable - creates trust&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Match between the system and real world&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;use language and concepts from real world
+  &lt;li&gt;Match between the system and real world
     &lt;ul&gt;
-      &lt;li&gt;terms familiar to the user rather than system oriented&lt;/li&gt;
-      &lt;li&gt;instead of marketing jargon use regular language&lt;/li&gt;
-      &lt;li&gt;mental models&lt;/li&gt;
-      &lt;li&gt;skeuomorphic - digital experience to match/align a physical experience.&lt;/li&gt;
-      &lt;li&gt;real world conventions&lt;/li&gt;
-      &lt;li&gt;use user’s language&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;design for them and not you.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;User Control and Freedom&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;need a way to back out of a decision
-    &lt;ul&gt;
-      &lt;li&gt;back/cancel button&lt;/li&gt;
-      &lt;li&gt;undo&lt;/li&gt;
-      &lt;li&gt;must be visible to the user&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;foster a sense of freedom&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Consistency and Standards&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;internal and external
-    &lt;ul&gt;
-      &lt;li&gt;internal - in a product or family
+      &lt;li&gt;use language and concepts from real world
         &lt;ul&gt;
-          &lt;li&gt;color for call to action buttons&lt;/li&gt;
+          &lt;li&gt;terms familiar to the user rather than system oriented&lt;/li&gt;
+          &lt;li&gt;instead of marketing jargon use regular language&lt;/li&gt;
+          &lt;li&gt;mental models&lt;/li&gt;
+          &lt;li&gt;skeuomorphic - digital experience to match/align a physical experience.&lt;/li&gt;
+          &lt;li&gt;real world conventions&lt;/li&gt;
+          &lt;li&gt;use user’s language&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;external - conventions for industry or in general
+      &lt;li&gt;design for them and not you.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;User Control and Freedom
+    &lt;ul&gt;
+      &lt;li&gt;need a way to back out of a decision
         &lt;ul&gt;
-          &lt;li&gt;shopping cart - standard across most sites - upper right corner&lt;/li&gt;
+          &lt;li&gt;back/cancel button&lt;/li&gt;
+          &lt;li&gt;undo&lt;/li&gt;
+          &lt;li&gt;must be visible to the user&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;don’t force users to learn something new - unless it is worth the cost&lt;/li&gt;
+      &lt;li&gt;foster a sense of freedom&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Error Prevention&lt;/li&gt;
+  &lt;li&gt;Consistency and Standards
+    &lt;ul&gt;
+      &lt;li&gt;internal and external
+        &lt;ul&gt;
+          &lt;li&gt;internal - in a product or family&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+      &lt;li&gt;color for call to action buttons 
+      * external - conventions for industry or in general&lt;/li&gt;
+      &lt;li&gt;shopping cart - standard across most sites - upper right corner
+      * don’t force users to learn something new - unless it is worth the cost&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Error Prevention
+    &lt;ul&gt;
+      &lt;li&gt;don’t let users do something catastrophic by accident
+        &lt;ul&gt;
+          &lt;li&gt;high cost effects&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;location of a button&lt;/li&gt;
+      &lt;li&gt;confirmation dialog?&lt;/li&gt;
+      &lt;li&gt;support undo function so error doesn’t become permanent
+        &lt;ul&gt;
+          &lt;li&gt;reply all - timer before actually sending?&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Recognition vs. Recall
+    &lt;ul&gt;
+      &lt;li&gt;why is recognition easier than recall
+        &lt;ul&gt;
+          &lt;li&gt;is the information provided correct&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;memory retrieval - the more ques we have the easier to retreive&lt;/li&gt;
+      &lt;li&gt;show the commands and the user can recognize what they want versus remembering the command on a command line&lt;/li&gt;
+      &lt;li&gt;minimize user working&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Flexibility and Efficiency of Use
+    &lt;ul&gt;
+      &lt;li&gt;cntrl-c to copy versus right click copy versus edit menu copy option&lt;/li&gt;
+      &lt;li&gt;let the user select their prefered way to work&lt;/li&gt;
+      &lt;li&gt;accelerator - speeds up interaction for experienced users&lt;/li&gt;
+      &lt;li&gt;macros&lt;/li&gt;
+      &lt;li&gt;visibility for new users so they aren’t overwelmed.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Aesthetic and Minimalist Design
+    &lt;ul&gt;
+      &lt;li&gt;focus on the essentials
+        &lt;ul&gt;
+          &lt;li&gt;doesn’t mean flat or monochromatic colors&lt;/li&gt;
+          &lt;li&gt;keeping the content in the visual design focused on essentials&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;signal to noise ration - ratio of relevant to irrelevant information
+        &lt;ul&gt;
+          &lt;li&gt;text content, animation&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;every extra piece of information in the UI takes away from the relevant information&lt;/li&gt;
+      &lt;li&gt;visual - graphics or photos - support the primary goals of users -&lt;/li&gt;
+      &lt;li&gt;communicate don’t decorate&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Recognize, Diagnose and Recover from Errors
+    &lt;ul&gt;
+      &lt;li&gt;clearly inform users when an error has occurred
+        &lt;ul&gt;
+          &lt;li&gt;visual treatments (colors) and error message&lt;/li&gt;
+          &lt;li&gt;what is the problem, in regular language&lt;/li&gt;
+          &lt;li&gt;offer users a solution to solve the problem&lt;/li&gt;
+          &lt;li&gt;best - link to solve the problem&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;gmail - supports undoing sending an email&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Help and Documentation
+    &lt;ul&gt;
+      &lt;li&gt;should be as intuitive as possible not to need helpful, but…&lt;/li&gt;
+      &lt;li&gt;consider:
+        &lt;ul&gt;
+          &lt;li&gt;is it easy to search/find helpful&lt;/li&gt;
+          &lt;li&gt;focused on user’s task&lt;/li&gt;
+          &lt;li&gt;list steps to be carried out&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;search suggestions&lt;/li&gt;
+      &lt;li&gt;minimize the interaction cost to the user&lt;/li&gt;
+      &lt;li&gt;make help contextual
+        &lt;ul&gt;
+          &lt;li&gt;pop over&lt;/li&gt;
+          &lt;li&gt;screen shots&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;use analytics to see it works&lt;/li&gt;
+      &lt;li&gt;don’t overload users with unnecessary information&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;don’t let users do something catastrophic by accident
-    &lt;ul&gt;
-      &lt;li&gt;high cost effects&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;location of a button&lt;/li&gt;
-  &lt;li&gt;confirmation dialog?&lt;/li&gt;
-  &lt;li&gt;support undo function so error doesn’t become permanent
-    &lt;ul&gt;
-      &lt;li&gt;reply all - timer before actually sending?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Recognition vs. Recall&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;why is recognition easier than recall
-    &lt;ul&gt;
-      &lt;li&gt;is the information provided correct&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;memory retrieval - the more ques we have the easier to retreive&lt;/li&gt;
-  &lt;li&gt;show the commands and the user can recognize what they want versus remembering the command on a command line&lt;/li&gt;
-  &lt;li&gt;minimize user working&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Flexibility and Efficiency of Use&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;cntrl-c to copy versus right click copy versus edit menu copy option&lt;/li&gt;
-  &lt;li&gt;let the user select their prefered way to work&lt;/li&gt;
-  &lt;li&gt;accelerator - speeds up interaction for experienced users&lt;/li&gt;
-  &lt;li&gt;macros&lt;/li&gt;
-  &lt;li&gt;visibility for new users so they aren’t overwelmed.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Aesthetic and Minimalist Design&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;focus on the essentials
-    &lt;ul&gt;
-      &lt;li&gt;doesn’t mean flat or monochromatic colors&lt;/li&gt;
-      &lt;li&gt;keeping the content in the visual design focused on essentials&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;signal to noise ration - ratio of relevant to irrelevant information
-    &lt;ul&gt;
-      &lt;li&gt;text content, animation&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;every extra piece of information in the UI takes away from the relevant information&lt;/li&gt;
-  &lt;li&gt;visual - graphics or photos - support the primary goals of users -&lt;/li&gt;
-  &lt;li&gt;communicate don’t decorate&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Recognize, Diagnose and Recover from Errors&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;clearly inform users when an error has occurred
-    &lt;ul&gt;
-      &lt;li&gt;visual treatments (colors) and error message&lt;/li&gt;
-      &lt;li&gt;what is the problem, in regular language&lt;/li&gt;
-      &lt;li&gt;offer users a solution to solve the problem&lt;/li&gt;
-      &lt;li&gt;best - link to solve the problem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;gmail - supports undoing sending an email&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Help and Documentation&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;should be as intuitive as possible not to need helpful, but…&lt;/li&gt;
-  &lt;li&gt;consider:
-    &lt;ul&gt;
-      &lt;li&gt;is it easy to search/find helpful&lt;/li&gt;
-      &lt;li&gt;focused on user’s task&lt;/li&gt;
-      &lt;li&gt;list steps to be carried out&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;search suggestions&lt;/li&gt;
-  &lt;li&gt;minimize the interaction cost to the user&lt;/li&gt;
-  &lt;li&gt;make help contextual
-    &lt;ul&gt;
-      &lt;li&gt;pop over&lt;/li&gt;
-      &lt;li&gt;screen shots&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;use analytics to see it works&lt;/li&gt;
-  &lt;li&gt;don’t overload users with unnecessary information&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;h4 id=&quot;bonus-material-&quot;&gt;Bonus Material :)&lt;/h4&gt;
 
@@ -1027,4 +1030,4 @@ the details of choices and mistakes.&lt;/p&gt;</content><author><name>Ron Regan<
 
 &lt;p&gt;Now I’m stuck because I use a Hibernate many-to-any relation from the annotations to the requirement entities and the @AnyMetaDef requires linking to the classes that are referenced, and that leads back to a cyclic dependency. I could probably cheat and do the meta def mapping in an xml file, but that is really a technical solution that breaks the independency goal of modules which is the point of this exercise.&lt;/p&gt;
 
-&lt;p&gt;What I really want is an independent annotation service that allows adding notes to any thing, but is also aware of events and changes so it can respond to changes on those tings.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">I like to use my old school project to experiment with new development techniques and technology. One thing I’ve found is that organizing code into Java packages doesn’t make code modular and easy to reuse; over time the code falls into the big ball of mud pattern. I’m working on splitting my project into multiple modules via Maven and Intellij.</summary></entry><entry><title type="html">Hello</title><link href="http://localhost:4000/2018/06/15/hello.html" rel="alternate" type="text/html" title="Hello" /><published>2018-06-15T00:00:00-04:00</published><updated>2018-06-15T00:00:00-04:00</updated><id>http://localhost:4000/2018/06/15/hello</id><content type="html" xml:base="http://localhost:4000/2018/06/15/hello.html">&lt;p&gt;Just saying hello.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Just saying hello.</summary></entry></feed>
+&lt;p&gt;What I really want is an independent annotation service that allows adding notes to any thing, but is also aware of events and changes so it can respond to changes on those tings.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">I like to use my old school project to experiment with new development techniques and technology. One thing I’ve found is that organizing code into Java packages doesn’t make code modular and easy to reuse; over time the code falls into the big ball of mud pattern. I’m working on splitting my project into multiple modules via Maven and Intellij.</summary></entry></feed>
