@@ -359,7 +359,66 @@ infinite gulf of evaluation - levels of bureaucracy, feedback/desires filtered t
     * use idiosyncratic language - indecipherable error messages
     * make operations dangerous - lose work by clicking the wrong button.
     
-    
+#### User Centered Design
+
+* Make it easy for the user to know what actions are possible at any time
+* Make things visible
+  * the conceptual model
+  * alternative actions
+  * results of actions
+* Make it easy to evaluate the current state of the system
+* Use natural mappings
+  * between intentions and the possible actions
+  * between actions and results
+  * what is visible and how it relates to system state 
+
+*in other words*
+* The user can figure out what to do
+* The user can tell what is going on
+
+##### Seven Principles for Transforming Difficult Tasks into Simple Ones
+
+* Use knowledge in the world and in the head
+  * people learn better/feel comfortable when knowledge is externally available.
+    * explicit or derived through constraints
+  * knowledge in the world is only useful if it is natural/easily mapped to actions and outcomes.
+  * allow users to use knowledge in the head to make things faster.
+    * (key-chords versus navigating through menus)
+    * the design shouldn't impede a user that knows what they want. 
+  * good conceptual models make things easier.
+    * natural - works the way the user thinks it should.
+    * consistent - similar goals use similar actions
+    * three models
+      * design - designers conceptualization of how it works
+      * user - users self explanation of how it works
+      * system image - the user facing interface to the system
+      * ideally the user model = design model, for this to happen the system image must communicate the design image to the user
+      * the user aquires all knowledge of the system through the system image.
+    * manuals/help - if you need them, something is wrong.
+* Simplify the Structure of tasks
+  * people only have limited resources for performing tasks
+    * memory
+      * short term - limited space
+      * long term - needs to be triggered (hints), slower access
+        * sensible versus rote
+    * concurrency
+      * people can only concentrate on one thing at a time
+        * lose your place if distracted, where was I?
+      * context switching can be expensive
+        * help the user with feed back if they get distracted
+    * provide mental aids - blinking cursor, highlight the field I'm on, tell me how many characters I've typed and what is the maximum. identify typos, validate fields
+    * make the invisible visible
+  * automate tasks so users don't have to do tedious things
+    * don't destroy the fun/pleasurable aspects of a process, maybe?
+    * don't take away control
+  * make tasks easier for the user
+    * velcro straps instead of shoe laces.
+    * digital versus analog clock.
+* Make things visible for Execution and Evaluation
+  * people make explanations for the things they see which may be wrong.
+      
+      
+
 
 ---
 
