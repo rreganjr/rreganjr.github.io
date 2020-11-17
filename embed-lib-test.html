@@ -1,0 +1,353 @@
+
+<html>
+
+<head>
+    <title>Embed Library Test</title>
+
+    <style>
+        .half {
+            width: 26%;
+            display: inline-block;
+            margin: 0 1% 0 0;
+            padding: 0 0 0 1%;
+        }
+
+        .half:first-child {
+            border-right: 1px solid #777;
+            padding-left: 0;
+        }
+
+        .half:last-child {
+            margin: 0;
+        }
+
+        .pq-embed-bound {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .pq-embed-bound:last-child {
+            margin-bottom: 0;
+        }
+
+        .kittens-bound {
+            border: 1px solid red;
+            max-width: 901px;
+        }
+
+        .embeds {
+            margin: 50px;
+            padding: 0;
+            border: 1px solid black;
+        }
+
+        label, button {
+            display: block;
+            margin-top: 10px;
+        }
+
+        span.label {
+            display: inline-block;
+            width: 85px;
+        }
+
+        label input[type="text"], label input[type="password"] {
+            width: 200px;
+        }
+
+        div.instructions {
+            border: 1px solid #aaa;
+            background-color: #eee;
+            padding: 10px;
+            width: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+<h1>Embed Library Test</h1>
+<div id="init-stuff">
+    <div class="instructions">
+        <h4>Instructions - Initialization</h4>
+        <p>Set the target target class for embedding
+            ( refer to <a href="/lms/app/pqembed/" target="_blank">the documentation</a> for more information
+            about what this does ), and enter the desired user information. <em>(@platformq.com will automatically be
+                appended to the email address, unless you enter another domain.)</em></p>
+
+        <p>Click "Init!" once you've edited the settings to suit your test case in order to initialize the library. You
+            will then be able to add embedded presentations.</p>
+    </div>
+    <div style="margin-top:20px;">
+        <div class="half presentation-controls" style="vertical-align: top">
+            <label for="email">
+                <span class="label">Email:</span>
+                <input type="text"
+                       id="email"
+                       placeholder="@platformq.com, if missing '@'"
+                       onfocus="this.placeholder=''"
+                       onblur="this.placeholder='@platformq.com, if missing \'@\''"/>
+            </label>
+            <label for="password">
+                <span class="label">Password:</span>
+                <input type="password" id="password" value=""/>
+            </label>
+            <label for="firstName">
+                <span class="label">First Name:</span>
+                <input type="text" id="firstName" value="Fred"/>
+            </label>
+            <label for="lastName">
+                <span class="label">Last Name:</span>
+                <input type="text" id="lastName" value="Bloggs"/>
+            </label>
+            <label for="address1">
+                <span class="label">Address 1:</span>
+                <input type="text" id="address1" value="100 Crescent Rd"/>
+            </label>
+            <label for="address2">
+                <span class="label">Address 2:</span>
+                <input type="text" id="address2" value="Suite 567"/>
+            </label>
+            <label for="city">
+                <span class="label">City:</span>
+                <input type="text" id="city" value="Needham"/>
+            </label>
+            <label for="state">
+                <span class="label">State:</span>
+                <input type="text" id="state" value="MA"/>
+            </label>
+            <label for="zip">
+                <span class="label">Zip:</span>
+                <input type="text" id="zip" value="02494"/>
+            </label>
+            <label for="country">
+                <span class="label">Country:</span>
+                <input type="text" id="country" value="US"/>
+            </label>
+        </div>
+        <div class="half presentation-controls" style="vertical-align: top">
+            <label for="degree">
+                <span class="label">Degree:</span>
+                <input type="text" id="degree" value="other"/>
+            </label>
+            <label for="specialty">
+                <span class="label">Specialty:</span>
+                <input type="text" id="specialty" value="Everything"/>
+            </label>
+            <label for="npi">
+                <span class="label">NPI:</span>
+                <input type="text" id="npi" value="424"/>
+            </label>
+            <label for="refCode">
+                <span class="label">RefCode:</span>
+                <input type="text" id="refCode" value="SuperRef1"/>
+            </label>
+            <label for="target-class">
+                <span class="label">Target Class:</span>
+                <input type="text" id="target-class" value="pq-embed"/>
+            </label>
+            <br>
+            <label for="privacyPolicy" style="width: 100%; display: inline-block; clear: right;">
+                <input type="checkbox" id="privacyPolicy" style="float: left;"/>
+                <span class="label" style="width: 90%; float: left;">Agreed to Privacy Policy</span>
+            </label>
+            <label for="disclosure" style="width: 100%; display: inline-block; clear: right;">
+                <input type="checkbox" id="disclosure" style="float: left;"/>
+                <span class="label" style="width: 90%; float: left;">Agreed to Disclosure</span>
+            </label>
+        </div>
+    </div>
+
+    <button id="init-button">Init!</button>
+</div>
+
+<div id="add-stuff" style="display:none">
+    <div class="instructions">
+        <h4>Instructions - Add Presentations</h4>
+        <p>Select the domain and presentation id below, then click "Add!"</p>
+        <p>The presentation should then be embedded in a new iframe and appended to the end of the page.</p>
+        <p>
+            The value of the Width box represents the width of the embed container (has a black outline).
+            You can manually set the width of the container by changing the value in the text box and clicking "Update
+            width".
+            The width will also be automatically updated when the window is resized, and the value of the box will be
+            changed to reflect that.
+        </p>
+    </div>
+    <div style="margin-top:20px;">
+        <div class="half presentation-controls" style="vertical-align: top">
+            <label for="domain-input">
+                <span class="label">Domain:</span>
+                <select id="domain-input">
+                    <option value="omedlive" selected>omedlive</option>
+                    <option value="cancercoachlive">cancercoachlive</option>
+                    <option value="cardiocarelive">cardiocarelive</option>
+                    <option value="neuroserieslive">neuroserieslive</option>
+                    <option value="testnc">testnc</option>
+                </select>
+            </label>
+            <label for="presentation">
+                <span class="label">Presentation:</span>
+                <input type="text" id="presentation" value="061016her2PositiveCME"/>
+            </label>
+            <label for="autoplay" style="width: 100%; display: inline-block; clear: right;">
+                <input type="checkbox" id="autoplay" style="float: left;"/>
+                <span class="label" style="width: 90%; float: left;">Automatically start presentation</span>
+            </label>
+        </div>
+        <div class="half container-controls" style="vertical-align: top">
+            <label for="container-width">
+                <span class="label">Width:</span>
+                <input type="text" id="container-width"/>
+            </label>
+        </div>
+    </div>
+    <div>
+        <div class="half">
+            <button id="add">Add!</button>
+        </div>
+        <div class="half">
+            <button id="update-width">Update width</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="embeds" id="embeds-container">
+    <!-- This is where our javascript code will add in the div that defines the emebedded presentation -->
+</div>
+
+
+<h2>Below are the events/messages fired off as the workflow progresses</h2>
+<div id="msgs">
+</div>
+
+
+<script src="/lms/js/pqEmbed/pqEmbed.js"></script>
+<script>
+    // this adds a listener for events/messages fired during the workflow process, see workflowBrowerMessageService.js
+    window.addEventListener("message", function (e) {
+        var msgs = document.querySelector('#msgs');
+        msgs.innerHTML = msgs.innerHTML + '<p>' + JSON.stringify(e.data) + '</p>';
+        console.log('message: ' + JSON.stringify(e.data));
+
+        if (e.data.event && e.data.event.startsWith('pqh:ces:workflow')) {
+            console.log('event: ' + e.data.event + ' procedure: ' + e.data.payload.procedureId);
+        }
+    }, false);
+
+    var queryParams = parseQuery();
+
+
+    jqueryReady();
+
+    function jqueryReady() {
+        var targetClass = 'pq-embed';
+        if (!window.jQuery) {
+            setTimeout(function () {
+                jqueryReady();
+            }, 1000);
+        } else {
+            jQuery('#init-button').click(function () {
+                targetClass = jQuery('#target-class').val();
+
+                pqEmbed.config({
+                    debug: true,
+                    targetClass: targetClass,
+                    safari: jQuery('#safari-field').is(':checked')
+                });
+
+                if (!queryParams.manual) {
+                    var email = jQuery('#email').val();
+                    if (email && email.indexOf('@') == -1) {
+                        email = email + '@platformq.com';
+                    }
+
+                    pqEmbed.init({
+                        email: email,
+                        password: jQuery('#password').val(),
+                        firstName: jQuery('#firstName').val(),
+                        lastName: jQuery('#lastName').val(),
+                        address1: jQuery('#address1').val(),
+                        address2: jQuery('#address2').val(),
+                        city: jQuery('#city').val(),
+                        state: jQuery('#state').val(),
+                        zip: jQuery('#zip').val(),
+                        country: jQuery('#country').val(),
+                        specialty: jQuery('#specialty').val(),
+                        npi: jQuery('#npi').val(),
+                        refCode: jQuery('#refCode').val(),
+                        degree: jQuery('#degree').val(),
+                        privacyPolicy: jQuery('#privacyPolicy').is(':checked'),
+                        disclosure: jQuery('#disclosure').is(':checked')
+                    });
+                } else {
+                    pqEmbed.init();
+                }
+
+                jQuery('#add').click(function () {
+                    var presentation = jQuery('#presentation').val();
+                    var domain       = jQuery('#domain-input').val();
+                    var autoplay     = jQuery('#autoplay').is(':checked') ? ' autoplay' : '';
+
+                    var embedElem = '<div class="' + targetClass + '" domain="' + domain + '" presentation="' + presentation + '"' + autoplay + '></div>';
+
+                    jQuery('.embeds').append(jQuery(embedElem));
+                });
+
+                jQuery('#init-stuff').hide();
+                jQuery('#add-stuff').show();
+                jQuery('#container-width').val(jQuery('#embeds-container').width());
+
+            });
+
+            jQuery('#update-width').click(function () {
+                var newWidth = jQuery('#container-width').val();
+                jQuery('#embeds-container').css('width', newWidth + 'px');
+            });
+
+            jQuery(window).resize(function () {
+                var newWidth = window.innerWidth - 100;
+                jQuery('#embeds-container').css('width', newWidth + 'px');
+                jQuery('#container-width').val(newWidth);
+
+            });
+        }
+    }
+
+    function parseQuery() {
+        var params = location.search.substr(1).split('&'),
+            newParams = [],
+            autoplay, manual, patient;
+
+        for (var i = 0; i < params.length; i += 1) {
+            var param = params[i];
+
+            // I should probably clean this up at some point.
+            if (param.substr(0, 6).toLowerCase() === 'manual') {
+                manual = param.split('=')[1];
+            } else if (param.substr(0, 7).toLowerCase() === 'patient') {
+                patient = param.split('=')[1];
+            } else if (param.substr(0, 8).toLowerCase() === 'autoplay') {
+                autoplay = param.split('=')[1];
+            } else {
+                // Any params not specific to the embed page (e.g. the ones above)
+                // will be forwarded in the querystring to the rest of the app
+                newParams.push(param);
+            }
+        }
+
+        var query = '?' + newParams.join('&');
+
+        return {
+            autoplay: autoplay,
+            manual: manual,
+            patient: patient,
+            query: query
+        };
+    }
+</script>
+
+</body>
+
+</html>
