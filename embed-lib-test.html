@@ -225,17 +225,6 @@
 
 <script src="/lms/js/pqEmbed/pqEmbed.js"></script>
 <script>
-    // this adds a listener for events/messages fired during the workflow process, see workflowBrowerMessageService.js
-    window.addEventListener("message", function (e) {
-        var msgs = document.querySelector('#msgs');
-        msgs.innerHTML = msgs.innerHTML + '<p>' + JSON.stringify(e.data) + '</p>';
-        console.log('message: ' + JSON.stringify(e.data));
-
-        if (e.data.event && e.data.event.startsWith('pqh:ces:workflow')) {
-            console.log('event: ' + e.data.event + ' procedure: ' + e.data.payload.procedureId);
-        }
-    }, false);
-
     var queryParams = parseQuery();
 
 
