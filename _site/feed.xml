@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-01-28T20:39:17-05:00</updated><id>/feed.xml</id><title type="html">RReganJr Software Developer</title><subtitle>musings</subtitle><author><name>Ron Regan</name></author><entry><title type="html">Notes on OOP Coders course for Ngrx</title><link href="/2021/01/28/NotesOnNgrx.html" rel="alternate" type="text/html" title="Notes on OOP Coders course for Ngrx" /><published>2021-01-28T00:00:00-05:00</published><updated>2021-01-28T00:00:00-05:00</updated><id>/2021/01/28/NotesOnNgrx</id><content type="html" xml:base="/2021/01/28/NotesOnNgrx.html">&lt;p&gt;Notes while working through &lt;a href=&quot;https://www.youtube.com/watch?v=oHmreG1Sul0&amp;amp;list=PLV-DQnYj14bRFWMmuT6ptSL4v5fxMJnOS&amp;amp;index=1&quot;&gt;this course&lt;/a&gt; on YouTube by OOP Coders.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-29T00:19:28-05:00</updated><id>http://localhost:4000/</id><title type="html">RReganJr Software Developer</title><subtitle>musings</subtitle><author><name>Ron Regan</name></author><entry><title type="html">Notes on OOP Coders course for Ngrx</title><link href="http://localhost:4000/2021/01/28/NotesOnNgrx.html" rel="alternate" type="text/html" title="Notes on OOP Coders course for Ngrx" /><published>2021-01-28T00:00:00-05:00</published><updated>2021-01-28T00:00:00-05:00</updated><id>http://localhost:4000/2021/01/28/NotesOnNgrx</id><content type="html" xml:base="http://localhost:4000/2021/01/28/NotesOnNgrx.html">&lt;p&gt;Notes while working through &lt;a href=&quot;https://www.youtube.com/watch?v=oHmreG1Sul0&amp;amp;list=PLV-DQnYj14bRFWMmuT6ptSL4v5fxMJnOS&amp;amp;index=1&quot;&gt;this course&lt;/a&gt; on YouTube by OOP Coders.&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&quot;https://github.com/oopcoders/NGRX-Course&quot;&gt;source code is here&lt;/a&gt;&lt;/p&gt;
 
@@ -6,40 +6,40 @@
 scroll to 7. begin and copy the commit id: 3efc22acd6e73ff41c84f70f770a548560de027b&lt;/p&gt;
 
 &lt;p&gt;In VS Projects C:\Users\rregan\VsProjects\&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/oopcoders/NGRX-Course.git
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/oopcoders/NGRX-Course.git
 git checkout 3efc22acd6e73ff41c84f70f770a548560de027b
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;open is vs code&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd NGRX-Course
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd NGRX-Course
 code .
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Install the ngrx store, open a terminal and type the following&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/store@latest
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/store@latest
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;see what it did:&lt;/li&gt;
   &lt;li&gt;in app.module.ts
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import { StoreModel } from '@ngrx/store'
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import { StoreModel } from '@ngrx/store'
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;p&gt;and in the imports&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; StoreModule.forRoot({},{})
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; StoreModule.forRoot({},{})
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;In package.json under “dependencies”
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;@ngrx/store&quot;: &quot;^9.0.0&quot;,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;@ngrx/store&quot;: &quot;^9.0.0&quot;,
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Install the ngrx dev tools in a terminal type the following&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/store-devtools@latest
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/store-devtools@latest
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;see what it did:&lt;/li&gt;
   &lt;li&gt;in app.module.ts
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  StoreDevtoolsModule.instrument({
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  StoreDevtoolsModule.instrument({
     maxAge: 25,
     logOnly: environment.production,
   }),
@@ -48,12 +48,12 @@ code .
     &lt;p&gt;** you can configure the instrumentations, see https://ngrx.io/guide/store-devtools/config&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;In package.json under “dependencies”
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;@ngrx/store-devtools&quot;: &quot;^10.1.2&quot;,
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;@ngrx/store-devtools&quot;: &quot;^10.1.2&quot;,
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;run the application
 ** in a terminal window
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm run dev
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm run dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;In the browser go to the application
@@ -64,14 +64,14 @@ see https://ngrx.io/guide/store-devtools for more on dev tools&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Install the schedmatics tools by typing the following in a terminal&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/schematics@latest
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/schematics@latest
 (Yes) for use default collection
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;see https://ngrx.io/guide/schematics&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;generate a store see https://ngrx.io/guide/schematics/store
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng generate store store --module=app.module.ts --root=true --statePath=store --stateInterface=AppState
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng generate store store --module=app.module.ts --root=true --statePath=store --stateInterface=AppState
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -79,7 +79,7 @@ see https://ngrx.io/guide/store-devtools for more on dev tools&lt;/li&gt;
 &lt;p&gt;** see the index.ts file in the store folder (store was used because of –statePath)
 ** see empty interface AppState, this is becaues of –stateInterface
 ** see the app.module.ts file, in the imports&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StoreModule.forRoot(reducers, {
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StoreModule.forRoot(reducers, {
   metaReducers,
   runtimeChecks: {
     strictStateImmutability: true,
@@ -90,7 +90,7 @@ see https://ngrx.io/guide/store-devtools for more on dev tools&lt;/li&gt;
 &lt;ul&gt;
   &lt;li&gt;forRoot was used because of –root=true&lt;/li&gt;
   &lt;li&gt;wecan remove the
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StoreModule.forRoot({},{})
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StoreModule.forRoot({},{})
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
     &lt;p&gt;that was generated when we first added the ngrx/store&lt;/p&gt;
   &lt;/li&gt;
@@ -100,7 +100,7 @@ see https://ngrx.io/guide/store-devtools for more on dev tools&lt;/li&gt;
 &lt;p&gt;Doing real stuff&lt;/p&gt;
 
 &lt;p&gt;Now add some actions https://ngrx.io/guide/store/actions 
-Using the schematics https://ngrx.io/guide/schematics/action&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes while working through this course on YouTube by OOP Coders.</summary></entry><entry><title type="html">Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri</title><link href="/2020/04/23/OverThinkingYourUXNotes.html" rel="alternate" type="text/html" title="Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri" /><published>2020-04-23T00:00:00-04:00</published><updated>2020-04-23T00:00:00-04:00</updated><id>/2020/04/23/OverThinkingYourUXNotes</id><content type="html" xml:base="/2020/04/23/OverThinkingYourUXNotes.html">&lt;h2 id=&quot;notes-on-why-youre-over-thinking-your-uiux-with-rohan-puri--harvard-i-lab&quot;&gt;Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri | Harvard i-lab&lt;/h2&gt;
+Using the schematics https://ngrx.io/guide/schematics/action&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes while working through this course on YouTube by OOP Coders.</summary></entry><entry><title type="html">Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri</title><link href="http://localhost:4000/2020/04/23/OverThinkingYourUXNotes.html" rel="alternate" type="text/html" title="Notes on Why You're Over-Thinking Your UI/UX with Rohan Puri" /><published>2020-04-23T00:00:00-04:00</published><updated>2020-04-23T00:00:00-04:00</updated><id>http://localhost:4000/2020/04/23/OverThinkingYourUXNotes</id><content type="html" xml:base="http://localhost:4000/2020/04/23/OverThinkingYourUXNotes.html">&lt;h2 id=&quot;notes-on-why-youre-over-thinking-your-uiux-with-rohan-puri--harvard-i-lab&quot;&gt;Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri | Harvard i-lab&lt;/h2&gt;
 
 &lt;p&gt;from Youtube.com &lt;a href=&quot;https://www.youtube.com/watch?v=Is2O666qDPs&quot;&gt;Why You’re Over-Thinking Your UI/UX with Rohan Puri&lt;/a&gt;&lt;/p&gt;
 
@@ -200,7 +200,7 @@ Using the schematics https://ngrx.io/guide/schematics/action&lt;/p&gt;</content>
 
 &lt;p&gt;create/browse/respond&lt;/p&gt;
 
-&lt;p&gt;Focus Above the fold - user’s don’t scroll&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri | Harvard i-lab</summary></entry><entry><title type="html">Web Browser Viewport</title><link href="/2020/04/08/WebViewPort.html" rel="alternate" type="text/html" title="Web Browser Viewport" /><published>2020-04-08T00:00:00-04:00</published><updated>2020-04-08T00:00:00-04:00</updated><id>/2020/04/08/WebViewPort</id><content type="html" xml:base="/2020/04/08/WebViewPort.html">&lt;h3 id=&quot;notes-on-web-browser-viewport&quot;&gt;Notes on Web Browser Viewport&lt;/h3&gt;
+&lt;p&gt;Focus Above the fold - user’s don’t scroll&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri | Harvard i-lab</summary></entry><entry><title type="html">Web Browser Viewport</title><link href="http://localhost:4000/2020/04/08/WebViewPort.html" rel="alternate" type="text/html" title="Web Browser Viewport" /><published>2020-04-08T00:00:00-04:00</published><updated>2020-04-08T00:00:00-04:00</updated><id>http://localhost:4000/2020/04/08/WebViewPort</id><content type="html" xml:base="http://localhost:4000/2020/04/08/WebViewPort.html">&lt;h3 id=&quot;notes-on-web-browser-viewport&quot;&gt;Notes on Web Browser Viewport&lt;/h3&gt;
 
 &lt;p&gt;from &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts&quot;&gt;Viewport concepts&lt;/a&gt; and &lt;a href=&quot;https://www.w3.org/TR/cssom-view/&quot;&gt;CSSOM View Module&lt;/a&gt;&lt;/p&gt;
 
@@ -208,14 +208,14 @@ Using the schematics https://ngrx.io/guide/schematics/action&lt;/p&gt;</content>
   &lt;li&gt;viewport - the size of the area for viewing the web page in the browser window&lt;/li&gt;
   &lt;li&gt;window - the size of the window of the browser including the controls not part of a web page. always &amp;gt;= viewport
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window.innerWidth&lt;/code&gt; is &lt;em&gt;always&lt;/em&gt; the width of the browser window viewport including the vertical scrollbar if present or zero if there is no viewport.&lt;/li&gt;
-      &lt;li&gt;The area within the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;innerHeight&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;innerWidth&lt;/code&gt; is the layout viewport.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;window.innerWidth&lt;/code&gt; is &lt;em&gt;always&lt;/em&gt; the width of the browser window viewport including the vertical scrollbar if present or zero if there is no viewport.&lt;/li&gt;
+      &lt;li&gt;The area within the &lt;code class=&quot;highlighter-rouge&quot;&gt;innerHeight&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;innerWidth&lt;/code&gt; is the layout viewport.&lt;/li&gt;
       &lt;li&gt;zooming in makes the layout viewport smaller&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;document - the size of the web page visible or not
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;document.documentElement.clientWidth&lt;/code&gt; is the width of the viewport including padding but not borders, margins, or vertical scrollbars if present.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;document.documentElement.clientWidth&lt;/code&gt; is the width of the viewport including padding but not borders, margins, or vertical scrollbars if present.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;layout viewport - the part of the document rendered in the viewport&lt;/li&gt;
@@ -234,15 +234,15 @@ Using the schematics https://ngrx.io/guide/schematics/action&lt;/p&gt;</content>
   &lt;li&gt;media queries are relative to the viewport&lt;/li&gt;
   &lt;li&gt;viewport length units are a percent of the viewport
     &lt;ul&gt;
-      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width: 50vw;&lt;/code&gt; is 50% of the viewport&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;width: 50vw;&lt;/code&gt; is 50% of the viewport&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;element.getBoundingClientRect();&lt;/code&gt; - returns the size of an element and its position relative to the viewport. The smallest rectangle which contains the entire element &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect&quot;&gt;Mozilla’s API web docs&lt;/a&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;element.getBoundingClientRect();&lt;/code&gt; - returns the size of an element and its position relative to the viewport. The smallest rectangle which contains the entire element &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect&quot;&gt;Mozilla’s API web docs&lt;/a&gt;
     &lt;ul&gt;
       &lt;li&gt;Properties other than width and height are relative to the top-left of the viewport.&lt;/li&gt;
       &lt;li&gt;The amount of scrolling that has been done of the viewport area (or any other scrollable element) is taken into account when computing the bounding rectangle.&lt;/li&gt;
-      &lt;li&gt;if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt; &amp;gt;= &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window.innerHeight&lt;/code&gt; the element is below the viewport&lt;/li&gt;
-      &lt;li&gt;if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bottom&lt;/code&gt; &amp;lt;= &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window.innerHeight&lt;/code&gt; the element is above the viewport&lt;/li&gt;
+      &lt;li&gt;if &lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt; &amp;gt;= &lt;code class=&quot;highlighter-rouge&quot;&gt;window.innerHeight&lt;/code&gt; the element is below the viewport&lt;/li&gt;
+      &lt;li&gt;if &lt;code class=&quot;highlighter-rouge&quot;&gt;bottom&lt;/code&gt; &amp;lt;= &lt;code class=&quot;highlighter-rouge&quot;&gt;window.innerHeight&lt;/code&gt; the element is above the viewport&lt;/li&gt;
     &lt;/ul&gt;
 
     &lt;p&gt;The requirement:&lt;/p&gt;
@@ -304,7 +304,7 @@ Using the schematics https://ngrx.io/guide/schematics/action&lt;/p&gt;</content>
       }
     }&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// unregister listeners for viewport changes
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// unregister listeners for viewport changes
 function removeViewportChangeListeners() {
   if (window.removeEventListener) {
     window.removeEventListener('DOMContentLoaded', this.onViewportChangeHandler, false);
@@ -343,7 +343,7 @@ function adjustISI() {
     }
   }
 } ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes on Web Browser Viewport</summary></entry><entry><title type="html">How Complexity Evolves</title><link href="/2020/03/04/ComplexityEvolvesExample.html" rel="alternate" type="text/html" title="How Complexity Evolves" /><published>2020-03-04T00:00:00-05:00</published><updated>2020-03-04T00:00:00-05:00</updated><id>/2020/03/04/ComplexityEvolvesExample</id><content type="html" xml:base="/2020/03/04/ComplexityEvolvesExample.html">&lt;h3 id=&quot;example-of-how-complexity-increases-as-a-feature-evolves&quot;&gt;Example of How Complexity Increases as a Feature Evolves&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes on Web Browser Viewport</summary></entry><entry><title type="html">How Complexity Evolves</title><link href="http://localhost:4000/2020/03/04/ComplexityEvolvesExample.html" rel="alternate" type="text/html" title="How Complexity Evolves" /><published>2020-03-04T00:00:00-05:00</published><updated>2020-03-04T00:00:00-05:00</updated><id>http://localhost:4000/2020/03/04/ComplexityEvolvesExample</id><content type="html" xml:base="http://localhost:4000/2020/03/04/ComplexityEvolvesExample.html">&lt;h3 id=&quot;example-of-how-complexity-increases-as-a-feature-evolves&quot;&gt;Example of How Complexity Increases as a Feature Evolves&lt;/h3&gt;
 
 &lt;p&gt;video data import&lt;/p&gt;
 
@@ -357,7 +357,7 @@ function adjustISI() {
 
 &lt;p&gt;reporting only users that become “real” users&lt;/p&gt;
 
-&lt;p&gt;merging two users together - some of our partners send generated email addresses in place of real emails in urls to our events, later they will send us a mapping of generated to real user emails and data that we use to collect the users use of our system so we can accurately report unique users.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Example of How Complexity Increases as a Feature Evolves</summary></entry><entry><title type="html">What Users Really Want Versus What Gets Delivered</title><link href="/2020/02/13/WantVersusReceive.html" rel="alternate" type="text/html" title="What Users Really Want Versus What Gets Delivered" /><published>2020-02-13T00:00:00-05:00</published><updated>2020-02-13T00:00:00-05:00</updated><id>/2020/02/13/WantVersusReceive</id><content type="html" xml:base="/2020/02/13/WantVersusReceive.html">&lt;h3 id=&quot;what-users-really-want-versus-what-gets-delivered&quot;&gt;What Users Really Want Versus What Gets Delivered&lt;/h3&gt;
+&lt;p&gt;merging two users together - some of our partners send generated email addresses in place of real emails in urls to our events, later they will send us a mapping of generated to real user emails and data that we use to collect the users use of our system so we can accurately report unique users.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Example of How Complexity Increases as a Feature Evolves</summary></entry><entry><title type="html">What Users Really Want Versus What Gets Delivered</title><link href="http://localhost:4000/2020/02/13/WantVersusReceive.html" rel="alternate" type="text/html" title="What Users Really Want Versus What Gets Delivered" /><published>2020-02-13T00:00:00-05:00</published><updated>2020-02-13T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/13/WantVersusReceive</id><content type="html" xml:base="http://localhost:4000/2020/02/13/WantVersusReceive.html">&lt;h3 id=&quot;what-users-really-want-versus-what-gets-delivered&quot;&gt;What Users Really Want Versus What Gets Delivered&lt;/h3&gt;
 
 &lt;p&gt;I find requirements the hard part of software development because communication is so hard; much harder than it seems it should be.&lt;/p&gt;
 
@@ -388,7 +388,7 @@ function adjustISI() {
 
 &lt;h4 id=&quot;details&quot;&gt;Details&lt;/h4&gt;
 
-&lt;p&gt;Software is effectively unconstrained with respect to options. Because of this a lot of detail is required to produce it.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">What Users Really Want Versus What Gets Delivered</summary></entry><entry><title type="html">10 Usability Heuristics for User Interface Design</title><link href="/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html" rel="alternate" type="text/html" title="10 Usability Heuristics for User Interface Design" /><published>2020-02-11T00:00:00-05:00</published><updated>2020-02-11T00:00:00-05:00</updated><id>/2020/02/11/NielsenNormanGroup10UsabilityHeuristics</id><content type="html" xml:base="/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html">&lt;h3 id=&quot;10-usability-heuristics-for-user-interface-design&quot;&gt;10 Usability Heuristics for User Interface Design&lt;/h3&gt;
+&lt;p&gt;Software is effectively unconstrained with respect to options. Because of this a lot of detail is required to produce it.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">What Users Really Want Versus What Gets Delivered</summary></entry><entry><title type="html">10 Usability Heuristics for User Interface Design</title><link href="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html" rel="alternate" type="text/html" title="10 Usability Heuristics for User Interface Design" /><published>2020-02-11T00:00:00-05:00</published><updated>2020-02-11T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics</id><content type="html" xml:base="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html">&lt;h3 id=&quot;10-usability-heuristics-for-user-interface-design&quot;&gt;10 Usability Heuristics for User Interface Design&lt;/h3&gt;
 
 &lt;p&gt;These are my notes for the &lt;a href=&quot;https://www.youtube.com/playlist?list=PLJOFJ3Ok_idtb2YeifXlG1-TYoMBLoG6I&quot;&gt;Youtube playlist The 10 Usability Heuristics&lt;/a&gt;&lt;/p&gt;
 
@@ -557,7 +557,7 @@ function adjustISI() {
   &lt;li&gt;the time to acquire a target is a function of the size of the target and the distance to the target&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MT = a + b * log2( 2D / W)
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MT = a + b * log2( 2D / W)
 
 MT = time to select target 
 a &amp;amp; b = constants set by type of device
@@ -591,7 +591,7 @@ W = width of target along axis of motion
   &lt;li&gt;example - list of US States - no matter where a user focuses on the list, they know what they are looking for and where it is in relation to where they are.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;Should the whole list  be visible to scan?&lt;/em&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">10 Usability Heuristics for User Interface Design</summary></entry><entry><title type="html">Dieter Rams - “Good design” principles</title><link href="/2020/01/27/DieterRamsGoodDesignPrinciples.html" rel="alternate" type="text/html" title="Dieter Rams - “Good design” principles" /><published>2020-01-27T00:00:00-05:00</published><updated>2020-01-27T00:00:00-05:00</updated><id>/2020/01/27/DieterRamsGoodDesignPrinciples</id><content type="html" xml:base="/2020/01/27/DieterRamsGoodDesignPrinciples.html">&lt;h3 id=&quot;dieter-rams---good-design-principles&quot;&gt;Dieter Rams - “Good design” principles&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Should the whole list  be visible to scan?&lt;/em&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">10 Usability Heuristics for User Interface Design</summary></entry><entry><title type="html">Dieter Rams - “Good design” principles</title><link href="http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples.html" rel="alternate" type="text/html" title="Dieter Rams - &quot;Good design&quot; principles" /><published>2020-01-27T00:00:00-05:00</published><updated>2020-01-27T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples</id><content type="html" xml:base="http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples.html">&lt;h3 id=&quot;dieter-rams---good-design-principles&quot;&gt;Dieter Rams - “Good design” principles&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;is innovative – The possibilities for progression are not, by any means, exhausted. Technological development is always offering new opportunities for original designs. But imaginative design always develops in tandem with improving technology, and can never be an end in itself.&lt;/li&gt;
@@ -608,7 +608,7 @@ W = width of target along axis of motion
 
 &lt;p&gt;From &lt;a href=&quot;https://en.wikipedia.org/wiki/Dieter_Rams&quot;&gt;Wikipedia’s page for Dieter Rams&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;See Also &lt;a href=&quot;https://www.interaction-design.org/literature/article/dieter-rams-10-timeless-commandments-for-good-design&quot;&gt;Interaction Design Foundation article&lt;/a&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Dieter Rams - “Good design” principles</summary></entry><entry><title type="html">Notes on - The Design of Everyday Things</title><link href="/2020/01/21/NotesOnTheDesignOfEverydayThings.html" rel="alternate" type="text/html" title="Notes on - The Design of Everyday Things" /><published>2020-01-21T00:00:00-05:00</published><updated>2020-01-21T00:00:00-05:00</updated><id>/2020/01/21/NotesOnTheDesignOfEverydayThings</id><content type="html" xml:base="/2020/01/21/NotesOnTheDesignOfEverydayThings.html">&lt;p&gt;&lt;em&gt;It’s not your fault - bad user experience is the fault of the designer.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;See Also &lt;a href=&quot;https://www.interaction-design.org/literature/article/dieter-rams-10-timeless-commandments-for-good-design&quot;&gt;Interaction Design Foundation article&lt;/a&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Dieter Rams - “Good design” principles</summary></entry><entry><title type="html">Notes on - The Design of Everyday Things</title><link href="http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings.html" rel="alternate" type="text/html" title="Notes on - The Design of Everyday Things" /><published>2020-01-21T00:00:00-05:00</published><updated>2020-01-21T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings</id><content type="html" xml:base="http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings.html">&lt;p&gt;&lt;em&gt;It’s not your fault - bad user experience is the fault of the designer.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;design-principals&quot;&gt;Design Principals&lt;/h4&gt;
 
@@ -1199,7 +1199,7 @@ how do we deal with novel situations&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;People are explanatory creatures&lt;/em&gt; - back story, mental models, interpretations pg 38&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;When ever the number of functions and required operations exceeds the number of controls, the design become arbitrary, unnatural, and complicated.&lt;/em&gt; pq. 31&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">It’s not your fault - bad user experience is the fault of the designer.</summary></entry><entry><title type="html">My Experience with Event Sourcing - Zarex Event processing</title><link href="/2020/01/16/ZarexEventProcessing.html" rel="alternate" type="text/html" title="My Experience with Event Sourcing - Zarex Event processing" /><published>2020-01-16T00:00:00-05:00</published><updated>2020-01-16T00:00:00-05:00</updated><id>/2020/01/16/ZarexEventProcessing</id><content type="html" xml:base="/2020/01/16/ZarexEventProcessing.html">&lt;p&gt;Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;When ever the number of functions and required operations exceeds the number of controls, the design become arbitrary, unnatural, and complicated.&lt;/em&gt; pq. 31&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">It’s not your fault - bad user experience is the fault of the designer.</summary></entry><entry><title type="html">My Experience with Event Sourcing - Zarex Event processing</title><link href="http://localhost:4000/2020/01/16/ZarexEventProcessing.html" rel="alternate" type="text/html" title="My Experience with Event Sourcing - Zarex Event processing" /><published>2020-01-16T00:00:00-05:00</published><updated>2020-01-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/16/ZarexEventProcessing</id><content type="html" xml:base="http://localhost:4000/2020/01/16/ZarexEventProcessing.html">&lt;p&gt;Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.&lt;/p&gt;
 
 &lt;p&gt;Because we were starting from a more traditional application structure that we were adapting to event based we used some of the existing structures and wrapped them. We already had the concept of an EditModel that contained the changes to make to an entity’s persistent state. The EditModel was translated from json to an object that was passed to a controller which was a UI binding to an EditCommand that took the incoming data and updated a Hibernate persisted entity and subordinate entities in the context of a transaction.&lt;/p&gt;
 
@@ -1211,14 +1211,14 @@ how do we deal with novel situations&lt;/p&gt;
 
 &lt;p&gt;Each service maintained its own state for all entities. The state may look different, for example in our authentication service we only cared about email, password and hash salt, and in our communications service we only care about contact info and whether a user is opted in to receiving emails about a specific product. In our data warehouse there were lots of different representations of a user, plus data from external sources so that we could report on different aspects. We setup up our services this way so that they could work completely independent of each other and didn’t make requests to each other for data.&lt;/p&gt;
 
-&lt;p&gt;There is a logical entity type, this represents a concept such as a User, this was used to associate different persistent models and event data to the same logical entities and allow services to indicate they care about events related to those entities even if the specific event may not be relevant to their local representation of the entity. It was the services responsability to process the message and ignore it if the data wasn’t relevant. For example the authentication service cared about users’ email and password, but not about users’ phone number so if an event came in to change the phone number it would process the event but do nothing. This relates to one of the problems with our rigorous consistency.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.</summary></entry><entry><title type="html">Getting back to FUNctional programming with jsrx</title><link href="/2019/11/22/jsrx.html" rel="alternate" type="text/html" title="Getting back to FUNctional programming with jsrx" /><published>2019-11-22T00:00:00-05:00</published><updated>2019-11-22T00:00:00-05:00</updated><id>/2019/11/22/jsrx</id><content type="html" xml:base="/2019/11/22/jsrx.html">&lt;p&gt;I’m working on a demo for upgrading https://globalofficelink.com/ to a single page app using Angular.&lt;/p&gt;
+&lt;p&gt;There is a logical entity type, this represents a concept such as a User, this was used to associate different persistent models and event data to the same logical entities and allow services to indicate they care about events related to those entities even if the specific event may not be relevant to their local representation of the entity. It was the services responsability to process the message and ignore it if the data wasn’t relevant. For example the authentication service cared about users’ email and password, but not about users’ phone number so if an event came in to change the phone number it would process the event but do nothing. This relates to one of the problems with our rigorous consistency.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.</summary></entry><entry><title type="html">Getting back to FUNctional programming with jsrx</title><link href="http://localhost:4000/2019/11/22/jsrx.html" rel="alternate" type="text/html" title="Getting back to FUNctional programming with jsrx" /><published>2019-11-22T00:00:00-05:00</published><updated>2019-11-22T00:00:00-05:00</updated><id>http://localhost:4000/2019/11/22/jsrx</id><content type="html" xml:base="http://localhost:4000/2019/11/22/jsrx.html">&lt;p&gt;I’m working on a demo for upgrading https://globalofficelink.com/ to a single page app using Angular.&lt;/p&gt;
 
 &lt;p&gt;I want to give the listings search page a better user experience. The minimum search is by type of listing (buy/rent versus
  selling) and country. There aren’t that many countries with listings so having a user select one of 200+ countries to find
  a listing is a terrible experience. I want the user to only have to select from countries that have listings.&lt;/p&gt;
 
 &lt;p&gt;I could easily do this as a query on a database:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   select distinct c.* 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   select distinct c.* 
    from country c
    left join listing l on (c.countryCode == l.countryCode)
    where l.id is not null 
@@ -1228,19 +1228,19 @@ how do we deal with novel situations&lt;/p&gt;
  for now I’ll pull dummy ones from an array.&lt;/p&gt;
 
 &lt;p&gt;For some reason I thought pulling countries from a service would return a stream of countries, but in reality it returns
- a stream of country arrays with a single item. So right off the bat I had it wrong as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;httpClient.get&amp;lt;Country&amp;gt;(this.countriesAPI)&lt;/code&gt;
- but Typescript didn’t complain because it had no idea what the service was returning. Plus I assumed an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Observable&lt;/code&gt; was
+ a stream of country arrays with a single item. So right off the bat I had it wrong as &lt;code class=&quot;highlighter-rouge&quot;&gt;httpClient.get&amp;lt;Country&amp;gt;(this.countriesAPI)&lt;/code&gt;
+ but Typescript didn’t complain because it had no idea what the service was returning. Plus I assumed an &lt;code class=&quot;highlighter-rouge&quot;&gt;Observable&lt;/code&gt; was
  iterable, but it wasn’t. I wasn’t sure how to turm my stream of country arrays into a stream of country so I just filtered
  the countries array with the array filter method and a static array of country codes.&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable via array filter of country codes
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable via array filter of country codes
    public getActiveCountriesTakeOne(): Observable&amp;lt;Country[]&amp;gt; {
      return this.countries.pipe(
        map(countries =&amp;gt; countries.filter(country =&amp;gt; ['US', 'CA', 'UK'].includes(country.alpha2Code))), tap(console.log));
    }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;the rxjs map takes the array as one item, applies the function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;countries.filter(...)&lt;/code&gt; and returns the correct set of
+&lt;p&gt;the rxjs map takes the array as one item, applies the function &lt;code class=&quot;highlighter-rouge&quot;&gt;countries.filter(...)&lt;/code&gt; and returns the correct set of
 countries I want. This seems inelegant and kind of like cheating so the next step was to turn my country array 
 into a stream of countries. This stumped me for a bit going through the documentation of functions, for example the
 description for flatMap:&lt;/p&gt;
@@ -1250,18 +1250,18 @@ description for flatMap:&lt;/p&gt;
 to each item emitted by the source Observable and merging the results of the Observables obtained from this transformation.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;while I’m sure this is technically correct it is indecipherable to me and the fact that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country)&lt;/code&gt; converts
+&lt;p&gt;while I’m sure this is technically correct it is indecipherable to me and the fact that &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country)&lt;/code&gt; converts
 a stream of Country[] into a stream of Country seems like witchcraft. It takes an item from the source stream, in
 this case a Country[] and makes that an Observable, subscribes to it and then applies the projection function, in this case
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;country&lt;/code&gt;, to the items in that stream, which just returns the item.&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;country&lt;/code&gt;, to the items in that stream, which just returns the item.&lt;/p&gt;
 
-&lt;p&gt;After flattening and mapping I could then filter the countries &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;filter(country =&amp;gt; ['US', 'CA', 'MX'].includes(country.alpha2Code))&lt;/code&gt;
+&lt;p&gt;After flattening and mapping I could then filter the countries &lt;code class=&quot;highlighter-rouge&quot;&gt;filter(country =&amp;gt; ['US', 'CA', 'MX'].includes(country.alpha2Code))&lt;/code&gt;
 but now I’m returning a stream of Countries, but the Select control doesn’t like that as it isn’t iterable. I need to return
 a single item with an array. Hello reduce, you have a funny name, why isn’t it collect? It in Lisp and XSLT you use tail recursion
 but this is more like unwinding recursion into iteration with a collection, anyway now I have a pure observable way of
 generating my active countries:&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable filtering by array
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable filtering by array
    public getActiveCountriesTakeTwo(): Observable&amp;lt;Country[]&amp;gt; {
      return this.countries.pipe(
        flatMap(country =&amp;gt; country),
@@ -1274,24 +1274,24 @@ generating my active countries:&lt;/p&gt;
  this as a single pipeline. I then outlined what I wanted. I want to take my stream of countries and if the country was
  in the collection of distinct country codes from the listings, return it. I need the countries individually to see if they
  are in the list, but I need the active country codes collectively. I broke the problem into two parts, make a distinct
- list of country codes and then apply that to the countries. I already know that I can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatMap&lt;/code&gt; to turn my stream
+ list of country codes and then apply that to the countries. I already know that I can use &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap&lt;/code&gt; to turn my stream
  of listing[] into a stream of listings, I thought I could be clever and map directly to countryCode like 
- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country.alpha2Code)&lt;/code&gt; but that didn’t work. There is probably a way to get that to work but using 
- https://rxjs-dev.firebaseapp.com/operator-decision-tree I found &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pluck()&lt;/code&gt; and that is pretty clean. Then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distinct()&lt;/code&gt;
+ &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country.alpha2Code)&lt;/code&gt; but that didn’t work. There is probably a way to get that to work but using 
+ https://rxjs-dev.firebaseapp.com/operator-decision-tree I found &lt;code class=&quot;highlighter-rouge&quot;&gt;pluck()&lt;/code&gt; and that is pretty clean. Then &lt;code class=&quot;highlighter-rouge&quot;&gt;distinct()&lt;/code&gt;
  is just like SQL, finally turn this back into an array with reduce. How do I bring two streams together? Using the 
  operator decision tree when I get my countries I want to then apply the filtering to see if it is in the active country
- code array, it came up with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt;. Using this took some time to wrap my head around but basically I take
-  a country from the main observable and the array from the country codes and combine into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{country,activeCountryCodes}&lt;/code&gt;
+ code array, it came up with &lt;code class=&quot;highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt;. Using this took some time to wrap my head around but basically I take
+  a country from the main observable and the array from the country codes and combine into &lt;code class=&quot;highlighter-rouge&quot;&gt;{country,activeCountryCodes}&lt;/code&gt;
   I then pass that single item into a filter
-  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;filter((countryWithCountryCodes) =&amp;gt; countryWithCountryCodes.countryCodes.includes(countryWithCountryCodes.country.alpha2Code))&lt;/code&gt;
+  &lt;code class=&quot;highlighter-rouge&quot;&gt;filter((countryWithCountryCodes) =&amp;gt; countryWithCountryCodes.countryCodes.includes(countryWithCountryCodes.country.alpha2Code))&lt;/code&gt;
   and if the country matches a code in the array it gets returned, otherwise not. Finally I collect that back into an
   array of countries for my select list and voilà.&lt;/p&gt;
 
 &lt;p&gt;I don’t know if this is true, but I expect if I setup my service observables to poll the services and then switched
-  to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;combineLatest()&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt; then my select list of countries for searching would magically
+  to use &lt;code class=&quot;highlighter-rouge&quot;&gt;combineLatest()&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt; then my select list of countries for searching would magically
   get updated if a new listing in a new country were added.&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import { Listing } from './../listings.types';
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import { Listing } from './../listings.types';
  import { Code, SIZE_UNITS } from './../../codes/codes.types';
  import { CodesService } from './../../codes/codes.service';
  import { Injectable } from '@angular/core';
