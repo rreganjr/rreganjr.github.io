@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '10 Usability Heuristics for User Interface Design'
+title: 10 Usability Heuristics for User Interface Design
 ---
 
 ### 10 Usability Heuristics for User Interface Design

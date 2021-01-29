@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'My Experience with Event Sourcing - Zarex Event processing'
+title: My Experience with Event Sourcing - Zarex Event processing
 ---
 
 Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.

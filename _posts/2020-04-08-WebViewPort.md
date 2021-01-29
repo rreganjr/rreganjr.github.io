@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Web Browser Viewport'
+title: Web Browser Viewport
 ---
 
 ### Notes on Web Browser Viewport

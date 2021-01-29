@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Dieter Rams - "Good design" principles'
+title: Dieter Rams - "Good design" principles
 ---
 
 ### Dieter Rams - "Good design" principles

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'What Users Really Want Versus What Gets Delivered'
+title: What Users Really Want Versus What Gets Delivered
 ---
 
 ### What Users Really Want Versus What Gets Delivered

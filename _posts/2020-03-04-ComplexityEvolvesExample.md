@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'How Complexity Evolves'
+title: How Complexity Evolves
 ---
 
 ### Example of How Complexity Increases as a Feature Evolves

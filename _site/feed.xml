@@ -1,4 +1,363 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-02-13T21:43:55-05:00</updated><id>http://localhost:4000/</id><title type="html">RReganJr Software Developer</title><subtitle>musings</subtitle><author><name>Ron Regan</name></author><entry><title type="html">What Users Really Want Versus What Gets Delivered</title><link href="http://localhost:4000/2020/02/13/WantVersusReceive.html" rel="alternate" type="text/html" title="What Users Really Want Versus What Gets Delivered" /><published>2020-02-13T00:00:00-05:00</published><updated>2020-02-13T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/13/WantVersusReceive</id><content type="html" xml:base="http://localhost:4000/2020/02/13/WantVersusReceive.html">&lt;h3 id=&quot;what-users-really-want-versus-what-gets-delivered&quot;&gt;What Users Really Want Versus What Gets Delivered&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-01-28T20:28:23-05:00</updated><id>/feed.xml</id><title type="html">RReganJr Software Developer</title><subtitle>musings</subtitle><author><name>Ron Regan</name></author><entry><title type="html">Notes on OOP Coders course for Ngrx</title><link href="/2021/01/28/NotesOnNgrx.html" rel="alternate" type="text/html" title="Notes on OOP Coders course for Ngrx" /><published>2021-01-28T00:00:00-05:00</published><updated>2021-01-28T00:00:00-05:00</updated><id>/2021/01/28/NotesOnNgrx</id><content type="html" xml:base="/2021/01/28/NotesOnNgrx.html">&lt;p&gt;Notes while working through &lt;a href=&quot;https://www.youtube.com/watch?v=oHmreG1Sul0&amp;amp;list=PLV-DQnYj14bRFWMmuT6ptSL4v5fxMJnOS&amp;amp;index=1&quot;&gt;this course&lt;/a&gt; on YouTube by OOP Coders.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/oopcoders/NGRX-Course&quot;&gt;source code is here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;click on commits
+scroll to 7. begin and copy the commit id: 3efc22acd6e73ff41c84f70f770a548560de027b&lt;/p&gt;
+
+&lt;p&gt;In VS Projects C:\Users\rregan\VsProjects\&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/oopcoders/NGRX-Course.git
+git checkout 3efc22acd6e73ff41c84f70f770a548560de027b
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;open is vs code&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd NGRX-Course
+code .
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Install the ngrx store, open a terminal and type the following&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/store@latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;see what it did:&lt;/li&gt;
+  &lt;li&gt;in app.module.ts
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import { StoreModel } from '@ngrx/store'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;and in the imports&lt;/p&gt;
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; StoreModule.forRoot({},{})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In package.json under “dependencies”
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;@ngrx/store&quot;: &quot;^9.0.0&quot;,
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Install the ngrx dev tools in a terminal type the following&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/store-devtools@latest
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;see what it did:&lt;/li&gt;
+  &lt;li&gt;in app.module.ts
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  StoreDevtoolsModule.instrument({
+    maxAge: 25,
+    logOnly: environment.production,
+  }),
+  !environment.production ? StoreDevtoolsModule.instrument() : [],
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;** you can configure the instrumentations, see https://ngrx.io/guide/store-devtools/config&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In package.json under “dependencies”
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;@ngrx/store-devtools&quot;: &quot;^10.1.2&quot;,
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;run the application
+** in a terminal window
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm run dev
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;In the browser go to the application
+** http://localhost:4201/&lt;/li&gt;
+  &lt;li&gt;open the dev tools&lt;/li&gt;
+  &lt;li&gt;see the Redux tab
+see https://ngrx.io/guide/store-devtools for more on dev tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Install the schedmatics tools by typing the following in a terminal&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng add @ngrx/schematics@latest
+(Yes) for use default collection
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;see https://ngrx.io/guide/schematics&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;generate a store see https://ngrx.io/guide/schematics/store
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ng generate store store --module=app.module.ts --root=true --statePath=store --stateInterface=AppState
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;** see the index.ts file in the store folder (store was used because of –statePath)
+** see empty interface AppState, this is becaues of –stateInterface
+** see the app.module.ts file, in the imports&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StoreModule.forRoot(reducers, {
+  metaReducers,
+  runtimeChecks: {
+    strictStateImmutability: true,
+	strictActionImmutability: true,
+  }
+  })
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;forRoot was used because of –root=true&lt;/li&gt;
+  &lt;li&gt;wecan remove the
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StoreModule.forRoot({},{})
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;that was generated when we first added the ngrx/store&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;restart the app because we made changes to app.moddule.ts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Doing real stuff&lt;/p&gt;
+
+&lt;p&gt;Now add some actions https://ngrx.io/guide/store/actions 
+Using the schematics https://ngrx.io/guide/schematics/action&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes while working through this course on YouTube by OOP Coders.</summary></entry><entry><title type="html">Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri</title><link href="/2020/04/23/OverThinkingYourUXNotes.html" rel="alternate" type="text/html" title="Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri" /><published>2020-04-23T00:00:00-04:00</published><updated>2020-04-23T00:00:00-04:00</updated><id>/2020/04/23/OverThinkingYourUXNotes</id><content type="html" xml:base="/2020/04/23/OverThinkingYourUXNotes.html">&lt;h2 id=&quot;notes-on-why-youre-over-thinking-your-uiux-with-rohan-puri--harvard-i-lab&quot;&gt;Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri | Harvard i-lab&lt;/h2&gt;
+
+&lt;p&gt;from Youtube.com &lt;a href=&quot;https://www.youtube.com/watch?v=Is2O666qDPs&quot;&gt;Why You’re Over-Thinking Your UI/UX with Rohan Puri&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;narrow-your-scope&quot;&gt;Narrow Your Scope&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;very narrow band of target users, first-adopters, very specific
+(mom’s 40-50 in california who earn 100K+)&lt;/li&gt;
+  &lt;li&gt;speeds up development time - only focus on statisfying that user’s need&lt;/li&gt;
+  &lt;li&gt;guide testing&lt;/li&gt;
+  &lt;li&gt;identify marketing&lt;/li&gt;
+  &lt;li&gt;narrows number of variables for testing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;examples:&lt;/p&gt;
+
+&lt;p&gt;Amazon -&amp;gt; started with just new books&lt;/p&gt;
+
+&lt;p&gt;Google -&amp;gt; search&lt;/p&gt;
+
+&lt;p&gt;Twitter -&amp;gt; sms platform to put a message on a screen&lt;/p&gt;
+
+&lt;p&gt;kill it with that one thing first&lt;/p&gt;
+
+&lt;p&gt;template:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;__ is a &lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__ that allows __&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;__ to &lt;strong&gt;__&lt;/strong&gt;&lt;strong&gt;__&lt;/strong&gt;___&lt;/p&gt;
+
+&lt;p&gt;(product) is a (general, relatable tool) that allows (2 adjectives + target users) to (use-case)&lt;/p&gt;
+
+&lt;p&gt;general, relatable tool -&amp;gt; we are the “uber” for what ever&lt;/p&gt;
+
+&lt;p&gt;2 adjectives -&amp;gt; super specific not “very”&lt;/p&gt;
+
+&lt;h3 id=&quot;define-personas&quot;&gt;Define Personas&lt;/h3&gt;
+
+&lt;p&gt;take target users and put a name and context to it. don’t go crazy with it, you don’t need a full page.&lt;/p&gt;
+
+&lt;p&gt;[me: anti-persona - someone that isn’t a target user]&lt;/p&gt;
+
+&lt;p&gt;h2. Check yourself -&amp;gt; Sory board&lt;/p&gt;
+
+&lt;p&gt;[checkout ios storyboard feature]&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;use personas&lt;/li&gt;
+  &lt;li&gt;identify and cut long trees/branches (deep UI workflows)&lt;/li&gt;
+  &lt;li&gt;identify dead ends&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;stop&quot;&gt;Stop&lt;/h3&gt;
+
+&lt;p&gt;stop thinking, no more mockups, personas, interviews, start building&lt;/p&gt;
+
+&lt;h3 id=&quot;build&quot;&gt;Build&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;html&lt;/li&gt;
+  &lt;li&gt;99 designs (don’t spend lots of time on logos and name)&lt;/li&gt;
+  &lt;li&gt;keynotopia - package of buttons/menus built in keynote and power point to build a slide show
+** balsamic&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;distribute&quot;&gt;Distribute&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;test flight (ios testing)&lt;/li&gt;
+  &lt;li&gt;heroku&lt;/li&gt;
+  &lt;li&gt;hockey app&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;collect-data&quot;&gt;Collect Data&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;be very quantitative&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;heap - collects data on everything&lt;/li&gt;
+  &lt;li&gt;google analytics - you must be very specific&lt;/li&gt;
+  &lt;li&gt;flurry
+(&lt;/li&gt;
+  &lt;li&gt;mail chimp&lt;/li&gt;
+  &lt;li&gt;hubspot
+)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;simplify&quot;&gt;Simplify&lt;/h3&gt;
+
+&lt;p&gt;anyone can make something bigger and more complex&lt;/p&gt;
+
+&lt;p&gt;expose users to feature, look at data, simplify, remove things that aren’t used/useful.&lt;/p&gt;
+
+&lt;p&gt;Prioritize activity Pathways&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;what pathway do you need users to engage with the most?&lt;/li&gt;
+  &lt;li&gt;What pathway do users use the most?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;create/browse/respond&lt;/p&gt;
+
+&lt;p&gt;Focus Above the fold - user’s don’t scroll&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes on Why You’re Over-Thinking Your UI/UX with Rohan Puri | Harvard i-lab</summary></entry><entry><title type="html">Web Browser Viewport</title><link href="/2020/04/08/WebViewPort.html" rel="alternate" type="text/html" title="Web Browser Viewport" /><published>2020-04-08T00:00:00-04:00</published><updated>2020-04-08T00:00:00-04:00</updated><id>/2020/04/08/WebViewPort</id><content type="html" xml:base="/2020/04/08/WebViewPort.html">&lt;h3 id=&quot;notes-on-web-browser-viewport&quot;&gt;Notes on Web Browser Viewport&lt;/h3&gt;
+
+&lt;p&gt;from &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts&quot;&gt;Viewport concepts&lt;/a&gt; and &lt;a href=&quot;https://www.w3.org/TR/cssom-view/&quot;&gt;CSSOM View Module&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;viewport - the size of the area for viewing the web page in the browser window&lt;/li&gt;
+  &lt;li&gt;window - the size of the window of the browser including the controls not part of a web page. always &amp;gt;= viewport
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window.innerWidth&lt;/code&gt; is &lt;em&gt;always&lt;/em&gt; the width of the browser window viewport including the vertical scrollbar if present or zero if there is no viewport.&lt;/li&gt;
+      &lt;li&gt;The area within the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;innerHeight&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;innerWidth&lt;/code&gt; is the layout viewport.&lt;/li&gt;
+      &lt;li&gt;zooming in makes the layout viewport smaller&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;document - the size of the web page visible or not
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;document.documentElement.clientWidth&lt;/code&gt; is the width of the viewport including padding but not borders, margins, or vertical scrollbars if present.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;layout viewport - the part of the document rendered in the viewport&lt;/li&gt;
+  &lt;li&gt;visual viewport - what is visible to the user in the viewport, the layout viewport minus dynamic controls (features that don’t scale with the dimensions of a page.)
+    &lt;ul&gt;
+      &lt;li&gt;it is always &amp;lt;= layout viewport&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The visual viewport is the part of the web page that is currently visible in the browser and can change. When the user pinch-zooms the page, pops open a dynamic keyboard, or when a previously hidden address bar becomes visible, the visual viewport shrinks but the layout viewport is unchanged.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;media queries are relative to the viewport&lt;/li&gt;
+  &lt;li&gt;viewport length units are a percent of the viewport
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width: 50vw;&lt;/code&gt; is 50% of the viewport&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;element.getBoundingClientRect();&lt;/code&gt; - returns the size of an element and its position relative to the viewport. The smallest rectangle which contains the entire element &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect&quot;&gt;Mozilla’s API web docs&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Properties other than width and height are relative to the top-left of the viewport.&lt;/li&gt;
+      &lt;li&gt;The amount of scrolling that has been done of the viewport area (or any other scrollable element) is taken into account when computing the bounding rectangle.&lt;/li&gt;
+      &lt;li&gt;if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;top&lt;/code&gt; &amp;gt;= &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window.innerHeight&lt;/code&gt; the element is below the viewport&lt;/li&gt;
+      &lt;li&gt;if &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bottom&lt;/code&gt; &amp;lt;= &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;window.innerHeight&lt;/code&gt; the element is above the viewport&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;The requirement:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;The ISI (Important Safety Information) must always be visible on 25% of the screen.&lt;/li&gt;
+      &lt;li&gt;The ISI is embedded in the page, but if that is not 25% visible then display a popup that contains the ISI text and is 25% of the screen size&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;isiBounds.top + percentVisibleSize &amp;gt; viewportHeight&lt;/td&gt;
+          &lt;td&gt; &lt;/td&gt;
+          &lt;td&gt;(isiBounds.bottom - percentVisibleSize) &amp;lt;= viewportHeight&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some code excerpts, the original was in a VueJS component, &lt;strong&gt;TODO&lt;/strong&gt;  remove VUE stuff and make it work as plain JS&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bounds&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;some random content&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isiContent&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;this content will also be in the popup.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;some other content&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isiPopup&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isi-pop-up container row&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ref=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isiPopup&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-bind:style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;'height: ' + isiPopupHeight + 'px'&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;v-if=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;config.isAnISI &amp;amp;&amp;amp; showISIPopup&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isi-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ISI-popup-nav&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ref=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isiPopupTopnav&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isi-top-bar&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;:style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;'background-color: ' + (config.isiTitleBackgroundColor || '#000000') + '; color: ' + (config.isiTitleForegroundColor || '#ffffff')&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;h4&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pop-up-header&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;strong&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bold-text&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/h4&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;button&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;button&quot;&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;click=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;resizeISI()&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn btn-expand-toggle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;:class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isISIPopupExpanded?'active':''&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;:style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;'border-color: ' + (config.isiTitleForegroundColor || '#ffffff')&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn-label&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;:style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;'color: ' + (config.isiTitleForegroundColor || '#ffffff')&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;^&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isi-scroll-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;isi-wrapper&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+              &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;richText&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+          &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;```ecmascript 6
+    // register listeners for viewport changes
+    function setupViewportChangeListeners() {
+      if (window.addEventListener) {
+        window.addEventListener(‘DOMContentLoaded’, this.onViewportChangeHandler, false);
+        window.addEventListener(‘load’, this.onViewportChangeHandler, false);
+        window.addEventListener(‘scroll’, this.onViewportChangeHandler, false);
+        window.addEventListener(‘resize’, this.onViewportChangeHandler, false);
+      } else if (window.attachEvent) { // Internet Explorer
+        window.attachEvent(‘onDOMContentLoaded’, this.onViewportChangeHandler);
+        window.attachEvent(‘onload’, this.onViewportChangeHandler);
+        window.attachEvent(‘onscroll’, this.onViewportChangeHandler);
+        window.attachEvent(‘onresize’, this.onViewportChangeHandler);
+      }
+    }&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// unregister listeners for viewport changes
+function removeViewportChangeListeners() {
+  if (window.removeEventListener) {
+    window.removeEventListener('DOMContentLoaded', this.onViewportChangeHandler, false);
+    window.removeEventListener('load', this.onViewportChangeHandler, false);
+    window.removeEventListener('scroll', this.onViewportChangeHandler, false);
+    window.removeEventListener('resize', this.onViewportChangeHandler, false);
+  } else if (window.detachEvent) { // Internet Explorer
+    window.detachEvent('onDOMContentLoaded', this.onViewportChangeHandler);
+    window.detachEvent('onload', this.onViewportChangeHandler);
+    window.detachEvent('onscroll', this.onViewportChangeHandler);
+    window.detachEvent('onresize', this.onViewportChangeHandler);
+  }
+}
+
+function onViewportChangeHandler(e) {
+  this.adjustISI()
+}
+
+function resizeISI() {
+  this.isISIPopupExpanded = !this.isISIPopupExpanded;
+  this.adjustISI();
+};
+
+function adjustISI() {
+  if (this.config.isAnISI &amp;amp;&amp;amp; this.$refs.bounds) {
+    const inlineISIBounds = this.$refs.bounds.getBoundingClientRect() // bounds of the isi richtext component in the page
+    const isiPopupTopnavHeight = (this.$refs.isiPopupTopnav ? this.$refs.isiPopupTopnav.getBoundingClientRect().height : 0);
+    const viewportHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const percentVisibleSize = (viewportHeight * (this.config.percentVisible || 25) / 100);
+    this.showISIPopup = inlineISIBounds.top + percentVisibleSize &amp;gt; viewportHeight || (inlineISIBounds.bottom &amp;lt;= percentVisibleSize);
+    if (this.isISIPopupExpanded) {
+      this.isiPopupHeight = (viewportHeight - 100);
+    } else {
+      // add the height of the popup topnav bar
+      this.isiPopupHeight = percentVisibleSize + isiPopupTopnavHeight;
+    }
+  }
+} ```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ron Regan</name></author><summary type="html">Notes on Web Browser Viewport</summary></entry><entry><title type="html">How Complexity Evolves</title><link href="/2020/03/04/ComplexityEvolvesExample.html" rel="alternate" type="text/html" title="How Complexity Evolves" /><published>2020-03-04T00:00:00-05:00</published><updated>2020-03-04T00:00:00-05:00</updated><id>/2020/03/04/ComplexityEvolvesExample</id><content type="html" xml:base="/2020/03/04/ComplexityEvolvesExample.html">&lt;h3 id=&quot;example-of-how-complexity-increases-as-a-feature-evolves&quot;&gt;Example of How Complexity Increases as a Feature Evolves&lt;/h3&gt;
+
+&lt;p&gt;video data import&lt;/p&gt;
+
+&lt;p&gt;missing video data for users that aren’t in our system&lt;/p&gt;
+
+&lt;p&gt;missing video data when we remap between ours and their events&lt;/p&gt;
+
+&lt;p&gt;dynamically organize event data at report time&lt;/p&gt;
+
+&lt;p&gt;if a user changes their email address we still need to be able to map the data with the old email address from video data to our system&lt;/p&gt;
+
+&lt;p&gt;reporting only users that become “real” users&lt;/p&gt;
+
+&lt;p&gt;merging two users together - some of our partners send generated email addresses in place of real emails in urls to our events, later they will send us a mapping of generated to real user emails and data that we use to collect the users use of our system so we can accurately report unique users.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Example of How Complexity Increases as a Feature Evolves</summary></entry><entry><title type="html">What Users Really Want Versus What Gets Delivered</title><link href="/2020/02/13/WantVersusReceive.html" rel="alternate" type="text/html" title="What Users Really Want Versus What Gets Delivered" /><published>2020-02-13T00:00:00-05:00</published><updated>2020-02-13T00:00:00-05:00</updated><id>/2020/02/13/WantVersusReceive</id><content type="html" xml:base="/2020/02/13/WantVersusReceive.html">&lt;h3 id=&quot;what-users-really-want-versus-what-gets-delivered&quot;&gt;What Users Really Want Versus What Gets Delivered&lt;/h3&gt;
 
 &lt;p&gt;I find requirements the hard part of software development because communication is so hard; much harder than it seems it should be.&lt;/p&gt;
 
@@ -6,7 +365,7 @@
   &lt;li&gt;What the user really wants.&lt;/li&gt;
   &lt;li&gt;What the user thinks they want.&lt;/li&gt;
   &lt;li&gt;What the user asks for.&lt;/li&gt;
-  &lt;li&gt;How I interpret what the user asks for.&lt;/li&gt;
+  &lt;li&gt;How I interpret what the user asks for (filling in details with my knowledge of the context.)&lt;/li&gt;
   &lt;li&gt;What I conceptualize that meets my interpretation of what the user wants.
     &lt;ul&gt;
       &lt;li&gt;Mapping my understanding of the requirements to an abstract solution that I think will meet the requirements.&lt;/li&gt;
@@ -29,7 +388,7 @@
 
 &lt;h4 id=&quot;details&quot;&gt;Details&lt;/h4&gt;
 
-&lt;p&gt;Software is effectively unconstrained with respect to options. Because of this a lot of detail is required to produce it.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">What Users Really Want Versus What Gets Delivered</summary></entry><entry><title type="html">10 Usability Heuristics for User Interface Design</title><link href="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html" rel="alternate" type="text/html" title="10 Usability Heuristics for User Interface Design" /><published>2020-02-11T00:00:00-05:00</published><updated>2020-02-11T00:00:00-05:00</updated><id>http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics</id><content type="html" xml:base="http://localhost:4000/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html">&lt;h3 id=&quot;10-usability-heuristics-for-user-interface-design&quot;&gt;10 Usability Heuristics for User Interface Design&lt;/h3&gt;
+&lt;p&gt;Software is effectively unconstrained with respect to options. Because of this a lot of detail is required to produce it.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">What Users Really Want Versus What Gets Delivered</summary></entry><entry><title type="html">10 Usability Heuristics for User Interface Design</title><link href="/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html" rel="alternate" type="text/html" title="10 Usability Heuristics for User Interface Design" /><published>2020-02-11T00:00:00-05:00</published><updated>2020-02-11T00:00:00-05:00</updated><id>/2020/02/11/NielsenNormanGroup10UsabilityHeuristics</id><content type="html" xml:base="/2020/02/11/NielsenNormanGroup10UsabilityHeuristics.html">&lt;h3 id=&quot;10-usability-heuristics-for-user-interface-design&quot;&gt;10 Usability Heuristics for User Interface Design&lt;/h3&gt;
 
 &lt;p&gt;These are my notes for the &lt;a href=&quot;https://www.youtube.com/playlist?list=PLJOFJ3Ok_idtb2YeifXlG1-TYoMBLoG6I&quot;&gt;Youtube playlist The 10 Usability Heuristics&lt;/a&gt;&lt;/p&gt;
 
@@ -198,7 +557,7 @@
   &lt;li&gt;the time to acquire a target is a function of the size of the target and the distance to the target&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MT = a + b * log2( 2D / W)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MT = a + b * log2( 2D / W)
 
 MT = time to select target 
 a &amp;amp; b = constants set by type of device
@@ -232,7 +591,7 @@ W = width of target along axis of motion
   &lt;li&gt;example - list of US States - no matter where a user focuses on the list, they know what they are looking for and where it is in relation to where they are.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;em&gt;Should the whole list  be visible to scan?&lt;/em&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">10 Usability Heuristics for User Interface Design</summary></entry><entry><title type="html">Dieter Rams - “Good design” principles</title><link href="http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples.html" rel="alternate" type="text/html" title="Dieter Rams - &quot;Good design&quot; principles" /><published>2020-01-27T00:00:00-05:00</published><updated>2020-01-27T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples</id><content type="html" xml:base="http://localhost:4000/2020/01/27/DieterRamsGoodDesignPrinciples.html">&lt;h3 id=&quot;dieter-rams---good-design-principles&quot;&gt;Dieter Rams - “Good design” principles&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Should the whole list  be visible to scan?&lt;/em&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">10 Usability Heuristics for User Interface Design</summary></entry><entry><title type="html">Dieter Rams - “Good design” principles</title><link href="/2020/01/27/DieterRamsGoodDesignPrinciples.html" rel="alternate" type="text/html" title="Dieter Rams - “Good design” principles" /><published>2020-01-27T00:00:00-05:00</published><updated>2020-01-27T00:00:00-05:00</updated><id>/2020/01/27/DieterRamsGoodDesignPrinciples</id><content type="html" xml:base="/2020/01/27/DieterRamsGoodDesignPrinciples.html">&lt;h3 id=&quot;dieter-rams---good-design-principles&quot;&gt;Dieter Rams - “Good design” principles&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;is innovative – The possibilities for progression are not, by any means, exhausted. Technological development is always offering new opportunities for original designs. But imaginative design always develops in tandem with improving technology, and can never be an end in itself.&lt;/li&gt;
@@ -249,7 +608,7 @@ W = width of target along axis of motion
 
 &lt;p&gt;From &lt;a href=&quot;https://en.wikipedia.org/wiki/Dieter_Rams&quot;&gt;Wikipedia’s page for Dieter Rams&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;See Also &lt;a href=&quot;https://www.interaction-design.org/literature/article/dieter-rams-10-timeless-commandments-for-good-design&quot;&gt;Interaction Design Foundation article&lt;/a&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Dieter Rams - “Good design” principles</summary></entry><entry><title type="html">Notes on - The Design of Everyday Things</title><link href="http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings.html" rel="alternate" type="text/html" title="Notes on - The Design of Everyday Things" /><published>2020-01-21T00:00:00-05:00</published><updated>2020-01-21T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings</id><content type="html" xml:base="http://localhost:4000/2020/01/21/NotesOnTheDesignOfEverydayThings.html">&lt;p&gt;&lt;em&gt;It’s not your fault - bad user experience is the fault of the designer.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;See Also &lt;a href=&quot;https://www.interaction-design.org/literature/article/dieter-rams-10-timeless-commandments-for-good-design&quot;&gt;Interaction Design Foundation article&lt;/a&gt;&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Dieter Rams - “Good design” principles</summary></entry><entry><title type="html">Notes on - The Design of Everyday Things</title><link href="/2020/01/21/NotesOnTheDesignOfEverydayThings.html" rel="alternate" type="text/html" title="Notes on - The Design of Everyday Things" /><published>2020-01-21T00:00:00-05:00</published><updated>2020-01-21T00:00:00-05:00</updated><id>/2020/01/21/NotesOnTheDesignOfEverydayThings</id><content type="html" xml:base="/2020/01/21/NotesOnTheDesignOfEverydayThings.html">&lt;p&gt;&lt;em&gt;It’s not your fault - bad user experience is the fault of the designer.&lt;/em&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;design-principals&quot;&gt;Design Principals&lt;/h4&gt;
 
@@ -715,6 +1074,121 @@ how do we deal with novel situations&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h4 id=&quot;user-centered-design&quot;&gt;User Centered Design&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make it easy for the user to know what actions are possible at any time&lt;/li&gt;
+  &lt;li&gt;Make things visible
+    &lt;ul&gt;
+      &lt;li&gt;the conceptual model&lt;/li&gt;
+      &lt;li&gt;alternative actions&lt;/li&gt;
+      &lt;li&gt;results of actions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Make it easy to evaluate the current state of the system&lt;/li&gt;
+  &lt;li&gt;Use natural mappings
+    &lt;ul&gt;
+      &lt;li&gt;between intentions and the possible actions&lt;/li&gt;
+      &lt;li&gt;between actions and results&lt;/li&gt;
+      &lt;li&gt;what is visible and how it relates to system state&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;in other words&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The user can figure out what to do&lt;/li&gt;
+  &lt;li&gt;The user can tell what is going on&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;seven-principles-for-transforming-difficult-tasks-into-simple-ones&quot;&gt;Seven Principles for Transforming Difficult Tasks into Simple Ones&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Use knowledge in the world and in the head
+    &lt;ul&gt;
+      &lt;li&gt;people learn better/feel comfortable when knowledge is externally available.
+        &lt;ul&gt;
+          &lt;li&gt;explicit or derived through constraints&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;knowledge in the world is only useful if it is natural/easily mapped to actions and outcomes.&lt;/li&gt;
+      &lt;li&gt;allow users to use knowledge in the head to make things faster.
+        &lt;ul&gt;
+          &lt;li&gt;(key-chords versus navigating through menus)&lt;/li&gt;
+          &lt;li&gt;the design shouldn’t impede a user that knows what they want.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;good conceptual models make things easier.
+        &lt;ul&gt;
+          &lt;li&gt;natural - works the way the user thinks it should.&lt;/li&gt;
+          &lt;li&gt;consistent - similar goals use similar actions&lt;/li&gt;
+          &lt;li&gt;three models
+            &lt;ul&gt;
+              &lt;li&gt;design - designers conceptualization of how it works&lt;/li&gt;
+              &lt;li&gt;user - users self explanation of how it works&lt;/li&gt;
+              &lt;li&gt;system image - the user facing interface to the system&lt;/li&gt;
+              &lt;li&gt;ideally the user model = design model, for this to happen the system image must communicate the design image to the user&lt;/li&gt;
+              &lt;li&gt;the user aquires all knowledge of the system through the system image.&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;manuals/help - if you need them, something is wrong.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Simplify the Structure of tasks
+    &lt;ul&gt;
+      &lt;li&gt;people only have limited resources for performing tasks
+        &lt;ul&gt;
+          &lt;li&gt;memory
+            &lt;ul&gt;
+              &lt;li&gt;short term - limited space&lt;/li&gt;
+              &lt;li&gt;long term - needs to be triggered (hints), slower access
+                &lt;ul&gt;
+                  &lt;li&gt;sensible versus rote&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;concurrency
+            &lt;ul&gt;
+              &lt;li&gt;people can only concentrate on one thing at a time
+                &lt;ul&gt;
+                  &lt;li&gt;lose your place if distracted, where was I?&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;context switching can be expensive
+                &lt;ul&gt;
+                  &lt;li&gt;help the user with feed back if they get distracted&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;provide mental aids - blinking cursor, highlight the field I’m on, tell me how many characters I’ve typed and what is the maximum. identify typos, validate fields&lt;/li&gt;
+          &lt;li&gt;make the invisible visible&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;automate tasks so users don’t have to do tedious things
+        &lt;ul&gt;
+          &lt;li&gt;don’t destroy the fun/pleasurable aspects of a process, maybe?&lt;/li&gt;
+          &lt;li&gt;don’t take away control&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;make tasks easier for the user
+        &lt;ul&gt;
+          &lt;li&gt;velcro straps instead of shoe laces.&lt;/li&gt;
+          &lt;li&gt;digital versus analog clock.&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Make things visible for Execution and Evaluation
+    &lt;ul&gt;
+      &lt;li&gt;people make explanations for the things they see which may be wrong.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;em&gt;Once a satisfactory product has been achieved, further changes may be counterproductive, you have to know when to stop.&lt;/em&gt; pg 150&lt;/p&gt;
@@ -725,7 +1199,7 @@ how do we deal with novel situations&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;People are explanatory creatures&lt;/em&gt; - back story, mental models, interpretations pg 38&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;When ever the number of functions and required operations exceeds the number of controls, the design become arbitrary, unnatural, and complicated.&lt;/em&gt; pq. 31&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">It’s not your fault - bad user experience is the fault of the designer.</summary></entry><entry><title type="html">My Experience with Event Sourcing - Zarex Event processing</title><link href="http://localhost:4000/2020/01/16/ZarexEventProcessing.html" rel="alternate" type="text/html" title="My Experience with Event Sourcing - Zarex Event processing" /><published>2020-01-16T00:00:00-05:00</published><updated>2020-01-16T00:00:00-05:00</updated><id>http://localhost:4000/2020/01/16/ZarexEventProcessing</id><content type="html" xml:base="http://localhost:4000/2020/01/16/ZarexEventProcessing.html">&lt;p&gt;Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;When ever the number of functions and required operations exceeds the number of controls, the design become arbitrary, unnatural, and complicated.&lt;/em&gt; pq. 31&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">It’s not your fault - bad user experience is the fault of the designer.</summary></entry><entry><title type="html">My Experience with Event Sourcing - Zarex Event processing</title><link href="/2020/01/16/ZarexEventProcessing.html" rel="alternate" type="text/html" title="My Experience with Event Sourcing - Zarex Event processing" /><published>2020-01-16T00:00:00-05:00</published><updated>2020-01-16T00:00:00-05:00</updated><id>/2020/01/16/ZarexEventProcessing</id><content type="html" xml:base="/2020/01/16/ZarexEventProcessing.html">&lt;p&gt;Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.&lt;/p&gt;
 
 &lt;p&gt;Because we were starting from a more traditional application structure that we were adapting to event based we used some of the existing structures and wrapped them. We already had the concept of an EditModel that contained the changes to make to an entity’s persistent state. The EditModel was translated from json to an object that was passed to a controller which was a UI binding to an EditCommand that took the incoming data and updated a Hibernate persisted entity and subordinate entities in the context of a transaction.&lt;/p&gt;
 
@@ -737,14 +1211,14 @@ how do we deal with novel situations&lt;/p&gt;
 
 &lt;p&gt;Each service maintained its own state for all entities. The state may look different, for example in our authentication service we only cared about email, password and hash salt, and in our communications service we only care about contact info and whether a user is opted in to receiving emails about a specific product. In our data warehouse there were lots of different representations of a user, plus data from external sources so that we could report on different aspects. We setup up our services this way so that they could work completely independent of each other and didn’t make requests to each other for data.&lt;/p&gt;
 
-&lt;p&gt;There is a logical entity type, this represents a concept such as a User, this was used to associate different persistent models and event data to the same logical entities and allow services to indicate they care about events related to those entities even if the specific event may not be relevant to their local representation of the entity. It was the services responsability to process the message and ignore it if the data wasn’t relevant. For example the authentication service cared about users’ email and password, but not about users’ phone number so if an event came in to change the phone number it would process the event but do nothing. This relates to one of the problems with our rigorous consistency.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.</summary></entry><entry><title type="html">Getting back to FUNctional programming with jsrx</title><link href="http://localhost:4000/2019/11/22/jsrx.html" rel="alternate" type="text/html" title="Getting back to FUNctional programming with jsrx" /><published>2019-11-22T00:00:00-05:00</published><updated>2019-11-22T00:00:00-05:00</updated><id>http://localhost:4000/2019/11/22/jsrx</id><content type="html" xml:base="http://localhost:4000/2019/11/22/jsrx.html">&lt;p&gt;I’m working on a demo for upgrading https://globalofficelink.com/ to a single page app using Angular.&lt;/p&gt;
+&lt;p&gt;There is a logical entity type, this represents a concept such as a User, this was used to associate different persistent models and event data to the same logical entities and allow services to indicate they care about events related to those entities even if the specific event may not be relevant to their local representation of the entity. It was the services responsability to process the message and ignore it if the data wasn’t relevant. For example the authentication service cared about users’ email and password, but not about users’ phone number so if an event came in to change the phone number it would process the event but do nothing. This relates to one of the problems with our rigorous consistency.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Some of the problems with our event sourcing and processing logic is that the EventStore has the concept of entities and identity and does rudimentary validation to get around the fact that we relied heavily on a SQL database for validation and referential integrity and without this validation the EventStore accepted requests that resulted in events that the backend service could not process.</summary></entry><entry><title type="html">Getting back to FUNctional programming with jsrx</title><link href="/2019/11/22/jsrx.html" rel="alternate" type="text/html" title="Getting back to FUNctional programming with jsrx" /><published>2019-11-22T00:00:00-05:00</published><updated>2019-11-22T00:00:00-05:00</updated><id>/2019/11/22/jsrx</id><content type="html" xml:base="/2019/11/22/jsrx.html">&lt;p&gt;I’m working on a demo for upgrading https://globalofficelink.com/ to a single page app using Angular.&lt;/p&gt;
 
 &lt;p&gt;I want to give the listings search page a better user experience. The minimum search is by type of listing (buy/rent versus
  selling) and country. There aren’t that many countries with listings so having a user select one of 200+ countries to find
  a listing is a terrible experience. I want the user to only have to select from countries that have listings.&lt;/p&gt;
 
 &lt;p&gt;I could easily do this as a query on a database:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   select distinct c.* 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   select distinct c.* 
    from country c
    left join listing l on (c.countryCode == l.countryCode)
    where l.id is not null 
@@ -754,19 +1228,19 @@ how do we deal with novel situations&lt;/p&gt;
  for now I’ll pull dummy ones from an array.&lt;/p&gt;
 
 &lt;p&gt;For some reason I thought pulling countries from a service would return a stream of countries, but in reality it returns
- a stream of country arrays with a single item. So right off the bat I had it wrong as &lt;code class=&quot;highlighter-rouge&quot;&gt;httpClient.get&amp;lt;Country&amp;gt;(this.countriesAPI)&lt;/code&gt;
- but Typescript didn’t complain because it had no idea what the service was returning. Plus I assumed an &lt;code class=&quot;highlighter-rouge&quot;&gt;Observable&lt;/code&gt; was
+ a stream of country arrays with a single item. So right off the bat I had it wrong as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;httpClient.get&amp;lt;Country&amp;gt;(this.countriesAPI)&lt;/code&gt;
+ but Typescript didn’t complain because it had no idea what the service was returning. Plus I assumed an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Observable&lt;/code&gt; was
  iterable, but it wasn’t. I wasn’t sure how to turm my stream of country arrays into a stream of country so I just filtered
  the countries array with the array filter method and a static array of country codes.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable via array filter of country codes
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable via array filter of country codes
    public getActiveCountriesTakeOne(): Observable&amp;lt;Country[]&amp;gt; {
      return this.countries.pipe(
        map(countries =&amp;gt; countries.filter(country =&amp;gt; ['US', 'CA', 'UK'].includes(country.alpha2Code))), tap(console.log));
    }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;the rxjs map takes the array as one item, applies the function &lt;code class=&quot;highlighter-rouge&quot;&gt;countries.filter(...)&lt;/code&gt; and returns the correct set of
+&lt;p&gt;the rxjs map takes the array as one item, applies the function &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;countries.filter(...)&lt;/code&gt; and returns the correct set of
 countries I want. This seems inelegant and kind of like cheating so the next step was to turn my country array 
 into a stream of countries. This stumped me for a bit going through the documentation of functions, for example the
 description for flatMap:&lt;/p&gt;
@@ -776,18 +1250,18 @@ description for flatMap:&lt;/p&gt;
 to each item emitted by the source Observable and merging the results of the Observables obtained from this transformation.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;while I’m sure this is technically correct it is indecipherable to me and the fact that &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country)&lt;/code&gt; converts
+&lt;p&gt;while I’m sure this is technically correct it is indecipherable to me and the fact that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country)&lt;/code&gt; converts
 a stream of Country[] into a stream of Country seems like witchcraft. It takes an item from the source stream, in
 this case a Country[] and makes that an Observable, subscribes to it and then applies the projection function, in this case
-&lt;code class=&quot;highlighter-rouge&quot;&gt;country&lt;/code&gt;, to the items in that stream, which just returns the item.&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;country&lt;/code&gt;, to the items in that stream, which just returns the item.&lt;/p&gt;
 
-&lt;p&gt;After flattening and mapping I could then filter the countries &lt;code class=&quot;highlighter-rouge&quot;&gt;filter(country =&amp;gt; ['US', 'CA', 'MX'].includes(country.alpha2Code))&lt;/code&gt;
+&lt;p&gt;After flattening and mapping I could then filter the countries &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;filter(country =&amp;gt; ['US', 'CA', 'MX'].includes(country.alpha2Code))&lt;/code&gt;
 but now I’m returning a stream of Countries, but the Select control doesn’t like that as it isn’t iterable. I need to return
 a single item with an array. Hello reduce, you have a funny name, why isn’t it collect? It in Lisp and XSLT you use tail recursion
 but this is more like unwinding recursion into iteration with a collection, anyway now I have a pure observable way of
 generating my active countries:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable filtering by array
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   // observable filtering by array
    public getActiveCountriesTakeTwo(): Observable&amp;lt;Country[]&amp;gt; {
      return this.countries.pipe(
        flatMap(country =&amp;gt; country),
@@ -800,24 +1274,24 @@ generating my active countries:&lt;/p&gt;
  this as a single pipeline. I then outlined what I wanted. I want to take my stream of countries and if the country was
  in the collection of distinct country codes from the listings, return it. I need the countries individually to see if they
  are in the list, but I need the active country codes collectively. I broke the problem into two parts, make a distinct
- list of country codes and then apply that to the countries. I already know that I can use &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap&lt;/code&gt; to turn my stream
+ list of country codes and then apply that to the countries. I already know that I can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatMap&lt;/code&gt; to turn my stream
  of listing[] into a stream of listings, I thought I could be clever and map directly to countryCode like 
- &lt;code class=&quot;highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country.alpha2Code)&lt;/code&gt; but that didn’t work. There is probably a way to get that to work but using 
- https://rxjs-dev.firebaseapp.com/operator-decision-tree I found &lt;code class=&quot;highlighter-rouge&quot;&gt;pluck()&lt;/code&gt; and that is pretty clean. Then &lt;code class=&quot;highlighter-rouge&quot;&gt;distinct()&lt;/code&gt;
+ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatMap(country =&amp;gt; country.alpha2Code)&lt;/code&gt; but that didn’t work. There is probably a way to get that to work but using 
+ https://rxjs-dev.firebaseapp.com/operator-decision-tree I found &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pluck()&lt;/code&gt; and that is pretty clean. Then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;distinct()&lt;/code&gt;
  is just like SQL, finally turn this back into an array with reduce. How do I bring two streams together? Using the 
  operator decision tree when I get my countries I want to then apply the filtering to see if it is in the active country
- code array, it came up with &lt;code class=&quot;highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt;. Using this took some time to wrap my head around but basically I take
-  a country from the main observable and the array from the country codes and combine into &lt;code class=&quot;highlighter-rouge&quot;&gt;{country,activeCountryCodes}&lt;/code&gt;
+ code array, it came up with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt;. Using this took some time to wrap my head around but basically I take
+  a country from the main observable and the array from the country codes and combine into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{country,activeCountryCodes}&lt;/code&gt;
   I then pass that single item into a filter
-  &lt;code class=&quot;highlighter-rouge&quot;&gt;filter((countryWithCountryCodes) =&amp;gt; countryWithCountryCodes.countryCodes.includes(countryWithCountryCodes.country.alpha2Code))&lt;/code&gt;
+  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;filter((countryWithCountryCodes) =&amp;gt; countryWithCountryCodes.countryCodes.includes(countryWithCountryCodes.country.alpha2Code))&lt;/code&gt;
   and if the country matches a code in the array it gets returned, otherwise not. Finally I collect that back into an
   array of countries for my select list and voilà.&lt;/p&gt;
 
 &lt;p&gt;I don’t know if this is true, but I expect if I setup my service observables to poll the services and then switched
-  to use &lt;code class=&quot;highlighter-rouge&quot;&gt;combineLatest()&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt; then my select list of countries for searching would magically
+  to use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;combineLatest()&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;withLatestFrom()&lt;/code&gt; then my select list of countries for searching would magically
   get updated if a new listing in a new country were added.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import { Listing } from './../listings.types';
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; import { Listing } from './../listings.types';
  import { Code, SIZE_UNITS } from './../../codes/codes.types';
  import { CodesService } from './../../codes/codes.service';
  import { Injectable } from '@angular/core';
@@ -893,141 +1367,4 @@ generating my active countries:&lt;/p&gt;
      );
    }
  }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ron Regan</name></author><summary type="html">I’m working on a demo for upgrading https://globalofficelink.com/ to a single page app using Angular.</summary></entry><entry><title type="html">TODO: My Experience with Event Sourcing</title><link href="http://localhost:4000/2018/09/27/MyExperienceWithEventSourcing.html" rel="alternate" type="text/html" title="TODO: My Experience with Event Sourcing" /><published>2018-09-27T00:00:00-04:00</published><updated>2018-09-27T00:00:00-04:00</updated><id>http://localhost:4000/2018/09/27/MyExperienceWithEventSourcing</id><content type="html" xml:base="http://localhost:4000/2018/09/27/MyExperienceWithEventSourcing.html">&lt;p&gt;Watching this video https://youtu.be/A0goyZ9F4bg reminded me that I need to write about my experience moving from a typical
-single relational database layered architecture to an event-store based micro-service architecture, particularly getting into
-the details of choices and mistakes.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">Watching this video https://youtu.be/A0goyZ9F4bg reminded me that I need to write about my experience moving from a typical single relational database layered architecture to an event-store based micro-service architecture, particularly getting into the details of choices and mistakes.</summary></entry><entry><title type="html">My Struggles with UI Coding: JavaScript and Angular</title><link href="http://localhost:4000/2018/07/31/StrugglesWithUICoding.html" rel="alternate" type="text/html" title="My Struggles with UI Coding: JavaScript and Angular" /><published>2018-07-31T00:00:00-04:00</published><updated>2018-07-31T00:00:00-04:00</updated><id>http://localhost:4000/2018/07/31/StrugglesWithUICoding</id><content type="html" xml:base="http://localhost:4000/2018/07/31/StrugglesWithUICoding.html">&lt;h2 id=&quot;history&quot;&gt;History&lt;/h2&gt;
-
-&lt;p&gt;In 2005 I started working for a company that focused on mobile apps. I decided to stay focused on server side coding because I thought in time the need for specialized phone specific code would go away. But I didn’t keep up with web coding. When we built a web UI for administration, my team hadn’t used javascript in a while so I looked for a Java solution. I compared Google Web Toolkit and the Echo2 framework. I went with Echo2 because it was much more like Java’s AWT/Swing and we had a single language to work with.&lt;/p&gt;
-
-&lt;p&gt;I didn’t get back to “real” client web coding until around 2010 or 2011. Five or six web years is like 100 human years. Even then mobile still wasn’t the same as desktop so I didn’t catch on to the new web frameworks. Now I find myself at a disadvantage. The way JavaScript was used back in the early 2000s is completely different. The programming model on the client side has advanced to complex multi-file modules. I feel like I missed something big somewhere as I struggle with seemingly simple issues.&lt;/p&gt;
-
-&lt;h2 id=&quot;struggles&quot;&gt;Struggles&lt;/h2&gt;
-
-&lt;p&gt;For example I was creating a new form for collecting reporting criteria that was very similar to another report page so I started by copying the files for the other report, renaming them and then editing the contents. At first nothing worked, but I got passed that relatively easily by restarting the buld/server. Then when I loaded the page most things were looking good except the first two date input fields. The labels for the start/end dates in the schedule select failed to display, both showed as `` and I had the following stack trace.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;angular.js:15288 TypeError: Cannot read property 'label' of undefined
-    at activate (pqScheduleWidgetDirective.js:31)
-    at pqScheduleWidgetController (pqScheduleWidgetDirective.js:22)
-    at Object.invoke (angular.js:4898)
-    at O.instance (angular.js:11101)
-    at q (angular.js:9867)
-    at angular.js:10305
-    at angular.js:17099
-    at m.$digest (angular.js:18238)
-    at m.$apply (angular.js:18604)
-    at l (angular.js:12404)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This made it seem like there was a problem with how I was configuring our custom schedule control. I can’t debug in the browser because the references to code in the stack trace open as empty files. Our build process obfuscates and merges the code into a single file. There is a mapping file that suppose to get loaded in the browser so the compressed code can be viewed and debugged as the source code, but it doesn’t work, so I have to guess my way around the code with alerts or commenting out changes I made until I happen on the problem.&lt;/p&gt;
-
-&lt;p&gt;Long story short, I had a typo in my model name in the html template. there was no indication in the file to the error. I apparently cut and pasted here and left an errant ‘P’ in the model reference, after removing it things worked fine. This cost me 2 hours.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;formly-form model=&quot;vm.reportPCMEOutcomesView&quot; fields=&quot;vm.formFields&quot; options=&quot;vm.formOptions&quot; ng-if=&quot;vm.reportCMEOutcomesView&quot;&amp;gt;&amp;lt;/formly-form&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This is were I feel like I’m missing something. Debugging in Java is such a joy compared to Visual Basic circa 1997 or C via gdb in the early 90s. Debugging in Chrome isn’t bad with un-obfuscated code, I can set break points and view data values. But stepping into library code is terrible.&lt;/p&gt;
-
-&lt;p&gt;There are other things about UI development. For example I lost time with an AngularJS module issue. Again I was copying and pasting a file someone else made to my reporting module. I changed the module name to match the name of the module I was putting it.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  angular
-    .module('some.module', [])
-    .directive(...)
-  ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After I did this I started getting errors that my controller wasn’t defined, making me think I messed up something else. What really happened is that I didn’t remove the second parameter to the module function &lt;code class=&quot;highlighter-rouge&quot;&gt;[]&lt;/code&gt; and now I redefining the module, blowing away all the other things I had added to it. I didn’t get an error that I was redefining an existing module which seems like something you shouldn’t be able to do. My new file should have started like this&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  angular
-    .module('some.module')
-    .directive(...)
-  ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Again this took me a while to figure out. Am I struggling because I don’t understand a tenet of JavaScript development or is this just how it is, and if so why do people work this way?&lt;/p&gt;
-
-&lt;h2 id=&quot;coda&quot;&gt;Coda&lt;/h2&gt;
-
-&lt;p&gt;Before our last UI expert left we decided to switch to using Typescript. In most cases we just simply renamed some files, but in others we did use real Typescript and that helped with compile time errors, until we moved to Intellij Ultimate with real Typescript support. That was awesome. Unfortunately he left and the new UI expert isn’t in to Typescript. Intellij Ultimate is still much better with regular JavaScript identifying typos and being able to find where functions are defined, so I have that. Debugging is still a pain.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">History</summary></entry><entry><title type="html">Modularity, ManyToAny, and Bidirectional Associations Follow Up</title><link href="http://localhost:4000/2018/06/29/Modularity2.html" rel="alternate" type="text/html" title="Modularity, ManyToAny, and Bidirectional Associations Follow Up" /><published>2018-06-29T00:00:00-04:00</published><updated>2018-06-29T00:00:00-04:00</updated><id>http://localhost:4000/2018/06/29/Modularity2</id><content type="html" xml:base="http://localhost:4000/2018/06/29/Modularity2.html">&lt;h2 id=&quot;the-solution&quot;&gt;The Solution&lt;/h2&gt;
-
-&lt;p&gt;This is the solution to the problem described in &lt;a href=&quot;/2018/06/18/Modularity.html&quot;&gt;Modularity, ManyToAny, and Bidirectional Associations&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I ended up creating a new module that only contains a package-info.java file where I define the AnyMetaDef with a name, added dependencies on the requel-project and annotation modules, but &lt;em&gt;no dependency&lt;/em&gt; on this module except for a runtime dependency in the main requel module so it gets included in the spring boot jar and is available in the classpath on startup.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AnyMetaDef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;annotatables&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idType&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;long&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;metaType&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;metaValues&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.annotation.Annotation&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AbstractAnnotation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.Project&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProjectImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.ProjectTeam&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ProjectTeamImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.Goal&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GoalImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.GoalRelation&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GoalRelationImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.UseCase&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UseCaseImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.Scenario&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ScenarioImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.Step&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StepImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.Story&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;StoryImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.Actor&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ActorImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.GlossaryTerm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;GlossaryTermImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.NonUserStakeholder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NonUserStakeholderImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.rreganjr.requel.project.UserStakeholder&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetEntity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;UserStakeholderImpl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rreganjr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;requel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annotation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rreganjr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;requel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annotation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;impl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AbstractAnnotation&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;com&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rreganjr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;requel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;impl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.*;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hibernate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annotations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;AnyMetaDef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hibernate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;annotations&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;MetaValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In the AbstractAnnotation class in the annotation module I reference the metaDef by name.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	@ManyToAny(metaDef = &quot;annotatables&quot;, fetch = FetchType.LAZY, metaColumn = @Column(name = &quot;annotatable_type&quot;, length = 255, nullable = false))
-	@JoinTable(name = &quot;annotation_annotatable&quot;, joinColumns = { @JoinColumn(name = &quot;annotation_id&quot;) }, inverseJoinColumns = { @JoinColumn(name = &quot;annotatable_id&quot;) })
-	public Set&amp;lt;Annotatable&amp;gt; getAnnotatables() {
-		return annotatables;
-	}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I will still need to manually maintain the mapping file, which is unfortunate, but doable.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-solution-i-wanted&quot;&gt;The Solution I Wanted&lt;/h2&gt;
-
-&lt;p&gt;My first thought to the problem was to remove the MetaDef completely by hooking into the hibernate metamodel creation process and dynamically adding classes by scanning available classes that implement the interface Annotatable and programmatically add the MetaDef. I spent a few days debugging Hibernate bootstrapping and couldn’t figure out a way. Using MetadataContributor seems promising, but I couldn’t find any examples on the web of someone trying to do something similar.&lt;/p&gt;
-
-&lt;p&gt;The stack trace of of where I ended up (hiberate 5.2 source)&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   LocalContainerEntityManagerFactoryBean afterPropertiesSet()
-     AbstractEntityManagerFactoryBean buildNativeEntityManagerFactory()
- 	  LocalContainerEntityManagerFactoryBean createNativeEntityManagerFactory()
- 	    SpringHibernateJpaPersistenceProvider createContainerEntityManagerFactory()
-           EntityManagerFactoryBuilderImpl build()
-             metadata()
-               MetadataBuildingProcess complete()
-                 InFlightMetadataCollectorImpl buildMetadataInstance()
-                   new MetadataImpl()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The documentation I found was light:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://docs.jboss.org/hibernate/orm/5.0/topical/html/bootstrap/NativeBootstrapping.html&quot;&gt;Native Bootstrapping&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://hibernate-dev.jboss.narkive.com/1t0vw8rS/hibernate5-migration&quot;&gt;Hibernate5 migration question&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://gist.github.com/danigulyas/d070df922234d6259f4f96f2a54236b7&quot;&gt;MetaValue Cache&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This seems promising, but it didn’t have details and the source referenced was a groovy project&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.alexckramer.com/grails/2016/12/18/grails-hibernate5-filter-support.html&quot;&gt;Grails Hibernate Filters support for Hibernate 5&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;next-step-scan-through-github&quot;&gt;Next Step: Scan through github&lt;/h3&gt;
-
-&lt;p&gt;If I have any free time I may come back to this type of solution by looking in gitlab:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/search?q=MetadataContributor+in%3Afile&amp;amp;type=Code&quot;&gt;MetadataContributor in:file&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Ron Regan</name></author><summary type="html">The Solution</summary></entry><entry><title type="html">Modularity, ManyToAny, and Bidirectional Associations</title><link href="http://localhost:4000/2018/06/18/Modularity.html" rel="alternate" type="text/html" title="Modularity, ManyToAny, and Bidirectional Associations" /><published>2018-06-18T00:00:00-04:00</published><updated>2018-06-18T00:00:00-04:00</updated><id>http://localhost:4000/2018/06/18/Modularity</id><content type="html" xml:base="http://localhost:4000/2018/06/18/Modularity.html">&lt;p&gt;I like to use my old school project to experiment with new development techniques and technology. One thing I’ve found is that organizing code into Java packages doesn’t make code modular and easy to reuse; over time the code falls into the &lt;a href=&quot;http://wiki.c2.com/?BigBallOfMud&quot;&gt;big ball of mud&lt;/a&gt; pattern. I’m working on splitting my project into multiple modules via Maven and Intellij.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/rreganjr/Requel&quot;&gt;Requel&lt;/a&gt; is a collaborative tool for collecting requirements as stories, goals, use cases and such. Users can comment or ask questions about different elements as well as an automatic analyzer that adds its own notes for users to review. One of the bigger issues I’ve hit is that requirement entities and annotation entities have bidirectional associations such that when a change occurs on an entity or annotation I can detect the event and update the UI and analyzer easily. This setup was fine in one big module, but leads to a cyclical dependency when I split out the annotations and project entities into distinct modules. As they say in computer science, all problems can be solved with one more level of abstraction, I created a third module to split out the concept of Annotatable from the annotations implementation to get around the cycle.&lt;/p&gt;
-
-&lt;p&gt;Now I’m stuck because I use a Hibernate many-to-any relation from the annotations to the requirement entities and the @AnyMetaDef requires linking to the classes that are referenced, and that leads back to a cyclic dependency. I could probably cheat and do the meta def mapping in an xml file, but that is really a technical solution that breaks the independency goal of modules which is the point of this exercise.&lt;/p&gt;
-
-&lt;p&gt;What I really want is an independent annotation service that allows adding notes to any thing, but is also aware of events and changes so it can respond to changes on those tings.&lt;/p&gt;</content><author><name>Ron Regan</name></author><summary type="html">I like to use my old school project to experiment with new development techniques and technology. One thing I’ve found is that organizing code into Java packages doesn’t make code modular and easy to reuse; over time the code falls into the big ball of mud pattern. I’m working on splitting my project into multiple modules via Maven and Intellij.</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ron Regan</name></author><summary type="html">I’m working on a demo for upgrading https://globalofficelink.com/ to a single page app using Angular.</summary></entry></feed>

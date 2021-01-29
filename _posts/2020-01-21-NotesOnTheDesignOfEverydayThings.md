@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Notes on - The Design of Everyday Things'
+title: Notes on - The Design of Everyday Things
 ---
 
 *It's not your fault - bad user experience is the fault of the designer.*

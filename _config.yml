@@ -9,5 +9,8 @@ github_username:  rreganjr
 markdown: kramdown
 theme: minima
 
+# Google Analytics
+google_analytics: G-27HZ5SRFK8
+
 #gems:
 #  - jekyll-last-modified-at

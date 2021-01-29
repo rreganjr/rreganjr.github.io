@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Notes on Why You\'re Over-Thinking Your UI/UX with Rohan Puri'
+title: Notes on Why You're Over-Thinking Your UI/UX with Rohan Puri
 ---
 
 ## Notes on Why You're Over-Thinking Your UI/UX with Rohan Puri | Harvard i-lab
