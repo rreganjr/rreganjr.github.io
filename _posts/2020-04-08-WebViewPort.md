@@ -63,7 +63,7 @@ Some code excerpts, the original was in a VueJS component, **TODO**  remove VUE 
     </div>
 ```
 
-```ecmascript 6
+```javascript
     // register listeners for viewport changes
     function setupViewportChangeListeners() {
       if (window.addEventListener) {
