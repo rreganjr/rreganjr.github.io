@@ -4,12 +4,24 @@ author: Ron Regan
 description: musings
 github_username:  rreganjr
 
+# Google Analytics
+google_analytics: G-27HZ5SRFK8
+
 # Build settings
+sass:
+  sass_dir: _sass
+
 markdown: kramdown
 theme: minima
 
-# Google Analytics
-google_analytics: G-27HZ5SRFK8
+#  see https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers for marking up languages
+highlighter: rouge
+
+# Markdown Processors
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 
 #gems:
 #  - jekyll-last-modified-at
