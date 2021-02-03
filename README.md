@@ -20,4 +20,8 @@ gem install minima
 ```
 gem install jekyll-feed
 
-this has some good tips https://www.taniarascia.com/make-a-static-website-with-jekyll/
+these have some good tips 
+
+* https://www.taniarascia.com/make-a-static-website-with-jekyll/
+* https://jekyllrb.com/docs/themes/
+
