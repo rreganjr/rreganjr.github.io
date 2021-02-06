@@ -17,11 +17,12 @@ gem install jekyll bundler
 Then the gems for the style
 ```
 gem install minima
-```
 gem install jekyll-feed
+```
 
 these have some good tips 
 
 * https://www.taniarascia.com/make-a-static-website-with-jekyll/
 * https://jekyllrb.com/docs/themes/
+* adding google analytics https://desiredpersona.com/google-analytics-jekyll/
 

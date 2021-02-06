@@ -10,7 +10,7 @@ Notes while working through [this course](https://www.youtube.com/watch?v=oHmreG
 The [source code is here](https://github.com/oopcoders/NGRX-Course)
 
 click on commits
-scroll to 7. begin and copy the commit id: 3efc22acd6e73ff41c84f70f770a548560de027b
+scroll to "7. begin" and copy the commit id: 3efc22acd6e73ff41c84f70f770a548560de027b
 
 ## Create Project is VS Code
 
@@ -369,3 +369,160 @@ tab shows it as an object. the message is the data as defined in the action
 ```
 
 ## Reducers
+
+Reducers "change" state by taking an action and the current state and producing a new state.
+
+There are four steps:
+
+
+### Create the reducer
+
+```commandline
+ng generate reducer store/reducers/customer-support --api=true --skipTests=true --reducers=../index.ts
+? Do you want to use the create function? Yes
+
+CREATE src/app/store/reducers/customer-support.reducer.ts (251 bytes)
+UPDATE src/app/store/index.ts (623 bytes)
+
+```
+* --reducers=../index.ts makes it add the reducer info to the index.ts file
+  * adds "import * as fromCustomerSupport from './reducers/customer-support.reducer';"
+  * adds "[fromCustomerSupport.customerSupportFeatureKey]: fromCustomerSupport.State;" in the AppState
+    * this is adding a property to the AppState interface with key 'customerSupport' that refers to the current State.
+  * adds "[fromCustomerSupport.customerSupportFeatureKey]: fromCustomerSupport.reducer," to the reducers
+    * this is mapping the customer support reducer to 'customerSupport' key in the map of all the reducers.
+
+```typescript
+import {
+  ActionReducer,
+  ActionReducerMap,
+  createFeatureSelector,
+  createSelector,
+  MetaReducer
+} from '@ngrx/store';
+import { environment } from '../../environments/environment';
+import * as fromCustomerSupport from './reducers/customer-support.reducer';
+
+
+export interface AppState {
+
+  [fromCustomerSupport.customerSupportFeatureKey]: fromCustomerSupport.State;
+}
+
+export const reducers: ActionReducerMap<AppState> = {
+
+  [fromCustomerSupport.customerSupportFeatureKey]: fromCustomerSupport.reducer,
+};
+
+
+export const metaReducers: MetaReducer<AppState>[] = !environment.production ? [] : [];
+```
+* --api=true defaults to adding success and failure actions to the reducer, if you leave it off it asks
+
+```commandline
+? Should we add success and failure actions to the reducer? No
+```
+* **note** I don't see any difference, but that is probably because the success and failure actions were
+removed from the customer-support.actions.ts in an earlier step.
+
+* Answering Yes to "Do you want to use the create function?" uses the createReducer()
+
+```typescript
+import { Action, createReducer, on } from '@ngrx/store';
+
+
+export const customerSupportFeatureKey = 'customerSupport';
+
+export interface State {
+
+}
+
+export const initialState: State = {
+
+};
+
+export const reducer = createReducer(
+  initialState,
+
+);
+```
+
+* Answering No to "Do you want to use the create function?" creates the reducer function
+
+```typescript
+import { Action } from '@ngrx/store';
+
+
+export const customerSupportFeatureKey = 'customerSupport';
+
+export interface State {
+
+}
+
+export const initialState: State = {
+
+};
+
+export function reducer(state = initialState, action: Action): State {
+  switch (action.type) {
+
+    default:
+      return state;
+  }
+}
+```
+
+### Define the State
+
+add properties to State in the reducers file
+
+```typescript
+export interface State {
+  name: string;
+  email: string;
+  message: string;
+}
+```
+
+###Define the values of the initial state
+
+```typescript
+export const initialState: State = {
+  name: null,
+  email: null,
+  message: null
+}
+```
+
+###Add handlers for the Actions to the reducer
+
+In createReducer add on() that takes the action and a function that takes the previous state
+and the action and returns a new state.
+
+```typescript
+export const reducer = createReducer(
+...
+on(sendingCustomerSupportMessage, (state, action) => {
+    return {
+      ...state,
+      ...action.data
+    };
+    };
+  })
+...
+```
+* sendingCustomerSupportMessage is the action defined in ../actions/customer-support.actions
+* ...state uses the spread operator to copy all the properties of the previous state into the
+new object being created
+* ...action.data uses the spread operator to copy all the properties in the action data into the
+new object, adding to or replacing the values from the previous state
+
+run the app and go to the [support form](http://localhost:4200/support) open the dev tools and
+go to the Redux tab.
+
+fill in the form and submit.
+
+* see the action on Action tab
+* click on the State tab and see that the customerSupport has the values from the form
+
+
