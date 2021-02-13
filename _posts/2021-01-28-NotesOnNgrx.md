@@ -239,7 +239,7 @@ Do you want to use the create function? (Y/n) Y
 This generates the file store/actions/customer-support.actions.ts
 
 * --skipTests=true says not to generate a test spec for the action
-* --api=true says to generate stubs for 
+* --api=true says to generate stubs for Load/Load Success/Load Failure
 * entering Y for using the create function makes the schematic generate the action classes
 using the createAction function like this:
 
@@ -525,4 +525,74 @@ fill in the form and submit.
 * see the action on Action tab
 * click on the State tab and see that the customerSupport has the values from the form
 
+##Selectors
 
+Pull data from the store
+
+### Create selector
+
+```comandline
+ng generate selector store/selectors/customer-support --skipTests=true
+```
+
+this creates /store/selectors/customer-support.selectors.ts
+
+```typescript
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+```
+
+* importing createSelector is the function for creating the selector to get the name out of the State
+** selectName uses the selectCustomerSupportFeature to get the State and a function to get name out of the state
+** you can pass in multiple features to combine data from different source in the fuction
+* importing createFeatureSelector is used for getting the customer support data from the store
+** selectCustomerSupportFeature uses the customerSupportFeatureKey to get the State defined by the reducer
+
+```typescript
+import { createFeatureSelector, createSelector } from '@ngrx/store';
+import { State, customerSupportFeatureKey } from '../reducers/customer-support.reducer';
+  
+  //Get feature from store
+  export const selectCustomerSupportFeature = createFeatureSelector<State>(
+    customerSupportFeatureKey
+  );
+  
+  //Return name from feature
+  export const selectName = createSelector(
+    selectCustomerSupportFeature,
+    (state: State) => state.name
+  );
+```
+
+### Use the Selector in the Support Form
+
+edit customer-support.component.ts to use the selector to get the name of the user after submitting
+* add a variable to hold the Observable for the name
+* in ngOnInit create the Observable
+* When the form is submitted, set isSendSuccess to true
+
+```typescript
+...
+  name$: Observable<string>;
+...
+  ngOnInit(): void {
+    this.name$ = this.store.pipe(select(selectName));
+  }
+...
+  onSubmit(f: NgForm) {
+    this.store.dispatch(sendingCustomerSupportMessage({ data: f.value }));
+    this.isSendSuccess = true;
+```
+
+edit customer-support.component.html to include the name in the success message
+* use the name$ Observable with interpolation and the async pipe
+
+```html
+...
+    <ng-container *ngIf="isSendSuccess != null">
+        <div class="alert alert-dismissible alert-success" *ngIf="isSendSuccess">
+            <button type="button" class="close" data-dismiss="alert" (click)="clearFeedback()">&times;</button>
+            <strong>We got your message {{name$ | async}}!</strong> We will be in touch.
+        </div>
+...
+    </ng-container>
+```
