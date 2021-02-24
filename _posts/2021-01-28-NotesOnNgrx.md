@@ -540,23 +540,22 @@ this creates /store/selectors/customer-support.selectors.ts
 ```typescript
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 ```
-
-* importing createSelector is the function for creating the selector to get the name out of the State
-** selectName uses the selectCustomerSupportFeature to get the State and a function to get name out of the state
-** you can pass in multiple features to combine data from different source in the fuction
-* importing createFeatureSelector is used for getting the customer support data from the store
-** selectCustomerSupportFeature uses the customerSupportFeatureKey to get the State defined by the reducer
+* createFeatureSelector create a selector for the top level feature state from the store
+  * selectCustomerSupportFeature is used for getting the top level customer support *State* from the *AppState*
+  * use the customerSupportFeatureKey to get the State
+* createSelector combines up to eight feature selectors and a projector function that returns the results
+  * selectName uses the selectCustomerSupportFeature to get the feature *State* and a function to get name property out of the state.
 
 ```typescript
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { State, customerSupportFeatureKey } from '../reducers/customer-support.reducer';
   
-  //Get feature from store
+  // Get feature from store
   export const selectCustomerSupportFeature = createFeatureSelector<State>(
     customerSupportFeatureKey
   );
   
-  //Return name from feature
+  // Return name from feature state
   export const selectName = createSelector(
     selectCustomerSupportFeature,
     (state: State) => state.name
@@ -566,9 +565,11 @@ import { State, customerSupportFeatureKey } from '../reducers/customer-support.r
 ### Use the Selector in the Support Form
 
 edit customer-support.component.ts to use the selector to get the name of the user after submitting
+
 * add a variable to hold the Observable for the name
 * in ngOnInit create the Observable
 * When the form is submitted, set isSendSuccess to true
+* the selection function comes from ngrx and takes the name selector
 
 ```typescript
 ...
@@ -584,6 +585,7 @@ edit customer-support.component.ts to use the selector to get the name of the us
 ```
 
 edit customer-support.component.html to include the name in the success message
+
 * use the name$ Observable with interpolation and the async pipe
 
 ```html
@@ -595,4 +597,65 @@ edit customer-support.component.html to include the name in the success message
         </div>
 ...
     </ng-container>
+```
+
+## Effects
+
+```commandline
+ng add @ngrx/effects@latest
+```
+
+**NOTE** In the demo after installing effects running the schematic to create effects gets an error. 
+The instructor says to get by this reinstall the schematics.
+
+```commandline
+An unhandled exception occurred: Collection "@ngrx/schematics" cannot be resolved.
+See "C:\Users\ron\AppData\Local\Temp\ng-UDElaR\angular-errors.log" for further details.
+```
+
+create the custom-support effects in store/effects/customer-support
+
+```commandline
+ng generate effect store/effects/customer-support --module=app.module.ts --root=true --api=true --skipTests=true
+? Do you want to use the create function? Yes
+CREATE src/app/store/effects/customer-support.effects.ts (204 bytes)
+UPDATE src/app/app.module.ts (2440 bytes)
+```
+
+* --module=app.module.ts - tell the cli the module where we're adding the effects
+* --root=true the effects are app wide and not for a specific feature
+* --api=true  
+
+* see file src/app/store/effects/customer-support.effects.ts
+
+```typescript
+import { Injectable } from '@angular/core';
+import { Actions, createEffect } from '@ngrx/effects';
+
+
+
+@Injectable()
+export class CustomerSupportEffects {
+
+
+
+  constructor(private actions$: Actions) {}
+
+}
+```
+
+src/app/app.module.ts adds imports and imports the CustomerSupportEffects
+
+```typescript
+...
+import { EffectsModule } from '@ngrx/effects';
+import { CustomerSupportEffects } from './store/effects/customer-support.effects';
+
+...
+@NgModule({
+...
+  imports: [
+...
+    EffectsModule.forRoot([CustomerSupportEffects]),
+]
 ```
