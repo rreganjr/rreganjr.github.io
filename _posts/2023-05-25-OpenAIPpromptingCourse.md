@@ -1,4 +1,9 @@
 
+---
+layout: post
+title: deeplearning.ai ChatGPT Prompt Engineering for Developers Course notes
+---
+
 see https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/5/inferring
 
 setup python environment
