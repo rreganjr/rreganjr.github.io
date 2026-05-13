@@ -110,7 +110,52 @@ git clone git@github.com-org1:org1/some-repo.git
 
 I find `core.sshCommand` easier in practice because the alias-host approach requires every clone URL to use the right alias — easy to forget when copy-pasting URLs from GitHub.
 
-That's the git side. The result is that a clone, commit, or push from anywhere under `~/gh-acc/org1/` uses `identity1`'s name, email, and SSH key, and the same goes for `~/gh-acc/org2/` and `identity2`. No per-shell switching required.
+### Or: HTTPS + credential helper
+
+If you'd rather keep HTTPS clone URLs and let macOS Keychain (or `git-credential-manager` on other platforms) store your credentials, that works too. I actually use this path day-to-day. It's slightly less clean than SSH for multi-account but it's what most people already have set up. Two things to know:
+
+**The "password" isn't your password.** GitHub disabled password authentication for git operations in August 2021. When `git push` over HTTPS prompts you for a password, it's asking for a **Personal Access Token (PAT)**. Pasting your GitHub login password will silently fail with an authentication error and you'll spend ten minutes wondering why. Use the same PAT you generated for `gh` (or a separate one — either works), as long as it has the `repo` scope for classic tokens, or **Contents: Read & write** for fine-grained tokens.
+
+**Credential helpers key by host, not directory.** By default `osxkeychain` will store one credential for `github.com` and hand the same one back to both trees — exactly the multi-account problem we're trying to avoid. The fix is to specify the username in the org specific configuration
+
+```ini
+# ~/.gitconfig-org1
+[user]
+    name = Identity One
+    email = identity1@org1.example.com
+
+[credential "https://github.com"]
+  username = identity1
+```
+
+```ini
+# ~/.gitconfig-org2
+[user]
+    name = Identity Two
+    email = identity2@org2.example.com
+
+[credential "https://github.com"]
+  username = identity2
+```
+
+Now any clone, fetch, or push of a `https://github.com/...` uses the username from the org config. Git prompts for the password (PAT) the first time, osxkeychain stores it keyed by the (host, user) pair, and the same setup runs independently in `org2` for `identity2`. The `core.sshCommand` line isn't needed in this mode — drop it from the per-tree config if you're going HTTPS-only.
+
+First push in a fresh tree:
+
+```bash
+cd ~/gh-acc/org1/some-repo
+git push
+# Username for 'https://github.com': identity1   (auto-filled by the rewrite)
+# Password for 'https://identity1@github.com': ← paste the PAT here
+```
+
+After that, subsequent pushes are silent. To inspect what got stored, open **Keychain Access → Login → search "github.com"**; each identity should be a separate row.
+
+To rotate a token later, delete the matching keychain entry and let git re-prompt on the next push.
+
+The reason SSH is theoretically cleaner is that it sidesteps the host-keying problem entirely (the key is bound to a specific identity at the SSH layer), and there's no token rotation step. But HTTPS works fine once the rewrite is in place, and corporate networks sometimes block port 22 for SSH while permitting 443 for HTTPS — so HTTPS is the more portable choice if you switch between networks.
+
+That's the git side. The result is that a clone, commit, or push from anywhere under `~/gh-acc/org1/` runs under `identity1`'s name, email, and credentials — whether those credentials are an SSH key or a keychain-stored PAT — and the same goes for `~/gh-acc/org2/` and `identity2`. No per-shell switching required.
 
 Now for `gh`.
 
