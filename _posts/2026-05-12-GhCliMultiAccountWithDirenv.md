@@ -324,3 +324,174 @@ A few extensions to this setup that I haven't gotten to yet but that slot in cle
 **Per-tree shell prompt.** A small `direnv` addition that prepends the current identity (or org name) to the shell prompt while you're inside a tree — a visual reminder of which account is active. Useful when you have multiple terminals open and they look identical.
 
 **A `direnv` helper for the credential helper.** If you ever do need HTTPS auth (some workflows can't avoid it), you can point `credential.helper` at a per-tree token file the same way we point `GH_TOKEN` at `~/.config/gh-tokens/orgN`. The mechanics are similar to the gh setup but using `git credential-store` or a tiny custom helper script.
+
+---
+
+## Addendum, August 2026: what broke after three months
+
+Three things went wrong in the months after I wrote this, all of them in the HTTPS half of the
+setup. Two were self-inflicted and one is a GitHub limitation with no clean workaround. Each cost
+me more time than it should have, so they go here rather than in a new post.
+
+### `gh auth setup-git` silently takes over the credential chain
+
+**Symptom:** VS Code started prompting for a password on every push, in every tree, while the same
+pushes from the terminal kept working.
+
+**Cause:** at some point I ran `gh auth setup-git` — or, more likely, accepted a prompt offering to
+"configure git authentication" for me. It writes this into `~/.gitconfig`:
+
+```ini
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+```
+
+That first, empty `helper =` is the destructive line. An empty value **resets the helper list**,
+wiping the `osxkeychain` helper inherited from the system gitconfig at
+`/Library/Developer/CommandLineTools/usr/share/git-core/gitconfig`. What's left is `gh` — and `gh`
+has exactly one active account per host. So every tree got the same token, regardless of
+`includeIf`, regardless of the `credential.https://github.com.username` pin from the per-tree
+config. Mine was my personal account, which has no access to my employer's org, so GitHub answered
+403 and git fell back to prompting.
+
+Two commands diagnose this. The first shows the whole chain and which file each piece came from:
+
+```bash
+git config --list --show-origin --show-scope | grep -i -e credential -e helper
+```
+
+The second asks git what it would actually hand to GitHub:
+
+```bash
+printf 'protocol=https\nhost=github.com\n\n' | git credential fill
+```
+
+Read the token prefix in the output. `gho_` means you're going through `gh`'s OAuth login, not the
+keychain. `ghp_` is a classic PAT, `github_pat_` a fine-grained one.
+
+The fix, and the thing never to re-run:
+
+```bash
+git config --global --unset-all credential.https://github.com.helper
+git config --global --unset-all credential.https://gist.github.com.helper
+```
+
+`gh auth setup-git` is aimed at people who don't already have a credential story. If you've built
+one deliberately, it is strictly destructive — and nothing warns you, because the terminal keeps
+working for as long as `gh`'s active account happens to be the right one.
+
+### Keep git credentials out of the environment — VS Code never sees it
+
+While debugging the above I went down a long detour building a custom credential helper that read
+`$GH_TOKEN` and a per-tree token file. It worked in the terminal and did nothing at all in VS Code,
+which is exactly the wrong way round: the terminal was never the problem.
+
+The reason is worth stating plainly. **direnv only affects shells.** VS Code's git integration runs
+in the extension-host process, which inherits whatever environment VS Code was launched with — and
+if you start it from the Dock or Spotlight, that's essentially nothing. No `.envrc` is ever
+evaluated for it. So any git auth scheme built on environment variables works in a direnv-hooked
+shell and fails in the editor, in Fork, in Tower, and in anything else launched from the GUI.
+
+The keychain path has no such problem: it's git config plus a helper binary, no environment
+involved. Which makes VS Code a useful canary — if a push works in the terminal but prompts in the
+editor, something env-dependent has crept into the credential path.
+
+This also retracts the last bullet in "Future things I'd like to do" below: wiring
+`credential.helper` to a per-tree token file the way `GH_TOKEN` is wired is a bad idea for exactly
+this reason. Don't do it. The keychain already gives you per-tree separation, and it gives it to
+every client rather than only to shells with the hook installed.
+
+### Key credentials per repo, not just per identity: `useHttpPath`
+
+The post above says credential helpers key by host, and that pinning `username` per tree upgrades
+that to (host, user). There's a third level I've since started relying on:
+
+```ini
+# ~/.gitconfig-org1
+[credential]
+	useHttpPath = true
+```
+
+With this on, git passes the repo path down to the helper, so the keychain key becomes
+(host, user, path) and **each repo gets its own stored token**. I need this because my fine-grained
+tokens are deliberately scoped to a couple of repos each; without it, one token per identity has to
+cover every repo in the tree, which is the opposite of least privilege. First push in each repo
+prompts once, then goes quiet.
+
+The rotation command has to include the path, or it won't match what got stored:
+
+```bash
+printf 'protocol=https\nhost=github.com\npath=owner/repo.git\n\n' \
+  | git credential-osxkeychain erase
+```
+
+One caveat: `gh` ignores `useHttpPath` entirely. If `gh` is anywhere in your credential chain (see
+the first section), this setting silently does nothing.
+
+### ProjectsV2 still needs a classic PAT
+
+This one isn't fixable, only workable-around. The scripts from
+[Story points on GitHub Projects from git history]({% post_url 2026-06-27-StoryPointsOnGithubProjectsFromGitHistory %})
+started failing with:
+
+```
+GraphQL: Resource not accessible by personal access token (addProjectV2ItemById)
+```
+
+The tell is that **reads succeed and writes fail**. `gh project list`, `field-list`, and `item-list`
+all worked; `item-add` and `item-edit` were rejected. Fine-grained PATs can read ProjectsV2 but not
+write it — you need a classic PAT with the `project` scope.
+
+The obvious move is to add a second token to the tree's `.envrc`. That's wrong twice over. It makes
+the token ambient for everything in the tree, and a classic PAT carrying only `project` has no
+`repo` scope, so it breaks the `gh issue view` and `gh issue list` calls in the same scripts. Giving
+it `repo` as well defeats the entire point of the fine-grained token.
+
+So inject it per command instead. In the shared library the scripts already source:
+
+```bash
+# ProjectsV2 mutations require a CLASSIC PAT with the `project` scope; fine-grained
+# PATs can read projects but cannot write them. Keep that token out of the ambient
+# environment: inject it only for `gh project` calls, so `gh issue`, git, and
+# everything else keep using the repo-scoped token direnv exports for this tree.
+PROJECT_TOKEN_FILE="${PROJECT_TOKEN_FILE:-$HOME/.config/gh-tokens/acct-projects}"
+
+_project_token() {
+  if [ ! -r "$PROJECT_TOKEN_FILE" ]; then
+    echo "ERROR: no ProjectsV2 token at $PROJECT_TOKEN_FILE" >&2
+    return 1
+  fi
+  tr -d '\r\n' < "$PROJECT_TOKEN_FILE"
+}
+
+# Intercept `gh project ...` only; every other gh invocation passes through
+# untouched. `command gh` avoids recursing into this function.
+gh() {
+  if [ "${1:-}" = project ]; then
+    local _tok
+    _tok="$(_project_token)" || return 1
+    GH_TOKEN="$_tok" GITHUB_TOKEN="$_tok" command gh "$@"
+  else
+    command gh "$@"
+  fi
+}
+```
+
+Shell functions are inherited by subshells, so this covers `$(gh project item-list ...)` inside
+command substitutions too, and every script that sources the library gets it for free with no
+call-site changes.
+
+Classic `project` is read+write across *all* your projects, which is coarser than I'd like and
+there's no finer classic scope. But with no `repo` scope the token can't read private code or push
+anything, which is the containment that actually matters if it leaks.
+
+### The one command worth remembering
+
+Of everything in this post, `git credential fill` is the piece I now reach for first. It answers
+"what would git actually send for this repo, and where did that come from" in one line, which is
+the question underneath nearly every multi-account credential problem:
+
+```bash
+printf 'protocol=https\nhost=github.com\npath=owner/repo.git\n\n' | git credential fill
+```
