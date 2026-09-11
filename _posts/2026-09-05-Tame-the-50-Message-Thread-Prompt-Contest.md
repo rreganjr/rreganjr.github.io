@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tame the 50-message thread — testing a prompt like software, then losing to a rubric
+title: Tame the 50-message thread — testing a prompt like software, and what a rubric can't see
 ---
 
 Work ran an internal prompt-writing challenge: write a prompt that makes Claude summarize a long, messy
@@ -10,9 +10,10 @@ and duplication, constraints (brevity, no invented facts), an output format an e
 cases like "no decision was reached." Bonus for telling Claude what to *ignore*.
 
 I could have written a good prompt in twenty minutes. Instead I spent two days building a test harness
-for it, ran it well over a hundred times across five threads and three model tiers, found and fixed real
-gaps, and then tied for first with two people who — as far as I know — did none of that. This post is
-about what the testing found, why it didn't move the score, and what I'd do differently.
+for it, ran it well over a hundred times across five threads and three model tiers, and found and fixed
+real gaps. The first scoring pass put me in a three-way tie for first at 92; a rescoring a week later
+moved me to 98, second overall behind an entry from the marketing team. This post is about what the
+testing found, what the two scorings did and didn't see, and what I'd do differently.
 
 I paired on the whole thing with Claude, which wrote the prompt, the scorer, and most of the test threads,
 and ran the blind evaluations as subagents so the model being tested never saw the answer keys.
@@ -178,12 +179,21 @@ no room for more.
 
 ## The result
 
-95 / 90 / 95 / 92 / 88 across the five criteria, average 92. Tied for first with two other entries.
-The judge's one criticism: "the 'no thread provided' caveat weakens testing" — the bare `Thread:` line at
-the end of the prompt, which I'd left as a placeholder. Claude had flagged it as optional. It should have
-said delete it.
+First pass: 95 / 90 / 95 / 92 / 88 across the five criteria, average 92, tied for first with two other
+entries. The judge's one criticism: "the 'no thread provided' caveat weakens testing" — the bare `Thread:`
+line at the end of the prompt, which I'd left as a placeholder. Claude had flagged it as optional. It
+should have said delete it.
 
-Ninety-two was also the top score before I entered. Three entries at 92 is a ceiling, not a coincidence.
+Ninety-two was also the top score before I entered, and three entries landing on exactly 92 looked like a
+ceiling rather than a coincidence. That was the state of things when I wrote the first version of this
+post, and Claude's conclusion below was written against it.
+
+**Update, a week later.** The challenge author reworked the scoring and re-ran it. My entry came out at
+98/100 — second overall and one of the top two on the tech team. First place, at 99, went to someone on
+the marketing side. So the rescoring did separate the entries that had bunched at 92, which weakens the
+"ceiling" reading below: a judge with a finer rubric could tell them apart. What it doesn't change is the
+more basic point — the judge still scored the prompt as text. The one-point gap between 98 and 99 is a
+difference in how two prompts *read*, not in how they perform, because nobody ran either one.
 
 ## Claude's conclusion
 
@@ -207,8 +217,10 @@ I asked Claude what it made of the outcome. Its answer, lightly trimmed:
 > see which one it preferred. We had the machinery for that and didn't point it at the right target. The
 > contest scored the prompt as an artifact; we tested it as a tool.
 
-I think that's right, and I'd add one thing. The testing didn't produce a higher score, but it produced
-things a higher score wouldn't have: a rule about post-decision objections that I'd never have thought to
+I think that's right, with the caveat from the update above: the saturation claim was true of the first
+scoring and less true of the second. The rest holds. And I'd add one thing. The testing may or may not have
+produced the higher score — I can't tell from the outside whether the rescoring rewarded anything the runs
+had fixed — but it produced things a score wouldn't have: a rule about post-decision objections that I'd never have thought to
 write, a measured answer to "does the example matter" instead of a belief, a specific reason not to let a
 weak model convert weekdays to dates, and a folder with five threads, five keys, and a scorer that can
 grade the next prompt in an afternoon. If the point of the exercise was a leaderboard position, I
